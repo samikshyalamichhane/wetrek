@@ -1,0 +1,19 @@
+
+[26-Jul-2022 15:34:28 UTC] PHP Warning:  Uncaught ErrorException: require_once(/home2/classicvacations/public_html//database/migrations/2014_10_12_100000_create_password_resets_table.php): failed to open stream: No such file or directory in /home2/classicvacations/public_html/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:98
+Stack trace:
+#0 /home2/classicvacations/public_html/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(98): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'require_once(/h...', '/home2/classicv...', 98, Array)
+#1 /home2/classicvacations/public_html/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(98): require_once()
+#2 /home2/classicvacations/public_html/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(448): Illuminate\Filesystem\Filesystem->requireOnce('/home2/classicv...')
+#3 /home2/classicvacations/public_html/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(240): Illuminate\Database\Migrations\Migrator->requir in /home2/classicvacations/public_html/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php on line 98
+[26-Jul-2022 15:34:28 UTC] PHP Fatal error:  Illuminate\Filesystem\Filesystem::requireOnce(): Failed opening required '/home2/classicvacations/public_html//database/migrations/2014_10_12_100000_create_password_resets_table.php' (include_path='.:/opt/alt/php74/usr/share/pear') in /home2/classicvacations/public_html/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php on line 98
+[05-Dec-2022 10:59:26 UTC] PHP Fatal error:  Cannot declare class Paco\PhpDemo\ActionRequest, because the name is already in use in /home1/advmagictrek/public_html/config/ActionRequest.php on line 40
+[06-Dec-2022 08:09:07 UTC] PHP Fatal error:  Cannot declare class Paco\PhpDemo\ActionRequest, because the name is already in use in /home1/advmagictrek/public_html/config/ActionRequest.php on line 40
+[06-Dec-2022 08:55:02 UTC] PHP Fatal error:  Cannot declare class Paco\PhpDemo\ActionRequest, because the name is already in use in /home1/advmagictrek/public_html/config/ActionRequest.php on line 40
+[06-Dec-2022 10:34:46 UTC] PHP Fatal error:  Cannot declare class Paco\PhpDemo\ActionRequest, because the name is already in use in /home1/advmagictrek/public_html/config/ActionRequest.php on line 40
+[06-Dec-2022 04:35:29 America/Chicago] PHP Warning:  The use statement with non-compound name 'Exception' has no effect in /home1/advmagictrek/public_html/config/ActionRequest.php on line 5
+[06-Dec-2022 04:35:59 America/Chicago] PHP Warning:  The use statement with non-compound name 'Exception' has no effect in /home1/advmagictrek/public_html/config/ActionRequest.php on line 5
+[06-Dec-2022 05:01:20 America/Chicago] PHP Warning:  The use statement with non-compound name 'Exception' has no effect in /home1/advmagictrek/public_html/config/ActionRequest.php on line 5
+[06-Dec-2022 05:01:28 America/Chicago] PHP Warning:  The use statement with non-compound name 'Exception' has no effect in /home1/advmagictrek/public_html/config/ActionRequest.php on line 5
+[06-Dec-2022 05:01:57 America/Chicago] PHP Warning:  The use statement with non-compound name 'Exception' has no effect in /home1/advmagictrek/public_html/config/ActionRequest.php on line 5
+[06-Dec-2022 05:02:07 America/Chicago] PHP Warning:  The use statement with non-compound name 'Exception' has no effect in /home1/advmagictrek/public_html/config/ActionRequest.php on line 5
+[07-Dec-2022 04:08:15 UTC] PHP Fatal error:  Cannot declare class Paco\PhpDemo\ActionRequest, because the name is already in use in /home1/advmagictrek/public_html/config/ActionRequest.php on line 40

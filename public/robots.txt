@@ -1,0 +1,9 @@
+sitemap: https://highvisionadventuretrek.com/sitemap.xml
+
+User-agent: *
+Disallow: /public/index.php/*
+Disallow: /booking/*
+Disallow: /blog/list?*
+Disallow: /login*
+Disallow: /admin/*
+Disallow: /search?*
