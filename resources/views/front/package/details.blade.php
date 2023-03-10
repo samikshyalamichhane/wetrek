@@ -6,10 +6,10 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="breadcrumb-inner">
-                    <h1 class="page-title">{{$package->category->title}}</h1>
+                    <h1 class="page-title">{{@$package->category->title}}</h1>
                     <ul class="page-list">
-                        <li><a href="#">{{$package->category->title}}</a></li>
-                        <li>{{$package->package_name}}</li>
+                        <li><a href="#">{{@$package->category->title}}</a></li>
+                        <li>{{@$package->package_name}}</li>
                     </ul>
                 </div>
             </div>
