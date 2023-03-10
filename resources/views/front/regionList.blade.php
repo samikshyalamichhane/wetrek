@@ -1,15 +1,15 @@
 @extends('front.layouts.app')
 @section('content')
    <!-- breadcrumb area start -->
-   <div class="breadcrumb-area jarallax" style="background-image:url(assets/img/bg/3.png);">
+   <div class="breadcrumb-area jarallax" style="background-image:url({{asset('images/main/'. $region->banner_image)}});">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb-inner">
-                        <h1 class="page-title">Nepal Tour</h1>
+                        <h1 class="page-title">{{$region->name}}</h1>
                         <ul class="page-list">
                             <li><a href="index.html">Home</a></li>
-                            <li>Nepal Tour</li>
+                            <li>{{$region->name}}</li>
                         </ul>
                     </div>
                 </div>
@@ -26,7 +26,7 @@
             <div class="col-xl-6 col-lg-8">
                 <div class="section-title section-title-left-border style-two">
                     <h2 class="title">Best Packages For You</h2>
-                    <p>Vivamus eget aliquam dui. Integer eu arcu vel arcu suscipit ultrices quis non mauris. Aenean scelerisque, sem eu dictum commodo, velit nisi</p>
+                    {!! $region->description !!}
                 </div>
             </div>
         </div>

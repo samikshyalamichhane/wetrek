@@ -253,17 +253,17 @@
 
     <div class="instagram-slider1 gallery-filter-area">
         <div class="gallery-sizer col-1"></div>
+        @foreach($galleryImages as $img)
         <div class="instagram-slider-item tp-gallery-item col-md-2">
             <div class="tp-gallery-item-img">
-                <a class="popup-thumb" href="{{asset('assets/front/img/tour/nepal.jpg')}}" data-effect="mfp-zoom-in">
-                    <img src="{{asset('assets/front/img/tour/nepal.jpg')}}" alt="image">
+                <a class="popup-thumb" href="/images/main/{{$img->image}}" data-effect="mfp-zoom-in">
+                    <img src="/images/main/{{$img->image}}" alt="image">
                 </a>
             </div>
 
         </div>
-
-
-        <div class="instagram-slider-item tp-gallery-item col-md-2">
+        @endforeach
+        {{--<div class="instagram-slider-item tp-gallery-item col-md-2">
             <div class="tp-gallery-item-img">
                 <a class="popup-thumb" href="{{asset('assets/front/img/tour/bhutan.jpg')}}" data-effect="mfp-zoom-in">
                     <img src="{{asset('assets/front/img/tour/nepal.jpg')}}" alt="image">
@@ -271,14 +271,6 @@
             </div>
 
         </div>
-
-
-
-
-
-
-
-
         <div class="instagram-slider-item tp-gallery-item col-md-2">
             <div class="tp-gallery-item-img">
                 <a class="popup-thumb" href="{{asset('assets/front/img/tour/tibet.jpg')}}" data-effect="mfp-zoom-in">
@@ -311,7 +303,7 @@
                 </a>
             </div>
 
-        </div>
+        </div>--}}
     </div>
 </div>
 <!-- instagram area end -->
@@ -398,11 +390,13 @@
             <div class="col-md-8">
                 <div class="partner-box">
                     <h4>Associated With</h4>
-                    <span><img src="{{asset('assets/front/img/icons/nepalgovernment-logo.png')}}" alt=""></span>
-                    <span><img src="{{asset('assets/front/img/icons/keep.png')}}" alt=""></span>
+                    @foreach($associates as $associate)
+                    <span><img src="{{asset('/images/main/' . $associate->image)}}" alt=""></span>
+                    @endforeach
+                    <!-- <span><img src="{{asset('assets/front/img/icons/keep.png')}}" alt=""></span>
                     <span><img src="{{asset('assets/front/img/icons/ntb.png')}}" alt=""></span>
                     <span><img src="{{asset('assets/front/img/icons/nma.png')}}" alt=""></span>
-                    <span><img src="{{asset('assets/front/img/icons/taan.png')}}" alt=""></span>
+                    <span><img src="{{asset('assets/front/img/icons/taan.png')}}" alt=""></span> -->
                 </div>
 
                 <div class="partner-box weaccept">

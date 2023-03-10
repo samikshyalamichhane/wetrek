@@ -2,7 +2,7 @@
     <div id="sidebar-collapse">
         <div class="admin-block d-flex">
             <div>
-                <img src="{{asset('/images/main/'.$dashboard_settings->logo)}}" class="rounded" width="45px" />
+                <img src="{{ $dashboard_settings->logoUrl() ? $dashboard_settings->logoUrl()  : asset('assets/front/img/wetravel-logo.png') }}" class="rounded" width="45px" />
             </div>
             <div class="admin-info">
                 <div class="font-strong">{{ Auth::user()->name }}</div>
@@ -112,7 +112,7 @@
             <li>
                 <a href="javascript:;">
                     <i class="sidebar-item-icon fa fa-paper-plane-o"></i>
-                    <span class="nav-label">Why Travel With US</span>
+                    <span class="nav-label">Why Choose US</span>
                     <i class="fa fa-angle-left arrow"></i>
                 </a>
                 <ul class="nav-2-level collapse">
@@ -157,6 +157,29 @@
 
             <li>
                 <a href="javascript:;">
+                    <i class="sidebar-item-icon fa fa-pagelines"></i>
+                    <span class="nav-label">Gallery</span>
+                    <i class="fa fa-angle-left arrow"></i>
+                </a>
+                <ul class="nav-2-level collapse">
+                    <li>
+                        <a href="{{route('gallery.create')}}">
+                            <span class="fa fa-plus"></span>
+                            Add Gallery
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{route('gallery.index')}}">
+                            <span class="fa fa-circle-o"></span>
+                            All Galleries
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+
+            <li>
+                <a href="javascript:;">
                     <i class="sidebar-item-icon fa fa-book"></i>
                     <span class="nav-label">Blogs</span>
                     <i class="fa fa-angle-left arrow"></i>
@@ -181,7 +204,7 @@
             <li>
                 <a href="javascript:;">
                     <i class="sidebar-item-icon fa fa-handshake-o"></i>
-                    <span class="nav-label">Accreditations With
+                    <span class="nav-label">Associated With
                     </span>
                     <i class="fa fa-angle-left arrow"></i>
                 </a>
@@ -189,13 +212,13 @@
                     <li>
                         <a href="{{route('associate.create')}}">
                             <span class="fa fa-plus"></span>
-                            Add Accreditations
+                            Add Associations
                         </a>
                     </li>
                     <li>
                         <a href="{{route('associate.index')}}">
                             <span class="fa fa-circle-o"></span>
-                            All Accreditations
+                            All Associations
                         </a>
                     </li>
 

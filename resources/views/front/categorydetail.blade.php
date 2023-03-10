@@ -23,7 +23,7 @@
     <div class="tour-list-area pd-top-120">
         <div class="container">
             <div class="row">
-                @foreach($destinationType->packages as $destination)
+                @foreach($destinationType->regions as $destination)
                 <div class="col-lg-6">
                     <div class="single-destinations-list style-four">
                         <div class="blur-thumb" style="background-image:url({{asset('images/thumbnail/'. $destination->banner_image)}});"></div>

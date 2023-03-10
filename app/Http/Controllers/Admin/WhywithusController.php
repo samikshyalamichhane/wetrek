@@ -5,38 +5,24 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Whywithus;
+use Illuminate\Support\Facades\Storage;
 use Image;
 use Illuminate\Support\Str;
 
 class WhywithusController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
     public function index()
     {
         $details = Whywithus::orderBy('updated_at', 'desc')->get();
         return view('admin.whywithus.list', compact('details'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         return view('admin.whywithus.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         $request->validate([
@@ -47,9 +33,10 @@ class WhywithusController extends Controller
 
         $formInput['slug'] = $this->generateSlug($request->whywithus_title, $request->slug, null);
         $formInput['published'] = is_null($request->published) ? 0 : 1;
-        // if($request->hasFile('whywithus_icon')){
-        //   $formInput['whywithus_icon'] = $this->imageProcessing($request->whywithus_icon, 1349, 356, 'yes');
-        // }
+        if($request->hasFile('whywithus_icon')){
+          $formInput['whywithus_icon'] = $this->imageProcessing($request->whywithus_icon, 1349, 356, 'yes');
+        }
+
         if($request->hasFile('image1')){
           $formInput['image1'] = $this->imageProcessing($request->image1, 300, 200, 'yes');
         }
@@ -60,36 +47,12 @@ class WhywithusController extends Controller
         return redirect()->route('whywithus.index')->with('message', 'Whywithus Create Successfuly.');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        abort('404');
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
         $detail = Whywithus::findorfail($id);
         return view('admin.whywithus.edit', compact('detail'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
       $request->validate([
@@ -106,6 +69,16 @@ class WhywithusController extends Controller
       //   }
       //   $formInput['whywithus_icon'] = $this->imageProcessing($request->whywithus_icon, 1349, 356, 'yes');
       // }
+
+      if ($request->hasFile('whywithus_icon')) {
+        if ($oldRecord->whywithus_icon) {
+          Storage::delete($oldRecord->whywithus_icon);
+        }
+        $file = $request->whywithus_icon;
+        $filename = time() . '-whywithus_icon.' . $file->getClientOriginalExtension();
+        $path = $file->storeAs('public/setting', $filename);
+        $formInput['whywithus_icon'] = $path;
+      }
 
       if($request->hasFile('image1')){
         if($oldRecord->image1){
@@ -124,12 +97,6 @@ class WhywithusController extends Controller
       return redirect()->route('whywithus.index')->with('message', 'Why with us Edited Successfuly.');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
         $record = Whywithus::findorfail($id);

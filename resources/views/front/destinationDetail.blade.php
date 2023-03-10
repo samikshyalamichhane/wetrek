@@ -1,7 +1,7 @@
 @extends('front.layouts.app')
 @section('content')
  <!-- breadcrumb area start -->
- <div class="breadcrumb-area jarallax" style="background-image:url(assets/img/banner/page-header-contact.jpg);">
+ <div class="breadcrumb-area jarallax" style="background-image:url({{asset('/images/thumbnail/' . $destination->banner_image)}});">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -27,7 +27,7 @@
                     <div class="gallery-filter-area row">
                         <div class="gallery-sizer col-1"></div>
                         <!-- gallery-item -->
-                        <div class="tp-gallery-item col-lg-8 col-md-6 col-12 mb-10">
+                        <!-- <div class="tp-gallery-item col-lg-8 col-md-6 col-12 mb-10">
                             <div class="tp-gallery-item-img">
                                 <div class="thumb">
                                     <img src="assets/img/banner/page-header-contact.jpg" alt="image">
@@ -38,22 +38,24 @@
                                         <a class="btn-read-more" href="package-listingpage.html"><span>Explore<i class="la la-arrow-right"></i></span></a>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <!-- gallery-item -->
+                        @foreach($destination->destinationtype as $data)
                         <div class="tp-gallery-item col-lg-4 col-md-6 col-12">
                             <div class="tp-gallery-item-img">
                                 <div class="thumb">
-                                    <img src="assets/img/tour/raimond-klavins-JqT2Wp5S0Dk-unsplash.jpg" alt="image">
+                                    <img src="{{asset('images/main/'.$data->banner_image)}}" alt="image">
                                 </div>
                                 <div class="details">
-                                    <h3>Tibet</h3>
-                                    <p>Etiam convallis elementum sapien, a aliquam turpis aliquam vitae. Praesent</p>
-                                    <a class="btn-read-more" href="package-listingpage.html"><span>Explore<i class="la la-arrow-right"></i></span></a>
+                                    <h3>{{$data->title}}</h3>
+                                    <p>{!! Illuminate\Support\Str::limit($destination->short_description, 50) !!}</p>
+                                    <a class="btn-read-more" href="{{ route('resolvepath.show',$data->slug) }}"><span>Explore<i class="la la-arrow-right"></i></span></a>
                                 </div>
                             </div>
                         </div>
+                        @endforeach
                         <!-- gallery-item -->
-                        <div class="tp-gallery-item col-lg-4 col-md-6 col-12">
+                        {{--<div class="tp-gallery-item col-lg-4 col-md-6 col-12">
                             <div class="tp-gallery-item-img">
                                 <div class="thumb">
                                     <img src="assets/img/tour/tour-17-580x450.jpg" alt="image">
@@ -116,7 +118,7 @@
                                     <a class="btn-read-more" href="package-listingpage.html"><span>Explore<i class="la la-arrow-right"></i></span></a>
                                 </div>
                             </div>
-                        </div>
+                        </div>--}}
                      
                     </div>
                 </div>

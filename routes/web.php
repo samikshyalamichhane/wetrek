@@ -205,7 +205,7 @@ Route::group(['namespace' => 'Front'], function () {
 
   //CV
   Route::get('/our-specials', 'HomeController@specialPackageLists')->name('classicVacationList');
-  // Route::get('who-we-are', 'HomeController@whoweare')->name('whoweare');
+  Route::get('who-we-are', 'HomeController@whoweare')->name('whoweare');
   // Route::get('why-classic-vacations-nepal', 'HomeController@whyus')->name('whyus');
   Route::get('travel-styles', 'HomeController@travelStyle')->name('travelstyle');
   Route::get('travel-information', 'HomeController@travelGuide')->name('travelGuide');

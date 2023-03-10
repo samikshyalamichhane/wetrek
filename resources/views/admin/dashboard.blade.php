@@ -16,12 +16,10 @@
 
   <div class="col-sm-12">
     <div class="row">
-      @php
-      $count= $dashboard_packages->count();
-      @endphp
+      
       <div class="col-sm-3">
         <div id="card1" class="card border-primary  mb-3" style="max-width: 18rem;">
-          <div class="card-header" id="num">{{$count}}</div>
+          <div class="card-header" id="num"></div>
           <div class="card-body text-primary">
             <h3 class="card-title" id="title">Packages</h3>
             <div class="icon">
@@ -34,12 +32,10 @@
       </div>
 
 
-      @php
-      $count= $dashboard_destinations->count();
-      @endphp
+      
       <div class="col-sm-3">
         <div id="card2" class="card border-primary  mb-3" style="max-width: 18rem;">
-          <div class="card-header" id="num">{{$count}}</div>
+          <div class="card-header" id="num"></div>
           <div class="card-body text-primary">
             <h3 class="card-title" id="title">Destinations</h3>
             <div class="icon">
@@ -51,12 +47,10 @@
         </div>
       </div>
 
-      @php
-      $count= $dashboard_destination_types->count();
-      @endphp
+      
       <div class="col-sm-3">
         <div id="card5" class="card border-primary  mb-3" style="max-width: 18rem;">
-          <div class="card-header" id="num">{{$count}}</div>
+          <div class="card-header" id="num"></div>
           <div class="card-body text-primary">
             <h3 class="card-title" id="title">Destination Types</h3>
             <div class="icon">
@@ -68,12 +62,10 @@
         </div>
       </div>
 
-      @php
-      $count= $dashboard_blogs->count();
-      @endphp
+      
       <div class="col-sm-3">
         <div id="card3" class="card border-primary  display: flex; mb-3" id="card" style="max-width: 18rem;">
-          <div class="card-header" id="num">{{$count}}</div>
+          <div class="card-header" id="num"></div>
           <div class="card-body text-primary">
             <h3 class="card-title" id="title">Blogs</h3>
             <div class="icon">
@@ -85,24 +77,10 @@
         </div>
       </div>
 
-      @php
-      $count= $dashboard_bookingLists->count();
-      @endphp
-      <div class="col-sm-3">
-        <div id="card6" class="card border-primary  display: flex; mb-3" id="card" style="max-width: 18rem;">
-          <div class="card-header" id="num">{{$count}}</div>
-          <div class="card-body text-primary">
-            <h3 class="card-title" id="title">Bookings</h3>
-            <div class="icon">
-              <i class="ion ion-pie-graph"></i>
-            </div>
-            <a id="link" href="{{route('bookingLists')}}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-            <p class="card-text"></p>
-          </div>
-        </div>
-      </div>
+      
+      
 
-      @php
+     {{-- @php
       $count= $dashboard_subscriber->count();
       @endphp
       <div class="col-sm-3">
@@ -151,7 +129,7 @@
             <p class="card-text"></p>
           </div>
         </div>
-      </div>
+      </div>--}}
 
     </div>
 
@@ -161,7 +139,7 @@
 
 </div>
 
-<div class="page-content fade-in-up">
+{{--<div class="page-content fade-in-up">
   <div class="ibox col-sm-12">
     <div class="row">
         <div class="ibox-head col-sm-6">
@@ -298,7 +276,7 @@
         </div>
       </div>
   </div>
-</div>
+</div>--}}
 <style type="text/css">
   #card1 {
     background-color: #3e3478

@@ -52,8 +52,8 @@
                       <td>{{++$key}}</td>
                       <td>{{$data->whywithus_title}}</td>
                       {{-- <td>{{$data->whywithus_description}}</td> --}}
-
-                      <td><a href="/images/main/{{$data->image1}}" target="_blank"><img style="height:120px; width: 120px;" src="{{$data->image1 ? asset('/images/thumbnail/' . $data->image1) : '/assets/admin/images/image.jpg' }}"></a></td>
+                       
+                      <td><a href="{{ $data->whywithus_iconUrl() }}" target="_blank"><img style="height:120px; width: 120px;" src="{{ $data->whywithus_iconUrl() }}"></a></td>
 
                       <td>{{$data->published == 1 ? 'Published' : 'Not Published'}}</td>
 

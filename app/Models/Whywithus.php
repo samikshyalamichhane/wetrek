@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
 
 class Whywithus extends Model
 {
@@ -11,5 +12,10 @@ class Whywithus extends Model
     public function scopePublished($query)
     {
       return $query->wherePublished(1);
+    }
+
+    public function whywithus_iconUrl()
+    {
+        return Storage::url($this->whywithus_icon);
     }
 }

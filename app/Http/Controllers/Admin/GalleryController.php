@@ -43,8 +43,8 @@ class GalleryController extends Controller
         $request->validate([
           'title' => 'required|max:255',
           'image' => 'required|max:2028|mimes:jpg,jpeg,png,gif',
-          'image1' => 'required',
-          'image1.*' => 'required|image|mimes:jpg,jpeg,png,gif|max:2028',
+          'image1' => 'nullable',
+          'image1.*' => 'nullable|image|mimes:jpg,jpeg,png,gif|max:2028',
         ]);
 
         $gallery = $request->except(['slug', 'published', 'image', 'image1']);
@@ -55,30 +55,19 @@ class GalleryController extends Controller
           $gallery['image'] = $this->imageProcessing($request->file('image'));
         }
         $gallery = Gallery::create($gallery);
-
+        if($request->has('image')){
         $filename = $request->file('image1');
         $koko = $this->saveImagesOfGallery($gallery->id, $filename);
+        }
 
         return redirect()->route('gallery.index')->with('message', 'Gallery Added Successfully.');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function show($id)
     {
         abort('404');
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
        $detail['gallery'] = $gallery = Gallery::findorfail($id);
@@ -87,13 +76,6 @@ class GalleryController extends Controller
        return view('admin.gallery.edit',$detail);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
        $request->validate([
@@ -122,12 +104,6 @@ class GalleryController extends Controller
        return redirect()->route('gallery.index')->with('message', 'Gallery Updated Successfully.');
      }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
       $gallery=Gallery::find($id);

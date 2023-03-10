@@ -51,6 +51,8 @@ use App\Models\Piller;
 use Illuminate\Support\Collection;
 use Mail;
 use App\Mail\SubscriberRequest;
+use App\Models\Category;
+use App\Models\Galleryimage;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Pagination\LengthAwarePaginator;
 
@@ -73,7 +75,9 @@ class HomeController extends Controller
     $destinations = Destination::select('country_name','slug','banner_image')->published()->get();
     $blogs = Blog::published()->get();
     $reviews = Travelersreview::published()->get();
-    return view('front.index',compact('sliders','aboutUs','bestSells','popularPackages','destinations','blogs','reviews'));
+    $associates = Associate::published()->get();
+    $galleryImages = Galleryimage::get();
+    return view('front.index',compact('sliders','aboutUs','bestSells','popularPackages','destinations','blogs','reviews','associates','galleryImages'));
   }
 
 
@@ -201,13 +205,25 @@ class HomeController extends Controller
   public static function destinationCategoryDetail($slug)
   {
 
-    $destinationType = Destinationtype::published()->whereSlug($slug)->first();
+    $destinationType = Destinationtype::with('packages')->published()->whereSlug($slug)->first();
     $og['title'] = $destinationType->meta_title ?? $destinationType->title;
     $og['description'] = $destinationType->meta_description;
     $og['keywords'] = $destinationType->keyword;
     $destinationCategoryPackages = Package::where('destinationtype_id', $destinationType->id)->where('published', 1)->orderBy('updated_at', 'desc')->paginate(12);
     return view('front.destinationCategoryDetail', compact('destinationType', 'destinationCategoryPackages', 'og'));
   }
+
+  public static function destinationCategoriesDetail($slug)
+  {
+
+    $destinationType = Category::with('regions')->where('published',1)->where('slug',$slug)->first();
+    $og['title'] = $destinationType->meta_title ?? $destinationType->title;
+    $og['description'] = $destinationType->meta_description;
+    $og['keywords'] = $destinationType->keyword;
+    $destinationCategoryPackages = Package::where('destinationtype_id', $destinationType->id)->where('published', 1)->orderBy('updated_at', 'desc')->paginate(12);
+    return view('front.categorydetail', compact('destinationType', 'destinationCategoryPackages', 'og'));
+  }
+
 
   public static function destinationDetail($slug)
   {

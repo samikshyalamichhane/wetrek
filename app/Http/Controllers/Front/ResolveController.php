@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use App\Models\Destination;
 use App\Models\Destinationtype;
 use App\Models\Package;
@@ -17,6 +18,11 @@ class ResolveController extends Controller
         $page = \App\Models\Page::published()->where('slug', $slug)->first();
         if ($page) {
             return HomeController::dynamicPages($slug);
+        }
+        $destinationType = Category::where('published',1)->whereSlug($slug)->first();
+        
+        if ($destinationType) {
+            return HomeController::destinationCategoriesDetail($slug);
         }
         $destinationType = Destinationtype::published()->whereSlug($slug)->first();
         if ($destinationType) {
@@ -42,8 +48,14 @@ class ResolveController extends Controller
     }
 
     public function showTwoSlug(Request $request,string $destination, string $slug)
-    {    
+    {   
+        $destinationType = Category::published()->whereSlug($slug)->first();
+        
+        if ($destinationType) {
+            return HomeController::destinationCategoryDetail($destination,$slug);
+        } 
         $destinationType = Destinationtype::published()->whereSlug($slug)->first();
+        dd($destinationType);
         if ($destinationType) {
             return HomeController::destinationCategoryDetail($destination,$slug);
         }

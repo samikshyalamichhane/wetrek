@@ -75,7 +75,7 @@
 
             <li class="dropdown dropdown-user">
                 <a class="nav-link dropdown-toggle link" data-toggle="dropdown">
-                    <img src="{{asset('/images/main/'.$dashboard_settings->logo)}}" />
+                    <img src="{{asset('assets/front/img/wetravel-logo.png')}}" />
                     <span></span>{{ Auth::user()->name }}<i class="fa fa-angle-down m-l-5"></i>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-right">

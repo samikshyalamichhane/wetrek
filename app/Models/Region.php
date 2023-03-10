@@ -2,7 +2,9 @@
 
 namespace App\Models;
 
+use Illuminate\Contracts\Cache\Store;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
 
 class Region extends Model
 {
@@ -24,6 +26,12 @@ class Region extends Model
     {
       return $query->wherePublish(1);
     }
+
+    public function banner_imageUrl()
+    {
+        return Storage::url($this->banner_image);
+    }
+
 
 
 }

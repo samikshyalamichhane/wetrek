@@ -41,11 +41,13 @@ class ViewComposer {
 		$destinations = Destination::with('destinationtype')->published()->take(5)->get();
 		// dd($destinations);
 		$packages=Package::published()->orderBy('created_at','desc')->get();
+		$whyWithUs=Whywithus::published()->get();
 		$view->with([
 			'dashboard_categories'=>$categories,
 			'dashboard_destinations'=>$destinations,
 			'dashboard_settings'=>$settings,
 			'dashboard_destination_types'=>$destination_types,
+			'dashboard_whyWithUs'=>$whyWithUs,
 		]);
 	}
 
