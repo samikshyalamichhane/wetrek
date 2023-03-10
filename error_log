@@ -17,3 +17,13 @@ Stack trace:
 [06-Dec-2022 05:01:57 America/Chicago] PHP Warning:  The use statement with non-compound name 'Exception' has no effect in /home1/advmagictrek/public_html/config/ActionRequest.php on line 5
 [06-Dec-2022 05:02:07 America/Chicago] PHP Warning:  The use statement with non-compound name 'Exception' has no effect in /home1/advmagictrek/public_html/config/ActionRequest.php on line 5
 [07-Dec-2022 04:08:15 UTC] PHP Fatal error:  Cannot declare class Paco\PhpDemo\ActionRequest, because the name is already in use in /home1/advmagictrek/public_html/config/ActionRequest.php on line 40
+[10-Mar-2023 10:50:30 UTC] PHP Warning:  require(/home/webhous1/wetrek.webhousejapan.com/vendor/autoload.php): Failed to open stream: No such file or directory in /home/webhous1/wetrek.webhousejapan.com/artisan on line 18
+[10-Mar-2023 10:50:30 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/webhous1/wetrek.webhousejapan.com/vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/webhous1/wetrek.webhousejapan.com/artisan:18
+Stack trace:
+#0 {main}
+  thrown in /home/webhous1/wetrek.webhousejapan.com/artisan on line 18
+[10-Mar-2023 10:50:43 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Application" not found in /home/webhous1/wetrek.webhousejapan.com/bootstrap/app.php:14
+Stack trace:
+#0 /home/webhous1/wetrek.webhousejapan.com/artisan(20): require_once()
+#1 {main}
+  thrown in /home/webhous1/wetrek.webhousejapan.com/bootstrap/app.php on line 14

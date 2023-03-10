@@ -58,3 +58,73 @@ Stack trace:
 [06-Dec-2022 05:01:59 America/Chicago] PHP Warning:  The use statement with non-compound name 'Exception' has no effect in /home1/advmagictrek/public_html/config/ActionRequest.php on line 5
 [06-Dec-2022 05:05:10 America/Chicago] PHP Warning:  The use statement with non-compound name 'Exception' has no effect in /home1/advmagictrek/public_html/config/ActionRequest.php on line 5
 [06-Dec-2022 05:11:01 America/Chicago] PHP Warning:  The use statement with non-compound name 'Exception' has no effect in /home1/advmagictrek/public_html/config/ActionRequest.php on line 5
+[10-Mar-2023 10:50:00 UTC] PHP Warning:  require(/home/webhous1/wetrek.webhousejapan.com/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/webhous1/wetrek.webhousejapan.com/public/index.php on line 24
+[10-Mar-2023 10:50:00 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/webhous1/wetrek.webhousejapan.com/public/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/webhous1/wetrek.webhousejapan.com/public/index.php:24
+Stack trace:
+#0 {main}
+  thrown in /home/webhous1/wetrek.webhousejapan.com/public/index.php on line 24
+[10-Mar-2023 10:50:02 UTC] PHP Warning:  require(/home/webhous1/wetrek.webhousejapan.com/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/webhous1/wetrek.webhousejapan.com/public/index.php on line 24
+[10-Mar-2023 10:50:02 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/webhous1/wetrek.webhousejapan.com/public/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/webhous1/wetrek.webhousejapan.com/public/index.php:24
+Stack trace:
+#0 {main}
+  thrown in /home/webhous1/wetrek.webhousejapan.com/public/index.php on line 24
+[10-Mar-2023 10:50:02 UTC] PHP Warning:  require(/home/webhous1/wetrek.webhousejapan.com/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/webhous1/wetrek.webhousejapan.com/public/index.php on line 24
+[10-Mar-2023 10:50:02 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/webhous1/wetrek.webhousejapan.com/public/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/webhous1/wetrek.webhousejapan.com/public/index.php:24
+Stack trace:
+#0 {main}
+  thrown in /home/webhous1/wetrek.webhousejapan.com/public/index.php on line 24
+[10-Mar-2023 10:50:02 UTC] PHP Warning:  require(/home/webhous1/wetrek.webhousejapan.com/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/webhous1/wetrek.webhousejapan.com/public/index.php on line 24
+[10-Mar-2023 10:50:02 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/webhous1/wetrek.webhousejapan.com/public/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/webhous1/wetrek.webhousejapan.com/public/index.php:24
+Stack trace:
+#0 {main}
+  thrown in /home/webhous1/wetrek.webhousejapan.com/public/index.php on line 24
+[10-Mar-2023 10:50:02 UTC] PHP Warning:  require(/home/webhous1/wetrek.webhousejapan.com/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/webhous1/wetrek.webhousejapan.com/public/index.php on line 24
+[10-Mar-2023 10:50:02 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/webhous1/wetrek.webhousejapan.com/public/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/webhous1/wetrek.webhousejapan.com/public/index.php:24
+Stack trace:
+#0 {main}
+  thrown in /home/webhous1/wetrek.webhousejapan.com/public/index.php on line 24
+[10-Mar-2023 10:50:04 UTC] PHP Warning:  require(/home/webhous1/wetrek.webhousejapan.com/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/webhous1/wetrek.webhousejapan.com/public/index.php on line 24
+[10-Mar-2023 10:50:04 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/webhous1/wetrek.webhousejapan.com/public/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/webhous1/wetrek.webhousejapan.com/public/index.php:24
+Stack trace:
+#0 {main}
+  thrown in /home/webhous1/wetrek.webhousejapan.com/public/index.php on line 24
+[10-Mar-2023 10:50:04 UTC] PHP Warning:  require(/home/webhous1/wetrek.webhousejapan.com/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/webhous1/wetrek.webhousejapan.com/public/index.php on line 24
+[10-Mar-2023 10:50:04 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/webhous1/wetrek.webhousejapan.com/public/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/webhous1/wetrek.webhousejapan.com/public/index.php:24
+Stack trace:
+#0 {main}
+  thrown in /home/webhous1/wetrek.webhousejapan.com/public/index.php on line 24
+[10-Mar-2023 10:50:04 UTC] PHP Warning:  require(/home/webhous1/wetrek.webhousejapan.com/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/webhous1/wetrek.webhousejapan.com/public/index.php on line 24
+[10-Mar-2023 10:50:04 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/webhous1/wetrek.webhousejapan.com/public/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/webhous1/wetrek.webhousejapan.com/public/index.php:24
+Stack trace:
+#0 {main}
+  thrown in /home/webhous1/wetrek.webhousejapan.com/public/index.php on line 24
+[10-Mar-2023 10:50:05 UTC] PHP Warning:  require(/home/webhous1/wetrek.webhousejapan.com/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/webhous1/wetrek.webhousejapan.com/public/index.php on line 24
+[10-Mar-2023 10:50:05 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/webhous1/wetrek.webhousejapan.com/public/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/webhous1/wetrek.webhousejapan.com/public/index.php:24
+Stack trace:
+#0 {main}
+  thrown in /home/webhous1/wetrek.webhousejapan.com/public/index.php on line 24
+[10-Mar-2023 10:50:05 UTC] PHP Warning:  require(/home/webhous1/wetrek.webhousejapan.com/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/webhous1/wetrek.webhousejapan.com/public/index.php on line 24
+[10-Mar-2023 10:50:05 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/webhous1/wetrek.webhousejapan.com/public/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/webhous1/wetrek.webhousejapan.com/public/index.php:24
+Stack trace:
+#0 {main}
+  thrown in /home/webhous1/wetrek.webhousejapan.com/public/index.php on line 24
+[10-Mar-2023 10:50:05 UTC] PHP Warning:  require(/home/webhous1/wetrek.webhousejapan.com/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/webhous1/wetrek.webhousejapan.com/public/index.php on line 24
+[10-Mar-2023 10:50:05 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/webhous1/wetrek.webhousejapan.com/public/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/webhous1/wetrek.webhousejapan.com/public/index.php:24
+Stack trace:
+#0 {main}
+  thrown in /home/webhous1/wetrek.webhousejapan.com/public/index.php on line 24
+[10-Mar-2023 10:50:06 UTC] PHP Warning:  require(/home/webhous1/wetrek.webhousejapan.com/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/webhous1/wetrek.webhousejapan.com/public/index.php on line 24
+[10-Mar-2023 10:50:06 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/webhous1/wetrek.webhousejapan.com/public/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/webhous1/wetrek.webhousejapan.com/public/index.php:24
+Stack trace:
+#0 {main}
+  thrown in /home/webhous1/wetrek.webhousejapan.com/public/index.php on line 24
+[10-Mar-2023 10:50:06 UTC] PHP Warning:  require(/home/webhous1/wetrek.webhousejapan.com/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/webhous1/wetrek.webhousejapan.com/public/index.php on line 24
+[10-Mar-2023 10:50:06 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/webhous1/wetrek.webhousejapan.com/public/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/webhous1/wetrek.webhousejapan.com/public/index.php:24
+Stack trace:
+#0 {main}
+  thrown in /home/webhous1/wetrek.webhousejapan.com/public/index.php on line 24
+[10-Mar-2023 10:50:06 UTC] PHP Warning:  require(/home/webhous1/wetrek.webhousejapan.com/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/webhous1/wetrek.webhousejapan.com/public/index.php on line 24
+[10-Mar-2023 10:50:06 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/webhous1/wetrek.webhousejapan.com/public/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/webhous1/wetrek.webhousejapan.com/public/index.php:24
+Stack trace:
+#0 {main}
+  thrown in /home/webhous1/wetrek.webhousejapan.com/public/index.php on line 24
