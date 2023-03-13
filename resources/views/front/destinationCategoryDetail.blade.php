@@ -30,8 +30,8 @@
                         <div class="details">
                           
                             
-                            <h4 class="title"><a href="{{ route('resolvepath.show',$destination->slug) }}">{{$destination->name}}</a></h4>
-                            <p class="content">{!! Illuminate\Support\Str::limit($destination->description, 150) !!}</p>
+                            <h4 class="title"><a href="{{ route('resolvepath.show',$destination->slug) }}">{{$destination->package_name}}</a></h4>
+                            <p class="content">{!! Illuminate\Support\Str::limit($destination->overview_description, 150) !!}</p>
                             <div class="list-price-meta">
                                 <!-- <ul class="tp-list-meta d-inline-block">
                                     <li><i class="fa-solid fa-person-snowboarding"></i>{{count($destinationType->packages)}} packages</li>
