@@ -1,118 +1,152 @@
 @extends('front.layouts.app')
-
+<title>WeTrek Nepal| Blogs</title>
 @section('content')
 
-    <!-- ===== MAIN ===== -->
-    <main class="bg-light toppadd main">
-        <div class="mainpart pb-5">
-            <div class="container">
-                <div class="row">
-                    <div class="pt-4 col-lg-9">
-                        <h4 class="font-weight-bold title">Blog</h4>
-                        <hr>
-                        <ul class="mt-4 mb-0 list-unstyled row">
-                            @foreach($details as $data)
-                                <div class="mb-3 col-6 col-md-6">
-                                    <div class="overflow-hidden bg-white rounded shadow-sm">
-                                        <figure class="mb-0 text-center bg-light position-relative">
-                                            <a href="{{route('blogDetails',$data->slug)}}">
-                                                <img width="500" height="350" src="{{asset('images/listing/'.$data->banner_image)}}" class="img-fluid w-100 wp-post-image" alt="Those small eyes of Himalayan kids looking at you while passing through their village Manang Annapurna region." loading="lazy">
-                                            </a>
-                                        </figure>
-                                        <div class="p-3 text-center p-lg-4 blogtext position-relative">
-                                            <h5 class="pt-3 position-relative">
-                                                <a href="{{route('blogDetails',$data->slug)}}" class="mb-3 d-block">{{$data->title}}</a>
-                                            </h5>
-                                            <p class="mb-0 position-relative">{{$data->short_description}}</p>
-                                            <div class="wave"></div>
-                                        </div>
-                                        <a href="{{route('blogDetails',$data->slug)}}" class="p-3 mb-0 text-center border-top d-block h5 btn-more">Read More <i class="fa fa-long-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                            @endforeach
-                            
-                        </ul>
-                        <div class="clearfix w-100">
-                            <nav aria-label="...">
-                                <ul class="my-4 pagination pagination-md">
-                                    {{$details->links()}}
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-
-                    <aside class="py-5 col-lg-3 mx-auto">
-                        <div id="sidebar" class="stickthis sidebar">
-                            {{-- <div class="mb-4 bg-white shadow-sm">
-                                <h4 class="p-3 mb-0 text-white bg-heading">Activities</h4>
-                                <div class="p-3">
-                                    <ul id="menu-sidebar-menu" class="mb-0 list-unstyled side-links">
-                                        <li class="menu-item">
-                                            <a href="#">Trekking and Hiking</a>
-                                        </li>
-                                        <li class="menu-item">
-                                            <a href="#">Adventure Activities</a>
-                                        </li>
-                                        <li class="menu-item">
-                                            <a href="#">Tours</a>
-                                        </li>
-                                        <li class="menu-item">
-                                            <a href="#">Nature and Wildlife</a>
-                                        </li>
-                                        <li class="menu-item">
-                                            <a href="#">Latest Blog</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div> --}}
-
-                            <div class="mb-4 bg-white shadow-sm">
-                                <h4 class="p-3 mb-0 text-white bg-heading">Any Questions?</h4>
-                                <div class="p-3">
-                                    @if(session('message'))
-                                        <div class="alert alert-info alert-dismissible" id="successMessage">
-                                            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                                            {{session('message')}}
-                                        </div>
-                                    @endif
-                                    <form method="post" action="{{route('blogEnquirySave')}}" class="sidebar-form">
-                                        @csrf
-                                        <input type="hidden" name="type" value="enquiry">
-
-                                        <div class="row">
-                                            <div class="col-md-6 col-lg-12 form-group">
-                                                <span class="form-group-wrap">
-                                                    <input type="text" name="name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" aria-required="true" aria-invalid="false" placeholder="Your Name*" required="required">
-                                                </span>
-                                            </div>
-                                            <div class="col-md-6 col-lg-12 form-group">
-                                                <span class="form-group-wrap">
-                                                    <input type="email" name="email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form-control" aria-required="true" aria-invalid="false" placeholder="Email Address*" required="required">
-                                                </span>
-                                            </div>
-                                            <div class="col-md-6 col-lg-12 form-group">
-                                                <span class="form-group-wrap">
-                                                    <input type="text" name="subject" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control" aria-required="true" aria-invalid="false" placeholder="Your Subject*" required="required">
-                                                </span>
-                                            </div>
-                                            <div class="col-md-6 col-lg-12 form-group">
-                                                <span class="form-group-wrap">
-                                                    <textarea name="message" cols="40" rows="7" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required form-control" aria-required="true" aria-invalid="false" placeholder="Message"></textarea>
-                                                </span>
-                                            </div>
-                                            <div class="col-lg-12 form-group">
-                                                <input type="submit" value="Submit" class="wpcf7-form-control wpcf7-submit btn btn-submit">
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </aside>
+<!-- breadcrumb area start -->
+<div class="breadcrumb-area jarallax" style="background-image:url({{ $dashboard_settings->blog_bannerUrl() }});">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumb-inner">
+                    <h1 class="page-title">Blog</h1>
+                    <ul class="page-list">
+                        <li><a href="{{route('indexHome')}}">Home</a></li>
+                        <li>Blog</li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </main>
-    <!-- ===== EMD MAIN ===== -->
+    </div>
+</div>
+<!-- breadcrumb area End -->
+
+<!-- blog area start -->
+<div class="blog-area pd-top-120 pd-bottom-70">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="row justify-content-center">
+                    @foreach($details as $blog)
+                    <div class="col-lg-6 col-md-6">
+                        <div class="single-blog">
+                            <div class="thumb">
+                                <img src="{{asset('/images/thumbnail/' . $blog->image)}}" alt="blog">
+
+                            </div>
+                            <div class="single-blog-details">
+                                <p class="date">{{ $blog->created_at->format('d F Y') }}</p>
+                                <h4 class="title"><a href="{{route('blogDetails',$blog->slug)}}">{{$blog->title}}</a></h4>
+                                <p class="content">{!! Illuminate\Support\Str::limit($blog->short_description, 250) !!}</p>
+                                <a class="btn-read-more" href="{{route('blogDetails',$blog->slug)}}"><span>Read More<i class="la la-arrow-right"></i></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <aside class="sidebar-area sidebar-area-4">
+
+                    <!-- <div class="widget widget_categories">
+                            <h2 class="widget-title">Category</h2>
+                            <ul>
+                                <li><a href="#">Software</a> 33</li>
+                                <li><a href="#">App Landing</a> 81</li>
+                                <li><a href="#">Saas Landing</a> 12</li>
+                                <li><a href="#">Design Studio</a> 17</li>
+                                <li><a href="#">Business Studio</a> 21</li>
+                                <li><a href="#">Product Showcase</a> 62</li>
+                            </ul>
+                        </div> -->
+                    <div class="widget widget-recent-post">
+                        <h2 class="widget-title">Recent Post</h2>
+                        <ul>
+                            @foreach($relatedBlogs as $blog)
+                            <li>
+                                <div class="media">
+                                    <img src="{{asset('/images/thumbnail/' . $blog->image)}}" alt="widget">
+                                    <div class="media-body">
+                                        <span class="post-date">{{ $blog->created_at->format('d F Y') }}</span>
+                                        <h6 class="title"><a href="{{route('blogDetails',$blog->slug)}}">{{$blog->title}}</a></h6>
+                                    </div>
+                                </div>
+                            </li>
+                            @endforeach
+
+                        </ul>
+                    </div>
+                    <!-- <div class="widget widget_tag_cloud">
+                            <h2 class="widget-title">Tags</h2>
+                            <div class="tagcloud">
+                                <a href="#">Adbeger</a>
+                                <a href="#">Religion</a>
+                                <a href="#">Relax</a>
+                                <a href="#">Nature</a>
+                                <a href="#">Descover</a>
+                            </div>
+                        </div> -->
+
+                </aside>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- blog area End -->
 
 @endsection
+
+@push('scripts')
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="application/javascript">
+    $(document).ready(function() {
+
+        $('#title').on('keyup', function() {
+            var title = $('#title').val();
+            if (title.length >= 2) {
+                $.ajax({
+                    type: "GET",
+                    url: '/search-on-key-up',
+                    data: {
+                        title: title,
+                    },
+                    success: function(response) {
+                        $('.searched_title_options').empty()
+                        $.each(response.data, function(key, blog) {
+                            $('.searched_title_options').append(
+                                `<a href="/blog/${blog.slug}">${blog.title}</a> <br/>`
+                            )
+                        });
+
+                    }
+                });
+            }
+
+        });
+
+        $('#title').on('keydown', function() {
+            var title = $('#title').val();
+            if (title.length <= 2) {
+                $.ajax({
+                    type: "GET",
+                    url: '/search-on-key-up',
+                    data: {
+                        title: title,
+                    },
+                    success: function(response) {
+                        $('.searched_title_options').empty()
+                        // $.each(response.data, function(key, package) {
+                        //     $('.searched_title_options').append(
+                        //         `<a href="/packages/${package.slug}" target="_blank">${package.package_name}</a> <br/>`
+                        //     )
+                        // });
+
+
+                    }
+                });
+            }
+
+        });
+
+    });
+</script>
+@endpush
