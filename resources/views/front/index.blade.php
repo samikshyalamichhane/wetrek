@@ -51,18 +51,16 @@
 <div class="search-area tp-main-search-area">
     <div class="container">
         <div class="tp-main-search">
+        <form action="{{ route('findAll') }}" method="get">
             <div class="row">
-
-
                 <div class="col-md-3">
                     <h3>Find Your Holiday</h3>
                 </div>
-                <!-- <form action="{{ route('findAll') }}" method="get"> -->
                 <div class="col-md-2">
                     <div class="tp-search-single-wrap float-left">
-                        <select class="select">
+                        <select class="select w-100" name="destination_id">
                         @foreach($dashboard_destinations as $destination)
-                            <option value="{{route('resolvepath.show',$destination->id)}}">{{$destination->country_name}}</option>
+                            <option value="{{$destination->id}}">{{$destination->country_name}}</option>
                         @endforeach
                         </select>
                         <i class="fa fa-plus-circle"></i>
@@ -70,9 +68,9 @@
                 </div>
                 <div class="col-md-2">
                     <div class="tp-search-single-wrap float-left w-100">
-                        <select class="select w-100">
+                        <select class="select w-100" name="destinationtype_id">
                         @foreach($dashboard_destination_types as $dest)
-                            <option value="1">{{$dest->title}}</option>
+                            <option value="{{$dest->id}}">{{$dest->title}}</option>
                         @endforeach
                         </select>
                         <i class="fa fa-plus-circle"></i>
@@ -80,7 +78,7 @@
                 </div>
                 {{--<div class="col-md-2 ">
                     <div class="tp-search-single-wrap float-left w-100">
-                        <select class="select w-100">
+                        <select class="select w-100" name="days_and_nights">
                             <option value="1">Duration</option>
                             <option value="2">5 Days</option>
                             <option value="3">10 Days</option>
@@ -93,9 +91,9 @@
                 <div class="col-lg-2 col-md-2">
                     <button class="btn btn-yellow" type="submit">Search</a>
                 </div>
-                <!-- </form> -->
             </div>
         </div>
+        </form>
     </div>
 </div>
 <!-- search area end -->

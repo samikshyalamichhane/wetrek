@@ -16,7 +16,7 @@
                             <img src="{{asset('images/listing/'.$desti->image)}}" alt="" class="card-img img-fluid">
                             <div class="card-body">
                                 <h3 class="card-title package__card--title">
-                                    <a href="{{route('popularPackageDetails', $desti->slug)}}">{{$desti->package_name}}</a>
+                                    <a href="{{route('resolvepath.show', $desti->slug)}}">{{$desti->package_name}}</a>
                                 </h3>
 
                                 <div class="package__card--info">
@@ -77,7 +77,7 @@
                             <img src="{{asset('images/listing/'.$desti->image)}}" alt="" class="card-img img-fluid">
                             <div class="card-body">
                                 <h3 class="card-title package__card--title">
-                                    <a href="{{route('packageDetails', $desti->slug)}}">{{$desti->package_name}}</a>
+                                    <a href="{{route('resolvepath.show', $desti->slug)}}">{{$desti->package_name}}</a>
                                 </h3>
 
                                 <div class="package__card--info">

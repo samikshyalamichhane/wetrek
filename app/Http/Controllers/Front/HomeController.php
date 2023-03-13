@@ -69,16 +69,16 @@ class HomeController extends Controller
 
   public function index()
   {
-    $sliders = Slider::where('published',1)->get();
-    $aboutUs = Page::where('slug','about-us')->first();
-    $bestSells = Package::select('package_name','slug','image','price','days_and_nights')->where('best_sells',1)->published()->get();
-    $popularPackages = Package::select('package_name','slug','image','price','days_and_nights')->where('popular_package',1)->published()->get();
-    $destinations = Destination::select('country_name','slug','banner_image')->published()->get();
+    $sliders = Slider::where('published', 1)->get();
+    $aboutUs = Page::where('slug', 'about-us')->first();
+    $bestSells = Package::select('package_name', 'slug', 'image', 'price', 'days_and_nights')->where('best_sells', 1)->published()->get();
+    $popularPackages = Package::select('package_name', 'slug', 'image', 'price', 'days_and_nights')->where('popular_package', 1)->published()->get();
+    $destinations = Destination::select('country_name', 'slug', 'banner_image')->published()->get();
     $blogs = Blog::published()->get();
     $reviews = Travelersreview::published()->get();
     $associates = Associate::published()->get();
     $galleryImages = Galleryimage::get();
-    return view('front.index',compact('sliders','aboutUs','bestSells','popularPackages','destinations','blogs','reviews','associates','galleryImages'));
+    return view('front.index', compact('sliders', 'aboutUs', 'bestSells', 'popularPackages', 'destinations', 'blogs', 'reviews', 'associates', 'galleryImages'));
   }
 
 
@@ -160,7 +160,7 @@ class HomeController extends Controller
   {
     $details = Blog::published()->orderBy('updated_at', 'desc')->paginate(9);
     $relatedBlogs = Blog::published()->inRandomOrder()->orderBy('updated_at', 'desc')->take(5)->get();
-    return view('front.blog.list', compact('details','relatedBlogs'));
+    return view('front.blog.list', compact('details', 'relatedBlogs'));
   }
 
   public function blogDetails($slug)
@@ -197,7 +197,7 @@ class HomeController extends Controller
     $og['title'] = $package->meta_title ?? $package->package_name;
     $og['description'] = $package->meta_description;
     $og['keywords'] = $package->keyword;
-    return view('front.package.details', compact('package','og'));
+    return view('front.package.details', compact('package', 'og'));
     // return view('front.package.details', compact('packages', 'similarTrekkingPackage', 'otherPackage', 'og'));
   }
 
@@ -217,7 +217,7 @@ class HomeController extends Controller
   public static function destinationCategoriesDetail($slug)
   {
 
-    $destinationType = Category::with('regions')->where('published',1)->where('slug',$slug)->first();
+    $destinationType = Category::with('regions')->where('published', 1)->where('slug', $slug)->first();
     $og['title'] = $destinationType->meta_title ?? $destinationType->title;
     $og['description'] = $destinationType->meta_description;
     $og['keywords'] = $destinationType->keyword;
@@ -332,17 +332,22 @@ class HomeController extends Controller
 
   public function findAll()
   {
-    // $advertisements = Advertisement::Published()
-    //    ->where('place', 'left_sidebar')
-    //    ->first();
+    // dd(request()->all());
     $title = request()->get('title');
-    if ($title != null) {
-      $trekkingPackageSearch = Package::latest()->published()
-        ->where('package_name', 'like', '%' . $title . '%')
-        // ->orWhere('description', 'like', '%' . $title . '%')
-        // ->orWhere('accommodation', 'like', '%' . $title . '%')
-        ->get();
-    }
+    $trekkingPackageSearch = Package::latest()->published()
+    ->whereHas('destinationtype', function ($q) {
+      $q->where('destinationtype_id', request()->destinationtype_id);
+    })
+    ->orWhereHas('destinations', function ($q) {
+      $q->where('destination_id', request()->destination_id);
+    })
+      ->where('days_and_nights', 'like', '%' . request()->days_and_nights . '%')
+      ->where('destination_id', request()->destination_id )
+      ->get();
+
+    // dd($trekkingPackageSearch);
+
+    // }
     return view('front.searchPackage', compact('trekkingPackageSearch', 'title'));
   }
 
@@ -369,15 +374,16 @@ class HomeController extends Controller
 
   public function saveEnquiry(Request $request)
   {
-    $request->validate([
-      'name' => 'required',
-      'email' => 'required',
-      // 'how_found' => 'required',
-      'message' => 'required',
-      // 'g-recaptcha-response' => 'required',
-    ]
-    // , ['g-recaptcha-response.required' => 'The recaptcha field is required.']
-  );
+    $request->validate(
+      [
+        'name' => 'required',
+        'email' => 'required',
+        // 'how_found' => 'required',
+        'message' => 'required',
+        // 'g-recaptcha-response' => 'required',
+      ]
+      // , ['g-recaptcha-response.required' => 'The recaptcha field is required.']
+    );
     // ]);
 
     if ($request->contactus) {

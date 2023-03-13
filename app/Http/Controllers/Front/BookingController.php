@@ -107,10 +107,10 @@ class BookingController extends Controller
     $package = Package::where('id',$request->package_id)->first();
     $booking->destination_name = $package_name->package_name;
     
-    Mail::to('info@adventuremagictreks.com')->send(new BookingRequest($booking,$package));
-    if ($request->payment_type == 'hbl') {
-			return view('front.booking.payment', compact('booking'));
-		}
+    // Mail::to('info@adventuremagictreks.com')->send(new BookingRequest($booking,$package));
+    // if ($request->payment_type == 'hbl') {
+		// 	return view('front.booking.payment', compact('booking'));
+		// }
     return redirect()->route('thankyou')->with( ['booking-form'=>'booking-form'] );
   }
 

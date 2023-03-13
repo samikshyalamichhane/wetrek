@@ -35,7 +35,7 @@ class ViewComposer {
 
 	}
 	public function compose(View $view) {
-		$destination_types=Destinationtype::select('title','slug')->orderBy('created_at','asc')->get();
+		$destination_types=Destinationtype::select('id','title','slug')->orderBy('created_at','asc')->get();
 		$categories=Category::with('regions')->publish()->orderBy('created_at','asc')->get();
 		$settings=Setting::first();
 		$destinations = Destination::with('destinationtype')->published()->take(5)->get();

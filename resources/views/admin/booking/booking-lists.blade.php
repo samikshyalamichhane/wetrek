@@ -18,11 +18,7 @@
     <div class="ibox">
         <div class="ibox-head">
             <div class="ibox-title">Bookings List</div>
-            <!-- <div>
-                <a class="btn btn-info btn-md" href="{{route('bookings.create')}}">Trekking Package Inquery</a>
-            </div> -->
         </div>
-
 
         <div class="ibox-body">
             <table id="example-table" class="table table-striped table-bordered table-hover" cellspacing="0" width="100%">

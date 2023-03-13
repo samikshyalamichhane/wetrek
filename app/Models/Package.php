@@ -33,6 +33,10 @@ class Package extends Model
     	return $this->belongsTo('App\Models\Activity','activity_id');
     }
 
+    public function destinations(){
+    	return $this->belongsTo('App\Models\Destination','destination_id');
+    }
+
     public function packageitinerary()
     {
       return $this->hasMany('App\Models\PackageItinerary', 'package_id')->orderBy('order_row');

@@ -62,7 +62,7 @@
                     </div>
 
                     <div class="single-info">
-                        <div class="info-texts"><a class="btn btn-yellow" href="#">Book Now <i class="fa fa-paper-plane" style="margin-top: 7px;"></i></a>
+                        <div class="info-texts"><a class="btn btn-yellow" href="{{route('bookingForm')}}">Book Now <i class="fa fa-paper-plane" style="margin-top: 7px;"></i></a>
 
                         </div>
                     </div>
@@ -70,18 +70,8 @@
                 </div>
             </div>
         </div>
-
-
-
-
         <div class="row">
-
-
             <div class="col-lg-8">
-
-
-
-
                 <section id="tabs">
                     <div class="container">
 
@@ -102,7 +92,7 @@
 
                                         <div class="tour-details-wrap">
                                             <h4 class="single-page-small-title pd-top-50">{{ $package->overview_title }}</h4>
-                                            {!! $package->overview_description !!}
+                                            {!! $package->description !!}
                                         </div>
                                     </div>
 

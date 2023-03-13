@@ -263,12 +263,12 @@
                              Booking Lists
                         </a>
                     </li>
-                    <li>
+                    {{--<li>
                         <a href="{{route('quoteLists')}}">
                             <span class="fa fa-plus"></span>
                             Request Quote Lists
                         </a>
-                    </li>
+                    </li>--}}
                     {{-- <li>
                         <a href="{{route('tourbookings.index')}}">
                             <span class="fa fa-plus"></span>

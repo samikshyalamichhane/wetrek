@@ -26,22 +26,20 @@
                 @foreach($destinationType->packages as $destination)
                 <div class="col-lg-6">
                     <div class="single-destinations-list style-four">
-                        <div class="blur-thumb" style="background-image:url({{asset('images/thumbnail/'. $destination->banner_image)}});"></div>
+                        <div class="blur-thumb" style="background-image:url({{ $destination->imageUrl() }});"></div>
                         <div class="details">
                           
                             
                             <h4 class="title"><a href="{{ route('resolvepath.show',$destination->slug) }}">{{$destination->name}}</a></h4>
-                            <p class="content">{!! Illuminate\Support\Str::limit($destination->description, 50) !!}</p>
+                            <p class="content">{!! Illuminate\Support\Str::limit($destination->description, 150) !!}</p>
                             <div class="list-price-meta">
-                                <ul class="tp-list-meta d-inline-block">
+                                <!-- <ul class="tp-list-meta d-inline-block">
                                     <li><i class="fa-solid fa-person-snowboarding"></i>{{count($destinationType->packages)}} packages</li>
-                                 
-                                    
-                                </ul>
-                                <!-- <div class="tp-price-meta d-inline-block">
+                                </ul> -->
+                                <div class="tp-price-meta d-inline-block">
                                     <p>Start With</p>
                                     <h2 class="tour-pric" style="color:#00ADE8">{{ $destination->price }} </h2>
-                                </div> -->
+                                </div>
                             </div>
                         </div>
                     </div>
