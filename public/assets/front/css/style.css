@@ -8660,3 +8660,13 @@ ul.common-list li{
   width: 100%;
 
 }
+.sameimg img{
+    height:280px;
+    object-fit:cover;
+    width:100%;
+}
+.sameimgs img{
+    height:220px;
+    object-fit:cover;
+    width:100%;
+}
