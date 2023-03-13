@@ -40,7 +40,7 @@
                             </div>
                         </div> -->
                         <!-- gallery-item -->
-                        @foreach($destination->destinationtype->where('publish',1) as $data)
+                        @foreach($destination->destinationtype as $data)
                         <div class="tp-gallery-item col-lg-4 col-md-6 col-12">
                             <div class="tp-gallery-item-img">
                                 <div class="thumb">
