@@ -139,7 +139,7 @@
                 </div>
 
             </div>
-            <div class="col-lg-10 offset-lg-1">
+            <div class="col-lg-10 offset-lg-1 sameimgs">
                 <div class="upcomming-card-slider upcomming-card-slider-2 tp-common-slider-style">
                     @foreach($destinations as $dest)
                     <div class="single-upconing-card">
@@ -211,7 +211,7 @@
                 @foreach($popularPackages as $popularPackage)
                     <div class="d-list-slider-item">
                         <div class="single-destinations-list ">
-                            <div class="thumb">
+                            <div class="thumb sameimg">
                                 <img src="{{$popularPackage->imageUrl()}}" alt="list">
 
                             </div>
