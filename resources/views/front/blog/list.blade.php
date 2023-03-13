@@ -34,9 +34,9 @@
                                    
                                 </div>
                                 <div class="single-blog-details">
-                                    <p class="date">19 September 2019</p>
+                                    <p class="date">{{ $blog->created_at->format('d F Y') }}</p>
                                     <h4 class="title"><a href="{{route('blogDetails',$blog->slug)}}">{{$blog->title}}</a></h4>
-                                    <p class="content">{!!$blog->short_description!!}</p>
+                                    <p class="content">{!! Illuminate\Support\Str::limit($blog->short_description, 500) !!}</p>
                                     <a class="btn-read-more" href="{{route('blogDetails',$blog->slug)}}"><span>Read More<i class="la la-arrow-right"></i></span></a>
                                 </div>
                             </div>
@@ -176,7 +176,7 @@
                                     <div class="media">
                                         <img src="{{asset('/images/thumbnail/' . $blog->image)}}" alt="widget">
                                         <div class="media-body">
-                                            <span class="post-date">20 July 2019</span>
+                                            <span class="post-date">{{ $blog->created_at->format('d F Y') }}</span>
                                             <h6 class="title"><a href="{{route('blogDetails',$blog->slug)}}">{{$blog->title}}</a></h6>
                                         </div>
                                     </div>
