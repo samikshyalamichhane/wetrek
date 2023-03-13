@@ -92,7 +92,7 @@
 
                                         <div class="tour-details-wrap">
                                             <h4 class="single-page-small-title pd-top-50">{{ $package->overview_title }}</h4>
-                                            {!! $package->description !!}
+                                            {!! $package->overview_description !!}
                                         </div>
                                     </div>
 
