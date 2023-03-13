@@ -29,7 +29,7 @@
                             <img src="{{asset('/images/thumbnail/' . $blog->image)}}" alt="blog">
                         </div>
                         <div class="single-blog-details">
-                            <p class="date mb-0">19 September 2019</p>
+                            <p class="date mb-0">{{ $blog->created_at->format('d F Y') }}</p>
                             <h3 class="title">{{$blog->title}}</h3>
                             <p class="content mb-0"></p>
                         </div>
@@ -73,7 +73,7 @@
                                     <div class="media">
                                         <img src="{{asset('/images/thumbnail/' . $blog->image)}}" alt="widget">
                                         <div class="media-body">
-                                            <span class="post-date">20 July 2019</span>
+                                            <span class="post-date">{{ $blog->created_at->format('d F Y') }}</span>
                                             <h6 class="title"><a href="{{route('blogDetails',$blog->slug)}}">{{$blog->title}}</a></h6>
                                         </div>
                                     </div>
