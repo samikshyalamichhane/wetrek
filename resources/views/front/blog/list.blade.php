@@ -36,13 +36,122 @@
                                 <div class="single-blog-details">
                                     <p class="date">{{ $blog->created_at->format('d F Y') }}</p>
                                     <h4 class="title"><a href="{{route('blogDetails',$blog->slug)}}">{{$blog->title}}</a></h4>
-                                    <p class="content">{!! Illuminate\Support\Str::limit($blog->short_description, 500) !!}</p>
+                                    <p class="content">{!! Illuminate\Support\Str::limit($blog->short_description, 150) !!}</p>
                                     <a class="btn-read-more" href="{{route('blogDetails',$blog->slug)}}"><span>Read More<i class="la la-arrow-right"></i></span></a>
                                 </div>
                             </div>
                         </div>
                         @endforeach
-                        
+                        {{--<div class="col-lg-6 col-md-6">
+                            <div class="single-blog">
+                                <div class="thumb">
+                                    <img src="assets/img/tour/tour-17-580x450.jpg" alt="blog">
+                                    
+                                </div>
+                                <div class="single-blog-details">
+                                    <p class="date">19 September 2019</p>
+                                    <h4 class="title"><a href="blog-details.html">Aliquam faucibus, nec commodo</a></h4>
+                                    <p class="content">Praesent eu dolor eu orci vehicula euismod. Vivamus sed sollicitudin libero, vel malesuada</p>
+                                    <a class="btn-read-more" href="blog-details.html"><span>Read More<i class="la la-arrow-right"></i></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="single-blog">
+                                <div class="thumb">
+                                    <img src="assets/img/tour/tour-17-580x450.jpg" alt="blog">
+                                   
+                                </div>
+                                <div class="single-blog-details">
+                                    <p class="date">19 September 2019</p>
+                                    <h4 class="title"><a href="blog-details.html">Why You Shouldn Elephants France.</a></h4>
+                                    <p class="content">Praesent eu dolor eu orci vehicula euismod. Vivamus sed sollicitudin libero, vel malesuada</p>
+                                    <a class="btn-read-more" href="blog-details.html"><span>Read More<i class="la la-arrow-right"></i></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="single-blog">
+                                <div class="thumb">
+                                    <img src="assets/img/tour/tour-17-580x450.jpg" alt="blog">
+                                   
+                                </div>
+                                <div class="single-blog-details">
+                                    <p class="date">19 September 2019</p>
+                                    <h4 class="title"><a href="blog-details.html">Duis pretium gravida enim, vel maximus</a></h4>
+                                    <p class="content">Praesent eu dolor eu orci vehicula euismod. Vivamus sed sollicitudin libero, vel malesuada</p>
+                                    <a class="btn-read-more" href="blog-details.html"><span>Read More<i class="la la-arrow-right"></i></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="single-blog">
+                                <div class="thumb">
+                                    <img src="assets/img/tour/tour-17-580x450.jpg" alt="blog">
+                                   
+                                </div>
+                                <div class="single-blog-details">
+                                    <p class="date">19 September 2019</p>
+                                    <h4 class="title"><a href="blog-details.html">Duis pretium gravida enim</a></h4>
+                                    <p class="content">Praesent eu dolor eu orci vehicula euismod. Vivamus sed sollicitudin libero, vel malesuada</p>
+                                    <a class="btn-read-more" href="blog-details.html"><span>Read More<i class="la la-arrow-right"></i></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="single-blog">
+                                <div class="thumb">
+                                    <img src="assets/img/tour/tour-17-580x450.jpg" alt="blog">
+                                   
+                                </div>
+                                <div class="single-blog-details">
+                                    <p class="date">19 September 2019</p>
+                                    <h4 class="title"><a href="blog-details.html">Why You Shouldn Elephants France.</a></h4>
+                                    <p class="content">Praesent eu dolor eu orci vehicula euismod. Vivamus sed sollicitudin libero, vel malesuada</p>
+                                    <a class="btn-read-more" href="blog-details.html"><span>Read More<i class="la la-arrow-right"></i></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="single-blog">
+                                <div class="thumb">
+                                    <img src="assets/img/tour/tour-17-580x450.jpg" alt="blog">
+                                    
+                                </div>
+                                <div class="single-blog-details">
+                                    <p class="date">19 September 2019</p>
+                                    <h4 class="title"><a href="blog-details.html">Etiam convallis elementum sapien</a></h4>
+                                    <p class="content">Praesent eu dolor eu orci vehicula euismod. Vivamus sed sollicitudin libero, vel malesuada</p>
+                                    <a class="btn-read-more" href="blog-details.html"><span>Read More<i class="la la-arrow-right"></i></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="single-blog">
+                                <div class="thumb">
+                                    <img src="assets/img/tour/tour-17-580x450.jpg" alt="blog">
+                                    
+                                </div>
+                                <div class="single-blog-details">
+                                    <p class="date">19 September 2019</p>
+                                    <h4 class="title"><a href="blog-details.html">Duis porta, ligula rhoncus euismod</a></h4>
+                                    <p class="content">Praesent eu dolor eu orci vehicula euismod. Vivamus sed sollicitudin libero, vel malesuada</p>
+                                    <a class="btn-read-more" href="blog-details.html"><span>Read More<i class="la la-arrow-right"></i></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12  text-md-center text-left">
+                            <div class="tp-pagination text-md-center text-left d-inline-block mt-4">
+                                <ul>
+                                    <li><a class="prev page-numbers" href="#"><i class="la la-long-arrow-left"></i></a></li>
+                                    <li><span class="page-numbers">1</span></li>
+                                    <li><span class="page-numbers current">2</span></li>
+                                    <li><a class="page-numbers" href="#">3</a></li>
+                                    <li><a class="page-numbers" href="#">4</a></li>
+                                    <li><a class="next page-numbers" href="#"><i class="la la-long-arrow-right"></i></a></li>
+                                </ul>                          
+                            </div>
+                        </div>--}}
                     </div>
                 </div>
                 <div class="col-lg-4">
