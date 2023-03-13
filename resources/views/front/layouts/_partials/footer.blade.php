@@ -171,6 +171,7 @@
   <script src="{{asset('assets/front/js/owl.carousel.min.js')}}"></script>
   <script src="{{asset('assets/front/js/wow.min.js')}}"></script>
   <script src="{{asset('assets/front/js/slick.js')}}"></script>
+   <script src="{{asset('assets/front/js/bootstrap.min.js')}}"></script>
   <script src="{{asset('assets/front/js/waypoints.min.js')}}"></script>
   <script src="{{asset('assets/front/js/jquery.counterup.min.js')}}"></script>
   <script src="{{asset('assets/front/js/imagesloaded.pkgd.min.js')}}"></script>

@@ -8665,8 +8665,6 @@ ul.common-list li{
     object-fit:cover;
     width:100%;
 }
-.sameimgs img{
-    height:220px;
-    object-fit:cover;
-    width:100%;
+.sameimgs .shadow{
+    
 }

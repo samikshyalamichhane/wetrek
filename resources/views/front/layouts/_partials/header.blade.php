@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="{{asset('assets/front/css/animate.css')}}">
     <link rel="stylesheet" href="{{asset('assets/front/css/magnific-popup.css')}}">
     <link rel="stylesheet" href="{{asset('assets/front/css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/front/css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/front/css/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/front/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/front/css/slick.css')}}">
     <link rel="stylesheet" href="{{asset('assets/front/css/swiper.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/front/css/nice-select.css')}}">
