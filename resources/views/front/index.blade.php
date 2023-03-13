@@ -247,7 +247,7 @@
 
     <div class="instagram-slider1 gallery-filter-area">
         <div class="gallery-sizer col-1"></div>
-        @foreach($galleryImages as $img)
+        @foreach($galleryImages->take(6) as $img)
         <div class="instagram-slider-item tp-gallery-item col-md-2">
             <div class="tp-gallery-item-img">
                 <a class="popup-thumb" href="/images/main/{{$img->image}}" data-effect="mfp-zoom-in">
