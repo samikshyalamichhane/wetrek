@@ -56,8 +56,11 @@ class PackageController extends Controller
     // if ($request->hasFile('image')) {
     //   $formData['image'] = $this->imageProcessing($request->image, 1920, 886, 'yes');
     // }
-    if ($request->has('image')) {
-      $formData['image'] = $request->image->store('images/packages');
+    if ($request->hasFile('image')) {
+      $file = $request->image;
+      $filename = time() . '-image.' . $file->getClientOriginalExtension();
+      $path = $file->storeAs('public/packages', $filename);
+      $formData['image'] = $path;
     }
     if ($request->hasFile('package_pdf')) {
       $formData['package_pdf'] = $this->documentProcessing($request->package_pdf);
