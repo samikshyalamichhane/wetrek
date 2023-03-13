@@ -9,14 +9,13 @@
 
 
                           <div class="footer-widget widget">
-                              <h4 class="widget-title">Helicopter Tours in Nepal</h4>
+                              <h4 class="widget-title">Travel Guide</h4>
                               <ul class="widget_nav_menu">
-                                  <li><a href="#">Everest base camp heli tour</a></li>
-                                  <li><a href="#">Annapurna base camp heli tour</a></li>
-                                  <li><a href="#">Langtang heli tour</a></li>
-                                  <li><a href="#">Gosaikunda heli tour</a></li>
-                                  <li><a href="#">Muktinath heli tour</a></li>
-
+                                  <li><a href="{{route('pagesDetail',['nepal-visa'])}}">Nepal Visa</a></li>
+                                  <li><a href="{{route('pagesDetail',['accomodation'])}}">Accommodations</a></li>
+                                  <li><a href="{{route('pagesDetail',['best-time-to-travel'])}}">Best Time to Travel</a></li>
+                                  <li><a href="{{route('pagesDetail',['who-we-are'])}}">Who We Are</a></li>
+                                  <li><a href="{{route('pagesDetail',['why-travel-with-us'])}}">Why Travel With Us</a></li>
                               </ul>
                           </div>
 
@@ -29,7 +28,7 @@
                   <div class="footer-widget widget">
                       <h4 class="widget-title">Treks by Region</h4>
                       <ul class="widget_nav_menu">
-                        @foreach($dashboard_destination_types as $destination)
+                          @foreach($dashboard_destination_types as $destination)
                           <li><a href="{{route('resolvepath.show',$destination->slug)}}">{{$destination->title}}</a></li>
                           @endforeach
                       </ul>
@@ -171,7 +170,7 @@
   <script src="{{asset('assets/front/js/owl.carousel.min.js')}}"></script>
   <script src="{{asset('assets/front/js/wow.min.js')}}"></script>
   <script src="{{asset('assets/front/js/slick.js')}}"></script>
-   <script src="{{asset('assets/front/js/bootstrap.min.js')}}"></script>
+  <script src="{{asset('assets/front/js/bootstrap.min.js')}}"></script>
   <script src="{{asset('assets/front/js/waypoints.min.js')}}"></script>
   <script src="{{asset('assets/front/js/jquery.counterup.min.js')}}"></script>
   <script src="{{asset('assets/front/js/imagesloaded.pkgd.min.js')}}"></script>
