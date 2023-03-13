@@ -53,6 +53,7 @@ use Mail;
 use App\Mail\SubscriberRequest;
 use App\Models\Category;
 use App\Models\Galleryimage;
+use App\Models\PackageEnquiry;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Pagination\LengthAwarePaginator;
 
@@ -941,21 +942,21 @@ class HomeController extends Controller
   }
 
 
-  public function saveBlogEnquiry(Request $request)
+  public function packageEnquiry(Request $request)
   {
     $request->validate([
       'name' => 'required',
       'email' => 'required',
-      'subject' => 'required',
+      'message1' => 'required',
+      'phone' => 'required',
+      'how_found' => 'required',
+      'nationality' => 'required',
     ]);
     $formInput = $request->all();
-    Contactus::create($formInput);
-    return redirect()->back()->with('message', 'Message Send Successfuly.');
+    $formInput['ip_address'] = request()->ip();
+    PackageEnquiry::create($formInput);
+    return redirect()->back()->with('message', 'Form Submitted Successfuly.');
   }
-
-
-
-
 
   public function faq()
   {

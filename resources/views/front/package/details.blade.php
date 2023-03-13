@@ -56,7 +56,7 @@
 
 
                     <div class="single-info">
-                        <div class="info-texts"><a class="btn btn-yellow" href="#">Chat Via WhatsApp <i class="fa-brands fa-whatsapp" style="margin-top: 7px;"></i></a>
+                        <div class="info-texts"><a class="btn btn-yellow" href="https://wa.me/{{@$dashboard_settings->whatsapp}}">Chat Via WhatsApp <i class="fa-brands fa-whatsapp" style="margin-top: 7px;"></i></a>
 
                         </div>
                     </div>
@@ -231,10 +231,13 @@
                 <div class="sidebar-area sidebar-area-inner-page">
                     <div class="widget tour-list-widget">
                         <h3><strong>Inquiry Now</strong></h3>
+                        <form action="{{route('packageEnquiry', $package->id )}}" method="post">
+                            @csrf
+                            <input type="hidden" name="package_id" value="{{$package->id}}">
                         <div class="widget-tour-list-meta">
                             <div class="single-widget-search-input-title"><i class="fa fa-dot-circle-o"></i>Full Name</div>
                             <div class="single-widget-search-input">
-                                <input type="text" placeholder="Write name here">
+                                <input type="text" name="name" placeholder="Write name here">
                             </div>
                         </div>
 
@@ -242,7 +245,7 @@
                         <div class="widget-tour-list-meta">
                             <div class="single-widget-search-input-title"><i class="fa fa-dot-circle-o"></i>Nationality</div>
                             <div class="single-widget-search-input">
-                                <input type="text" placeholder="Write nationality here">
+                                <input type="text" name="nationality" placeholder="Write nationality here">
                             </div>
                         </div>
 
@@ -250,38 +253,39 @@
                         <div class="widget-tour-list-meta">
                             <div class="single-widget-search-input-title"><i class="fa fa-dot-circle-o"></i>Phone Number</div>
                             <div class="single-widget-search-input">
-                                <input type="phone" placeholder="Write here">
+                                <input type="phone" name="phone" placeholder="Write here">
                             </div>
                         </div>
 
                         <div class="widget-tour-list-meta">
                             <div class="single-widget-search-input-title"><i class="fa fa-dot-circle-o"></i>Email</div>
                             <div class="single-widget-search-input">
-                                <input type="email" placeholder="Write here">
+                                <input type="email" name="email" placeholder="Write here">
                             </div>
                         </div>
                         <div class="single-widget-search-input-title">How did you found us?</div>
                         <div class="single-widget-search-input">
-                            <select class="select w-100 custom-select">
-                                <option value="1">Internet Search</option>
-                                <option value="2">Facebook</option>
-                                <option value="3">Travel Show</option>
-                                <option value="3">Trip Advisor</option>
-                                <option value="3">Instagram</option>
-                                <option value="3">Blog</option>
+                            <select class="select w-100 custom-select" name="how_found">
+                                <option value="internet">Internet Search</option>
+                                <option value="facebook">Facebook</option>
+                                <option value="travel_show">Travel Show</option>
+                                <option value="trip_advisor">Trip Advisor</option>
+                                <option value="insatgram">Instagram</option>
+                                <option value="blog">Blog</option>
                             </select>
                         </div>
 
                         <div class="widget-tour-list-meta">
                             <div class="single-widget-search-input-title">Message</div>
                             <div class="single-widget-search-input">
-                                <textarea placeholder="Type"></textarea>
+                                <textarea name="message1" placeholder="Type"></textarea>
                             </div>
                         </div>
 
                         <div class="text-lg-center text-left">
-                            <a class="btn btn-yellow" href="#">Submit</a>
+                            <button class="btn btn-yellow" type="submit">Submit</button>
                         </div>
+                        </form>
                     </div>
                 </div>
 

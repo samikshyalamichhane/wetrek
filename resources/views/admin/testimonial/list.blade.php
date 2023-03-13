@@ -37,8 +37,7 @@
                     <tr>
                       <th>SN</th>
                       <th>Name</th>
-                      <th>Country</th>
-                      <th>Words</th>
+                      <!-- <th>Words</th> -->
                       <th>Image</th>
                       <th>Published</th>
                       <th>Options</th>
@@ -48,13 +47,9 @@
 
                   @if($details->count())
                     @foreach($details as $key => $data)
-                    {{-- [Note: Post is changed to country ] --}}
-                    {{$country = $data->post }}
                     <tr>
                       <td>{{++$key}}</td>
                       <td>{{$data->name}}</td>
-                      <td>{{$country}}</td>
-                      <td>{{str_limit($data->words, 200)}}</td>
                       <!-- <td>{{$data->short_description}}</td> -->
                       <td><a href="/images/main/{{$data->image}}" target="_blank"><img style="height:90px; width: 90px;" src="{{$data->image ? asset('/images/main/' . $data->image) : '/assets/admin/images/image.jpg' }}"></a></td>
 

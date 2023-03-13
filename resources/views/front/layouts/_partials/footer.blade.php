@@ -44,7 +44,7 @@
                           <li><a href="{{route('pagesDetail',['why-we-trek'])}}">Why We Trek</a></li>
                           <li><a href="{{route('team')}}">Our Team</a></li>
                           <li><a href="{{route('pagesDetail',['terms-and-condition'])}}">Terms & Conditions</a></li>
-                          <li><a href="#">Testimonial</a></li>
+                          <li><a href="{{route('getTestimonial')}}">Testimonial</a></li>
                           <li><a href="{{route('pagesDetail',['csr'])}}">CSR</a></li>
                           <li><a href="{{route('blogList')}}">Blogs</a></li>
 

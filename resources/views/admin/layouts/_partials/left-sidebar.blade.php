@@ -345,7 +345,7 @@
             </li> --}}
 
 
-            {{-- <li>
+             <li>
                 <a href="javascript:;">
                     <i class="sidebar-item-icon fa fa-sitemap"></i>
                     <span class="nav-label">Testimonial</span>
@@ -366,7 +366,7 @@
                     </li>
 
                 </ul>
-            </li> --}}
+            </li> 
 
             <li>
                 <a href="javascript:;">
@@ -385,6 +385,26 @@
                         <a href="{{route('travelersreview.index')}}">
                             <span class="fa fa-circle-o"></span>
                             All Travelers Review
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+
+            <li>
+                <a href="javascript:;">
+                    {{-- <i class="sidebar-item-icon fa fa-sitemap"></i> --}}
+                    <i class='sidebar-item-icon fa fa-address-card'></i>
+
+
+                    <span class="nav-label">Package Inquiry List</span>
+                    <i class="fa fa-angle-left arrow"></i>
+                </a>
+                <ul class="nav-2-level collapse">
+                    <li>
+                        <a href="{{route('packageEnquiryList')}}">
+                            <span class="fa fa-plus"></span>
+                            Inquiry List
                         </a>
                     </li>
 

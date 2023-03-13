@@ -61,7 +61,7 @@
             </div> -->
             <div class="form-group">
                 <button class="btn btn-info btn-block" type="submit">Login</button>
-                <a href="{{ route('forget.password.get') }}">Reset Password</a>
+                <a href="{{ route('forget.password.get') }}">Forget Password</a>
             </div>
             <!-- <div class="social-auth-hr">
                 <span>Or login with</span>

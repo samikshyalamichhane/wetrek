@@ -39,8 +39,7 @@ class ViewComposer {
 		$categories=Category::with('regions')->publish()->orderBy('created_at','asc')->get();
 		$settings=Setting::first();
 		$destinations = Destination::with('destinationtype')->published()->take(5)->get();
-		// dd($destinations);
-		$packages=Package::published()->orderBy('created_at','desc')->get();
+		$luxurypackages=Package::select('package_name','slug')->published()->orderBy('created_at','desc')->get();
 		$whyWithUs=Whywithus::published()->get();
 		$view->with([
 			'dashboard_categories'=>$categories,
@@ -48,6 +47,7 @@ class ViewComposer {
 			'dashboard_settings'=>$settings,
 			'dashboard_destination_types'=>$destination_types,
 			'dashboard_whyWithUs'=>$whyWithUs,
+			'dashboard_luxurypackages'=>$luxurypackages,
 		]);
 	}
 

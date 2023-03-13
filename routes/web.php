@@ -136,10 +136,14 @@ Route::group(['middleware' => 'auth', 'namespace' => 'Admin', 'prefix' => 'admin
 *User Enquiry
 */
   Route::get('enquiry/lists', 'EnquiryController@enquiryList')->name('enquiryList');
+  Route::get('package-enquiry/lists', 'EnquiryController@packageEnquiryList')->name('packageEnquiryList');
+  
   Route::post('contact-view', 'EnquiryController@viewContact')->name('viewContact');
+  Route::post('package-enquiry/view', 'EnquiryController@viewPackageEnquiry')->name('viewPackageEnquiry');
 
 
   Route::delete('enquiry/remove/{id}', 'EnquiryController@removeEnquiry')->name('userenquiry.destroy');
+  Route::delete('package-enquiry/remove/{id}', 'EnquiryController@removePackageEnquiry')->name('removePackageEnquiry');
 
   //Suscriber
   Route::get('enquiry/subscriber', 'EnquiryController@subscriberList')->name('subscriberList');
@@ -232,6 +236,7 @@ Route::group(['namespace' => 'Front'], function () {
   Route::get('payment-fail', 'RedirectUrlController@paymentFailure')->name('paymentFailure');
   Route::get('payment-cancel', 'RedirectUrlController@paymentCancel')->name('paymentCancel');
 
+  Route::post('/package-enquiry/{id}', 'HomeController@packageEnquiry')->name('packageEnquiry');
 
   Route::get('{resolvePath}', 'ResolveController@show')->name('resolvepath.show');
 

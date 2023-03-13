@@ -57,15 +57,13 @@
                 <div class="col-md-3">
                     <h3>Find Your Holiday</h3>
                 </div>
-
+                <!-- <form action="{{ route('findAll') }}" method="get"> -->
                 <div class="col-md-2">
                     <div class="tp-search-single-wrap float-left">
                         <select class="select">
-                            <option value="1">Destinations</option>
-                            <option value="2">Nepal</option>
-                            <option value="3">India</option>
-                            <option value="4">Bhutan</option>
-
+                        @foreach($dashboard_destinations as $destination)
+                            <option value="{{route('resolvepath.show',$destination->id)}}">{{$destination->country_name}}</option>
+                        @endforeach
                         </select>
                         <i class="fa fa-plus-circle"></i>
                     </div>
@@ -73,16 +71,14 @@
                 <div class="col-md-2">
                     <div class="tp-search-single-wrap float-left w-100">
                         <select class="select w-100">
-                            <option value="1">Activity</option>
-                            <option value="2">Trekes in Nepal</option>
-                            <option value="3">Peak Climbing</option>
-                            <option value="4">Tours in Nepal</option>
-                            <option value="5">Hiking in Nepal</option>
+                        @foreach($dashboard_destination_types as $dest)
+                            <option value="1">{{$dest->title}}</option>
+                        @endforeach
                         </select>
                         <i class="fa fa-plus-circle"></i>
                     </div>
                 </div>
-                <div class="col-md-2 ">
+                {{--<div class="col-md-2 ">
                     <div class="tp-search-single-wrap float-left w-100">
                         <select class="select w-100">
                             <option value="1">Duration</option>
@@ -93,10 +89,11 @@
                         </select>
                         <i class="fa fa-plus-circle"></i>
                     </div>
-                </div>
+                </div>--}}
                 <div class="col-lg-2 col-md-2">
-                    <a class="btn btn-yellow" href="#">Search</a>
+                    <button class="btn btn-yellow" type="submit">Search</a>
                 </div>
+                <!-- </form> -->
             </div>
         </div>
     </div>
@@ -151,7 +148,7 @@
                         </div>
 
                         <div class="details">
-                            <h3 class="title"><a href="#">{{$dest->country_name}}</a></h3>
+                            <h3 class="title"><a href="{{route('resolvepath.show',$dest->slug)}}">{{$dest->country_name}}</a></h3>
                             <p>{{$dest->heading_title}}</p>
 
                         </div>
@@ -184,7 +181,7 @@
                     </div>
                     <div class="details">
 
-                        <h4 class="title">{{$bestsell->package_name}}</h4>
+                        <h4 class="title"><a href="{{route('resolvepath.show',$bestsell->slug)}}">{{$bestsell->package_name}}</a></h4>
 
                         <div class="tp-price-meta">
                             <p class="location"><img src="{{asset('assets/front/img/icons/days-1.png')}}" alt="map" class="float-left">Duration<br>{{ $bestsell->days_and_nights }}</p>
@@ -219,8 +216,7 @@
 
                             </div>
                             <div class="details">
-                                <h4 class="title">{{$popularPackage->package_name}}</h4>
-                                <!-- <p class="content">Atmosphere of the sunny country</p> -->
+                                <h4 class="title"><a href="{{route('resolvepath.show',$popularPackage->slug)}}">{{$popularPackage->package_name}}</a></h4>
                                 <div class="tp-price-meta">
                                     <p class="location"><img src="{{asset('assets/front/img/icons/days-1.png')}}" alt="map" class="float-left">Duration<br>1 Day</p>
                                     <h2>{{$popularPackage->price}} </h2>
@@ -367,7 +363,7 @@
                     </div>
                     <div class="details">
 
-                        <h4 class="title">{{$blog->title}}</h4>
+                        <h4 class="title"><a href="{{route('blogDetails',$blog->slug)}}">{{$blog->title}}</a></h4>
 
                         <div class="tp-price-meta">
                             <p class="location"><img src="{{asset('assets/front/img/icons/icon _user_.png')}}" alt="map" class="float-left">{{$blog->author}}</p>
