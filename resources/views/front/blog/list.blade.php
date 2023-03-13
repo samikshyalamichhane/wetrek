@@ -36,7 +36,7 @@
                                 <div class="single-blog-details">
                                     <p class="date">{{ $blog->created_at->format('d F Y') }}</p>
                                     <h4 class="title"><a href="{{route('blogDetails',$blog->slug)}}">{{$blog->title}}</a></h4>
-                                    <p class="content">{!! Illuminate\Support\Str::limit($blog->short_description, 500) !!}</p>
+                                    <p class="content">{!! Illuminate\Support\Str::limit($blog->short_description, 250) !!}</p>
                                     <a class="btn-read-more" href="{{route('blogDetails',$blog->slug)}}"><span>Read More<i class="la la-arrow-right"></i></span></a>
                                 </div>
                             </div>
