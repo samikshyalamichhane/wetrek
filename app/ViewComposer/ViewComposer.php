@@ -39,7 +39,7 @@ class ViewComposer {
 		$categories=Category::with('regions','packages')->publish()->orderBy('created_at','asc')->get();
 		$settings=Setting::first();
 		$destinations = Destination::with('destinationtype')->published()->take(5)->get();
-		$luxurypackages=Package::select('package_name','slug')->published()->orderBy('created_at','desc')->get();
+		$luxurypackages=Package::select('package_name','slug')->where('luxury_package',1)->published()->orderBy('created_at','desc')->get();
 		$whyWithUs=Whywithus::published()->get();
 		$view->with([
 			'dashboard_categories'=>$categories,
