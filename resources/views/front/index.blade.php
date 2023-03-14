@@ -322,7 +322,7 @@
                     <div>
                         <div class="testititle"><b>{{$review->title}}</b></div>
                         {!! $review->words !!}
-                        <div class="single-comment-wrap">
+                        <div class="single-comment-wrap ttimg">
                             <div class="thumb">
                                 <img src="{{asset('/images/main/' . $review->image)}}" alt="img" height="75px" >
                             </div>
@@ -382,7 +382,7 @@
 
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <div class="partner-box">
+                <div class="partner-box ass">
                     <h4>Associated With</h4>
                     @foreach($associates as $associate)
                     <span><img src="{{asset('/images/main/' . $associate->image)}}" alt=""></span>
