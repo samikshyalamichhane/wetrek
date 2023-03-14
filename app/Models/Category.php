@@ -28,7 +28,7 @@ class Category extends Model
 
     public function packages()
     {
-        return $this->hasMany('App\Models\Package', 'region_id', 'id');
+        return $this->hasMany('App\Models\Package', 'category_id', 'id');
     }
 
     public function scopePublish($query)
