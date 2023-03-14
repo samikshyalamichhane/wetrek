@@ -82,7 +82,7 @@ class Package extends Model
     }
     public function scopePopulartours($query)
     {
-      return $query->wherePopular_tours(1);
+      return $query->wherepopular_package(1);
     }
 
     public function imageUrl()

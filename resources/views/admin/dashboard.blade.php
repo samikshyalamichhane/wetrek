@@ -1,5 +1,4 @@
 @extends('admin.layouts.app')
-@section('title','Dashboard')
 @push('admin.styles')
 @endpush
 @section('content')
@@ -7,19 +6,16 @@
 
   <div class="col-sm-12">
     @include('admin.layouts._partials.messages.info')
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
-      </ol>
-    </nav>
   </div>
 
   <div class="col-sm-12">
     <div class="row">
-      
+      @php
+      $count= @$dashboard_packages->count();
+      @endphp
       <div class="col-sm-3">
         <div id="card1" class="card border-primary  mb-3" style="max-width: 18rem;">
-          <div class="card-header" id="num"></div>
+          <div class="card-header" id="num">{{$count}}</div>
           <div class="card-body text-primary">
             <h3 class="card-title" id="title">Packages</h3>
             <div class="icon">
@@ -32,10 +28,12 @@
       </div>
 
 
-      
+      @php
+      $count= $dashboard_destinations->count();
+      @endphp
       <div class="col-sm-3">
         <div id="card2" class="card border-primary  mb-3" style="max-width: 18rem;">
-          <div class="card-header" id="num"></div>
+          <div class="card-header" id="num">{{$count}}</div>
           <div class="card-body text-primary">
             <h3 class="card-title" id="title">Destinations</h3>
             <div class="icon">
@@ -47,10 +45,12 @@
         </div>
       </div>
 
-      
+      @php
+      $count= $dashboard_destination_types->count();
+      @endphp
       <div class="col-sm-3">
         <div id="card5" class="card border-primary  mb-3" style="max-width: 18rem;">
-          <div class="card-header" id="num"></div>
+          <div class="card-header" id="num">{{$count}}</div>
           <div class="card-body text-primary">
             <h3 class="card-title" id="title">Destination Types</h3>
             <div class="icon">
@@ -62,10 +62,12 @@
         </div>
       </div>
 
-      
+      @php
+      $count= @$dashboard_blogs->count();
+      @endphp
       <div class="col-sm-3">
         <div id="card3" class="card border-primary  display: flex; mb-3" id="card" style="max-width: 18rem;">
-          <div class="card-header" id="num"></div>
+          <div class="card-header" id="num">{{$count}}</div>
           <div class="card-body text-primary">
             <h3 class="card-title" id="title">Blogs</h3>
             <div class="icon">
@@ -77,10 +79,24 @@
         </div>
       </div>
 
-      
-      
+      @php
+      $count= $dashboard_bookingLists->count();
+      @endphp
+      <div class="col-sm-3">
+        <div id="card6" class="card border-primary  display: flex; mb-3" id="card" style="max-width: 18rem;">
+          <div class="card-header" id="num">{{$count}}</div>
+          <div class="card-body text-primary">
+            <h3 class="card-title" id="title">Bookings</h3>
+            <div class="icon">
+              <i class="ion ion-pie-graph"></i>
+            </div>
+            <a id="link" href="{{route('bookingLists')}}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <p class="card-text"></p>
+          </div>
+        </div>
+      </div>
 
-     {{-- @php
+      @php
       $count= $dashboard_subscriber->count();
       @endphp
       <div class="col-sm-3">
@@ -108,7 +124,7 @@
             <div class="icon">
               <i class="ion ion-pie-graph"></i>
             </div>
-            <a id="link" href="{{route('quoteLists')}}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a id="link" href="{{route('packageEnquiryList')}}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
             <p class="card-text"></p>
           </div>
         </div>
@@ -129,7 +145,7 @@
             <p class="card-text"></p>
           </div>
         </div>
-      </div>--}}
+      </div>
 
     </div>
 
@@ -139,7 +155,7 @@
 
 </div>
 
-{{--<div class="page-content fade-in-up">
+<div class="page-content fade-in-up">
   <div class="ibox col-sm-12">
     <div class="row">
         <div class="ibox-head col-sm-6">
@@ -206,7 +222,7 @@
                     <td>{{$data->no_of_traveller}}</td>
                     <td>{{$data->first_name}}</td>
                     <!-- <td>{{date('Y-m-d', strtotime($data->costanddate->start_date ?? ""))}} to {{date('Y-m-d', strtotime($data->costanddate->end_date ?? ""))}}</td> -->
-                    <td>{{@$data->package->package_name}}</td>
+                    <td>{{$data->package->package_name}}</td>
                     <td><a href="" class="btn btn-success btn-sm booking-view" data-id="{{$data->id}}"><i class="fa fa-eye"></i></a></td>
                   </tr>
                 @endforeach
@@ -276,7 +292,7 @@
         </div>
       </div>
   </div>
-</div>--}}
+</div>
 <style type="text/css">
   #card1 {
     background-color: #3e3478
