@@ -3,7 +3,7 @@
       <div class="container">
 
           <div class="row">
-              <div class="col-lg-3 col-md-3">
+              <div class="col-lg-2 col-md-3">
                   <div class="footer-widget widget">
                       <div class="about_us_widget">
 
@@ -51,7 +51,7 @@
                       </ul>
                   </div>
               </div>
-              <div class="col-lg-2 col-md-3">
+              <div class="col-lg-3 col-md-3">
                   <div class="footer-widget widget ">
                       <div class="widget-contact">
                           <h4 class="widget-title">Nepal Contact Adress</h4>

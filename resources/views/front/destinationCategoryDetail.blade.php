@@ -27,7 +27,7 @@
                 <div class="col-lg-6">
                     <div class="single-destinations-list style-four">
                         <div class="blur-thumb" style="background-image:url({{ $destination->imageUrl() }});"></div>
-                        <div class="details">
+                        <div class="details newdetail">
                           
                             
                             <h4 class="title"><a href="{{ route('resolvepath.show',$destination->slug) }}">{{$destination->package_name}}</a></h4>
