@@ -1,5 +1,4 @@
 @extends('front.layouts.app')
-<title>We Trek | Who We Are</title>
 @section('content')
 <!-- breadcrumb area start -->
 <div class="breadcrumb-area jarallax" style="background-image:url({{ $dashboard_settings->whoweare_bannerUrl() }});">

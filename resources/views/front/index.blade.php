@@ -5,45 +5,45 @@
     <div class="banner-slider">
         @foreach($sliders as $slider)
         <div class="banner-slider-item " style="background-image: url({{asset('images/main/'.$slider->image)}} );>
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-8 col-lg-9 offset-xl-2 offset-lg-1">
-                        <div class="row">
-                            <div class="col-lg-9 col-sm-8">
-                                <div class="banner-inner">
+            <div class=" container">
+            <div class="row">
+                <div class="col-xl-8 col-lg-9 offset-xl-2 offset-lg-1">
+                    <div class="row">
+                        <div class="col-lg-9 col-sm-8">
+                            <div class="banner-inner">
 
-                                    <h2 class="banner-title s-animate-2">{{$slider->title}}</h2>
-                                    <p class="banner-cat s-animate-1">{{$slider->subtitle}}</p>
-                                </div>
+                                <h2 class="banner-title s-animate-2">{{$slider->title}}</h2>
+                                <p class="banner-cat s-animate-1">{{$slider->subtitle}}</p>
                             </div>
-
-
                         </div>
+
+
                     </div>
                 </div>
             </div>
         </div>
-        @endforeach
-
     </div>
-    <div class="banner-social-meta">
-        <div class="banner-slider-dots"></div>
+    @endforeach
 
-    </div>
-    <div class="container">
-        <div class="banner-slider-controls">
-            <div class="slider-nav tp-control-nav"></div>
-            <!--slider-nav-->
-            <div class="tp-slider-extra slider-extra">
-                <div class="text">
-                    <span class="first">01</span>
-                    <span class="devider">/</span>
-                    <span class="last"></span>
-                </div>
+</div>
+<div class="banner-social-meta">
+    <div class="banner-slider-dots"></div>
+
+</div>
+<div class="container">
+    <div class="banner-slider-controls">
+        <div class="slider-nav tp-control-nav"></div>
+        <!--slider-nav-->
+        <div class="tp-slider-extra slider-extra">
+            <div class="text">
+                <span class="first">01</span>
+                <span class="devider">/</span>
+                <span class="last"></span>
             </div>
-            <!--slider-extra-->
         </div>
+        <!--slider-extra-->
     </div>
+</div>
 </div>
 <!-- banner area end -->
 
@@ -51,32 +51,32 @@
 <div class="search-area tp-main-search-area">
     <div class="container">
         <div class="tp-main-search">
-        <form action="{{ route('findAll') }}" method="get">
-            <div class="row">
-                <div class="col-md-3">
-                    <h3>Find Your Holiday</h3>
-                </div>
-                <div class="col-md-2">
-                    <div class="tp-search-single-wrap float-left">
-                        <select class="select w-100" name="destination_id">
-                        @foreach($dashboard_destinations as $destination)
-                            <option value="{{$destination->id}}">{{$destination->country_name}}</option>
-                        @endforeach
-                        </select>
-                        <i class="fa fa-plus-circle"></i>
+            <form action="{{ route('findAll') }}" method="get">
+                <div class="row">
+                    <div class="col-md-3">
+                        <h3>Find Your Holiday</h3>
                     </div>
-                </div>
-                <div class="col-md-2">
-                    <div class="tp-search-single-wrap float-left w-100">
-                        <select class="select w-100" name="destinationtype_id">
-                        @foreach($dashboard_destination_types as $dest)
-                            <option value="{{$dest->id}}">{{$dest->title}}</option>
-                        @endforeach
-                        </select>
-                        <i class="fa fa-plus-circle"></i>
+                    <div class="col-md-2">
+                        <div class="tp-search-single-wrap float-left">
+                            <select class="select w-100" name="destination_id">
+                                @foreach($dashboard_destinations as $destination)
+                                <option value="{{$destination->id}}">{{$destination->country_name}}</option>
+                                @endforeach
+                            </select>
+                            <i class="fa fa-plus-circle"></i>
+                        </div>
                     </div>
-                </div>
-                {{--<div class="col-md-2 ">
+                    <div class="col-md-2">
+                        <div class="tp-search-single-wrap float-left w-100">
+                            <select class="select w-100" name="destinationtype_id">
+                                @foreach($dashboard_destination_types as $dest)
+                                <option value="{{$dest->id}}">{{$dest->title}}</option>
+                                @endforeach
+                            </select>
+                            <i class="fa fa-plus-circle"></i>
+                        </div>
+                    </div>
+                    {{--<div class="col-md-2 ">
                     <div class="tp-search-single-wrap float-left w-100">
                         <select class="select w-100" name="days_and_nights">
                             <option value="1">Duration</option>
@@ -88,10 +88,10 @@
                         <i class="fa fa-plus-circle"></i>
                     </div>
                 </div>--}}
-                <div class="col-lg-2 col-md-2">
-                    <button class="btn btn-yellow" type="submit">Search</a>
+                    <div class="col-lg-2 col-md-2">
+                        <button class="btn btn-yellow" type="submit">Search</a>
+                    </div>
                 </div>
-            </div>
         </div>
         </form>
     </div>
@@ -206,7 +206,7 @@
             </div>
             <div class="col-lg-10 offset-lg-1">
                 <div class="upcomming-card-slider upcomming-card-slider-2 tp-common-slider-style">
-                @foreach($popularPackages as $popularPackage)
+                    @foreach($popularPackages as $popularPackage)
                     <div class="d-list-slider-item">
                         <div class="single-destinations-list ">
                             <div class="thumb sameimg">
@@ -223,7 +223,7 @@
                         </div>
                     </div>
                     @endforeach
-                   
+
 
                 </div>
             </div>
@@ -260,45 +260,45 @@
         {{--<div class="instagram-slider-item tp-gallery-item col-md-2">
             <div class="tp-gallery-item-img">
                 <a class="popup-thumb" href="{{asset('assets/front/img/tour/bhutan.jpg')}}" data-effect="mfp-zoom-in">
-                    <img src="{{asset('assets/front/img/tour/nepal.jpg')}}" alt="image">
-                </a>
-            </div>
-
-        </div>
-        <div class="instagram-slider-item tp-gallery-item col-md-2">
-            <div class="tp-gallery-item-img">
-                <a class="popup-thumb" href="{{asset('assets/front/img/tour/tibet.jpg')}}" data-effect="mfp-zoom-in">
-                    <img src="{{asset('assets/front/img/tour/nepal.jpg')}}" alt="image">
-                </a>
-            </div>
-
-        </div>
-        <div class="instagram-slider-item tp-gallery-item col-md-2">
-            <div class="tp-gallery-item-img">
-                <a class="popup-thumb" href="{{asset('assets/front/img/tour/nepal.jpg')}}" data-effect="mfp-zoom-in">
-                    <img src="{{asset('assets/front/img/tour/nepal.jpg')}}" alt="image">
-                </a>
-            </div>
-
-        </div>
-
-        <div class="instagram-slider-item tp-gallery-item col-md-2">
-            <div class="tp-gallery-item-img">
-                <a class="popup-thumb" href="{{asset('assets/front/img/tour/bhutan.jpg')}}" data-effect="mfp-zoom-in">
-                    <img src="{{asset('assets/front/img/tour/bhutan.jpg')}}" alt="image">
-                </a>
-            </div>
-
-        </div>
-        <div class="instagram-slider-item tp-gallery-item col-md-2">
-            <div class="tp-gallery-item-img">
-                <a class="popup-thumb" href="{{asset('assets/front/img/tour/tibet.jpg')}}" data-effect="mfp-zoom-in">
-                    <img src="{{asset('assets/front/img/tour/tibet.jpg')}}" alt="image">
-                </a>
-            </div>
-
-        </div>--}}
+        <img src="{{asset('assets/front/img/tour/nepal.jpg')}}" alt="image">
+        </a>
     </div>
+
+</div>
+<div class="instagram-slider-item tp-gallery-item col-md-2">
+    <div class="tp-gallery-item-img">
+        <a class="popup-thumb" href="{{asset('assets/front/img/tour/tibet.jpg')}}" data-effect="mfp-zoom-in">
+            <img src="{{asset('assets/front/img/tour/nepal.jpg')}}" alt="image">
+        </a>
+    </div>
+
+</div>
+<div class="instagram-slider-item tp-gallery-item col-md-2">
+    <div class="tp-gallery-item-img">
+        <a class="popup-thumb" href="{{asset('assets/front/img/tour/nepal.jpg')}}" data-effect="mfp-zoom-in">
+            <img src="{{asset('assets/front/img/tour/nepal.jpg')}}" alt="image">
+        </a>
+    </div>
+
+</div>
+
+<div class="instagram-slider-item tp-gallery-item col-md-2">
+    <div class="tp-gallery-item-img">
+        <a class="popup-thumb" href="{{asset('assets/front/img/tour/bhutan.jpg')}}" data-effect="mfp-zoom-in">
+            <img src="{{asset('assets/front/img/tour/bhutan.jpg')}}" alt="image">
+        </a>
+    </div>
+
+</div>
+<div class="instagram-slider-item tp-gallery-item col-md-2">
+    <div class="tp-gallery-item-img">
+        <a class="popup-thumb" href="{{asset('assets/front/img/tour/tibet.jpg')}}" data-effect="mfp-zoom-in">
+            <img src="{{asset('assets/front/img/tour/tibet.jpg')}}" alt="image">
+        </a>
+    </div>
+
+</div>--}}
+</div>
 </div>
 <!-- instagram area end -->
 
@@ -324,7 +324,7 @@
                         {!! $review->words !!}
                         <div class="single-comment-wrap">
                             <div class="thumb">
-                                <img src="{{asset('/images/main/' . $review->image)}}" alt="img" height="75px" >
+                                <img src="{{asset('/images/main/' . $review->image)}}" alt="img" height="75px">
                             </div>
                             <div class="content">
                                 <h4 class="title">{{$review->name}}</h4>
@@ -404,13 +404,13 @@
                     <p>Please enter your email address using the fields below to receive all of the latest news and offers!</p>
                     <form action="{{route('saveSubscribers')}}" method="post">
                         @csrf
-                    <div class="input-group newslatter-wrap">
+                        <div class="input-group newslatter-wrap">
 
-                        <input type="text" class="form-control" name="email" placeholder="Email" required>
-                        <div class="input-group-append">
-                            <button class="btn btn-yellow" type="submit">subscribe</button>
+                            <input type="text" class="form-control" name="email" placeholder="Email" required>
+                            <div class="input-group-append">
+                                <button class="btn btn-yellow" type="submit">subscribe</button>
+                            </div>
                         </div>
-                    </div>
                     </form>
 
                 </div>
