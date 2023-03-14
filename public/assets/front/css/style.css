@@ -8725,6 +8725,46 @@ ul.common-list li{
     object-fit:cover;
     border:1px solid #ccc;
 }
+.inn{
+    border:none;
+    padding-left:7px;
+}
+.inn ul li{
+    list-style:none;
+    position:relative;
+}
+.inn ul li:after{
+    position:absolute;
+    content:'\f00c';
+    font:normal normal normal 14px/1 FontAwesome;
+    left:0;
+    left: -22px;
+    bottom: 6px;
+    color: green;
+    font-size: 18px;
+}
+.exx ul li:after{
+    content:'\f00d';
+    color:#f00;
+}
+.nav-tabs{
+    background:var(--heading-color);
+}
+#tabs .nav-fill .nav-item{
+    color:#fff;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+    background:#00ADE8;
+    color:#fff;
+    border-radius:0;
+}
+.ptt{
+  margin:0;
+}
+.ptt h4{
+    padding:0;
+    margin:0;
+}
 
 
 
