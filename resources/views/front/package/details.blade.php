@@ -99,19 +99,19 @@
                                     <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                                         <div class="tour-details-wrap">
 
-                                            <div class="package-included-area">
+                                            <div class="package-included-area ptt">
                                                 <h4 class="single-page-small-title pd-bottom-30">Include/Exclude
                                                 </h4>
-                                                <div class="row">
+                                                <div class="">
                                                     
-                                                    <div class="col-xl-4 col-sm-6">
-                                                        <div class="single-package-included">
+                                                    <div class="">
+                                                        <div class="single-package-included inn">
                                                             <h6>{{$package->includes_title}}</h6>
                                                             {!! $package->includes_description !!}
                                                         </div>
                                                     </div>
-                                                    <div class="col-xl-4 col-sm-6">
-                                                        <div class="single-package-included">
+                                                    <div class="">
+                                                        <div class="single-package-included exx inn">
                                                             <h6>{{$package->excludes_title}}</h6>
                                                             {!! $package->excludes_description !!}
                                                         </div>
