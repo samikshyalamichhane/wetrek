@@ -9,6 +9,8 @@
     {!! SEOMeta::generate() !!}
     {!! OpenGraph::generate() !!}
 
+    <link rel="shortcut icon" rel="icon" href="{{ $dashboard_settings->faviconUrl() ? $dashboard_settings->faviconUrl() : asset('assets/front/img/wetravel-logo.png')}}" type="image/gif" />
+
     <!-- Additional plugin css -->
     <link rel="stylesheet" href="{{asset('assets/front/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/front/css/animate.css')}}">
