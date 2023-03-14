@@ -33,8 +33,11 @@ class WhywithusController extends Controller
 
         $formInput['slug'] = $this->generateSlug($request->whywithus_title, $request->slug, null);
         $formInput['published'] = is_null($request->published) ? 0 : 1;
-        if($request->hasFile('whywithus_icon')){
-          $formInput['whywithus_icon'] = $this->imageProcessing($request->whywithus_icon, 1349, 356, 'yes');
+        if ($request->hasFile('whywithus_icon')) {
+          $file = $request->whywithus_icon;
+          $filename = time() . '-whywithus_icon.' . $file->getClientOriginalExtension();
+          $path = $file->storeAs('public/setting', $filename);
+          $formInput['whywithus_icon'] = $path;
         }
 
         if($request->hasFile('image1')){
