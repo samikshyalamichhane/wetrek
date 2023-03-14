@@ -4,36 +4,51 @@
 <!--<div class="booking-image">-->
 <!--            <img src="https://classicvacationsnepal.com/images/main/Wed-07-23-37-1176753327-EBC.jpg" alt="" class="img-fluid">-->
 <!--       </div>-->
-<div class="tourmaster-single-header inner-image" style="background-image: url('https://classicvacationsnepal.com/images/main/Mon-03-10-37-959451343-globalpedia-hero-nepal-1.jpg');">
-    <div class="inner-overlay"></div>
-    <div class="tourmaster-single-header-background-overlay"></div>
-    <div class="tourmaster-single-header-overlay"></div>
-
-    <div class="tourmaster-single-header-container tourmaster-container">
-        <div class="tourmaster-single-header-container-inner">
-            <div class="tourmaster-single-header-title-wrap tourmaster-item-pdlr">
-                <div class="container">
-                    <div class="row">
-                        <div class="COL-12 trip-topic triphead-block p-0">
-                            <div class="tourmaster-single-header-gallery-wrap"></div>
-
-                            <h1 class="tourmaster-single-header-title">Booking Form<p></p>
-                            </h1>
-
-                        </div>
-
+<div class="breadcrumb-area jarallax" style="background-image:url(/storage/setting/1678197984-contactus_banner_image.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb-inner">
+                        <h1 class="page-title">Booking Form</h1>
+                        <ul class="page-list">
+                            <li><a href="index.html">Home</a></li>
+                            <li>Booking Form</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+<!--<div class="tourmaster-single-header inner-image" style="background-image: url('https://classicvacationsnepal.com/images/main/Mon-03-10-37-959451343-globalpedia-hero-nepal-1.jpg');">-->
+<!--    <div class="inner-overlay"></div>-->
+<!--    <div class="tourmaster-single-header-background-overlay"></div>-->
+<!--    <div class="tourmaster-single-header-overlay"></div>-->
 
-</div>
-<div class="contact-us nnba same-title mt-3">
-    <div class="container">
-    <h1>Welcome to our<span> Booking Form</span></h1>
-    </div>
-</div>
+<!--    <div class="tourmaster-single-header-container tourmaster-container">-->
+<!--        <div class="tourmaster-single-header-container-inner">-->
+<!--            <div class="tourmaster-single-header-title-wrap tourmaster-item-pdlr">-->
+<!--                <div class="container">-->
+<!--                    <div class="row">-->
+<!--                        <div class="COL-12 trip-topic triphead-block p-0">-->
+<!--                            <div class="tourmaster-single-header-gallery-wrap"></div>-->
+
+<!--                            <h1 class="tourmaster-single-header-title">Booking Form<p></p>-->
+<!--                            </h1>-->
+
+<!--                        </div>-->
+
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--</div>-->
+<!--<div class="contact-us nnba same-title mt-3 newbw">-->
+<!--    <div class="container">-->
+<!--    <h1>Welcome to our<span> Booking Form</span></h1>-->
+<!--    </div>-->
+<!--</div>-->
 <section class="booking-form-wrap">
     <div class="container">
         <!--<div class="about-title">-->
