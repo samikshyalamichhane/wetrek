@@ -1,5 +1,4 @@
 @extends('front.layouts.app')
-<title>WeTrek Nepal | Blogs | {{ $blog->title }}</title>
 @section('content')
  <!-- breadcrumb area start -->
  <div class="breadcrumb-area jarallax" style="background-image:url({{asset('/images/thumbnail/' . $blog->image)}});">
@@ -9,7 +8,7 @@
                     <div class="breadcrumb-inner">
                         <h1 class="page-title">Blog Details</h1>
                         <ul class="page-list">
-                            <li><a href="index.html">Home</a></li>
+                            <li><a href="{{route('indexHome')}}">Home</a></li>
                             <li>Blog Details</li>
                         </ul>
                     </div>

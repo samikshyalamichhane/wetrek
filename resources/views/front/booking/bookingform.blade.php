@@ -11,7 +11,7 @@
                     <div class="breadcrumb-inner">
                         <h1 class="page-title">Booking Form</h1>
                         <ul class="page-list">
-                            <li><a href="index.html">Home</a></li>
+                            <li><a href="{{route('indexHome')}}">Home</a></li>
                             <li>Booking Form</li>
                         </ul>
                     </div>

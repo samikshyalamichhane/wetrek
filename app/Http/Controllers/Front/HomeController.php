@@ -197,14 +197,15 @@ class HomeController extends Controller
 
   public function blogList()
   {
-    SEOMeta::setTitle($detail->meta_title ?? $detail->title);
-    SEOMeta::setDescription($detail->meta_description);
-    SEOMeta::setCanonical($detail->canonical_url);
+    SEOMeta::setTitle('Blogs of WeTrek Nepal,Best Trekking company in Nepal');
+    SEOMeta::setDescription($this->info->meta_description);
+    SEOMeta::setCanonical($this->info->canonical_url);
     // SEOMeta::addMeta('article:published_time', $about->created_at->toW3CString(), 'property');
-    SEOMeta::addKeyword($detail->keywords);
-    OpenGraph::setDescription($detail->meta_description);
-    OpenGraph::setTitle($detail->meta_title ? $detail->meta_title : $detail->title);
-    OpenGraph::setUrl($detail->canonical_url ? $detail->canonical_url : url()->current());
+    SEOMeta::addKeyword($this->info->keyword);
+    OpenGraph::setDescription($this->info->description);
+    OpenGraph::setTitle($this->info->meta_title ? $this->info->meta_title : $this->info->site_name);
+    OpenGraph::setUrl(url()->current());
+    OpenGraph::addProperty('type', 'articles');
     $details = Blog::published()->orderBy('updated_at', 'desc')->paginate(9);
     $relatedBlogs = Blog::published()->inRandomOrder()->orderBy('updated_at', 'desc')->take(5)->get();
     return view('front.blog.list', compact('details', 'relatedBlogs'));

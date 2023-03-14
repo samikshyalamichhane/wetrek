@@ -62,7 +62,7 @@
                     </div>
 
                     <div class="single-info">
-                        <div class="info-texts"><a class="btn btn-yellow" href="{{route('bookingForm')}}">Book Now <i class="fa fa-paper-plane" style="margin-top: 7px;"></i></a>
+                        <div class="info-texts"><a class="btn btn-yellow" href="{{route('bookingForm',['package_id'=>$package->id])}}">Book Now <i class="fa fa-paper-plane" style="margin-top: 7px;"></i></a>
 
                         </div>
                     </div>
