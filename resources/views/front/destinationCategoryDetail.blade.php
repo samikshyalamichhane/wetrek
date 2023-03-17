@@ -32,7 +32,7 @@
         </div>
 
         <div class="section-title">
-            <h2 class="title">Our Offers For<span> {{$destinationType->title}}</span></h2>
+            <h2 class="title">Our Packages For<span> {{$destinationType->title}}</span></h2>
 
         </div>
         <div class="row dest-img">
