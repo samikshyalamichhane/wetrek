@@ -82,7 +82,7 @@
                     @foreach($dashboard_categories as $category)
                     <li class="menu-item-has-children">
                         <a href="{{route('resolvepath.show',$category->slug)}}">{{$category->title}} <i class="ti-angle-down"></i></a>
-                        @if($category->slug == 'nepal-trek')
+                        @if($category->slug == 'nepal-trek' || $category->slug == 'nepal-tour')
                         <ul class="sub-menu">
                             @foreach($category->regions as $region)
                             <li><a href="{{route('resolvepath.show',$region->slug)}}">{{$region->name}}</a></li>
