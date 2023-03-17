@@ -822,7 +822,7 @@
         autoplay: true,
         autoplaySpeed: 5000,
         dots: false,
-        arrows: false,
+        arrows: true,
         infinite: true,
       });
 

@@ -23,15 +23,18 @@
     <div class="container">
 
         <div class="row">
-            <div class="col-xl-6 col-lg-8">
+            <div class="col-md-10">
                 <div class="section-title section-title-left-border style-two">
-                    <h2 class="title">Best Packages For You</h2>
+                    <!--<h2 class="title">Best Packages For You</h2>-->
                     {!! $region->description !!}
                 </div>
             </div>
         </div>
 
-
+<div class="section-title">
+                    <h2 class="title">Our Offers For<span> {{$region->name}}</span></h2>
+                    
+                </div>
         <div class="row dest-img">
             @foreach($regionPackages as $package )
             <div class="col-lg-4 col-sm-6 mb-4">

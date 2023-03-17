@@ -24,9 +24,9 @@
             <div class="row">
                 <div class="col-lg-8">
                     <div class="single-blog mb-0">
-                        <div class="thumb">
-                            <img src="{{asset('/images/thumbnail/' . $blog->image)}}" alt="blog">
-                        </div>
+                        <!--<div class="thumb">-->
+                        <!--    <img src="{{asset('/images/thumbnail/' . $blog->image)}}" alt="blog">-->
+                        <!--</div>-->
                         <div class="single-blog-details">
                             <p class="date mb-0">{{ $blog->created_at->format('d F Y') }}</p>
                             <h3 class="title">{{$blog->title}}</h3>

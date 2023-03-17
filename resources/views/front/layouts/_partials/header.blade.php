@@ -49,7 +49,7 @@
             <div class="responsive-mobile-menu">
                 <div class="mobile-logo">
                     <a href="index.html">
-                        <img src="{{ $dashboard_settings->logoUrl() }} ? {{ $dashboard_settings->logoUrl() }} : {{asset('assets/front/img/wetravel-logo.png')}}" alt="logo">
+                        <img src="{{ $dashboard_settings->logoUrl() }}">
                     </a>
                 </div>
                 <button class="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#tp_main_menu" aria-expanded="false" aria-label="Toggle navigation">

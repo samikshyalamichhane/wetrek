@@ -4,12 +4,12 @@
 <div class="banner-area">
     <div class="banner-slider">
         @foreach($sliders as $slider)
-        <div class="banner-slider-item " style="background-image: url({{asset('images/main/'.$slider->image)}} );>
+        <div class="banner-slider-item " style="background-image: url({{asset('images/main/'.$slider->image)}} )";>
             <div class=" container">
             <div class="row">
-                <div class="col-xl-8 col-lg-9 offset-xl-2 offset-lg-1">
+                <div class="col-xl-8 col-lg-8 offset-xl-2 offset-lg-1">
                     <div class="row">
-                        <div class="col-lg-9 col-sm-8">
+                        <div class="col-md-12">
                             <div class="banner-inner">
 
                                 <h2 class="banner-title s-animate-2">{{$slider->title}}</h2>
@@ -66,7 +66,7 @@
                             <i class="fa fa-plus-circle"></i>
                         </div>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-3">
                         <div class="tp-search-single-wrap float-left w-100">
                             <select class="select w-100" name="destinationtype_id">
                                 @foreach($dashboard_destination_types as $dest)
@@ -76,18 +76,19 @@
                             <i class="fa fa-plus-circle"></i>
                         </div>
                     </div>
-                    {{--<div class="col-md-2 ">
+                    <div class="col-md-2 ">
                     <div class="tp-search-single-wrap float-left w-100">
                         <select class="select w-100" name="days_and_nights">
-                            <option value="1">Duration</option>
-                            <option value="2">5 Days</option>
-                            <option value="3">10 Days</option>
-                            <option value="4">15 Days</option>
-                            <option value="5">20 Days</option>
+                            
+                            <option value="2">1-10 days</option>
+                            <option value="3">10-20 days</option>
+                            <option value="4">20-30 days</option>
+                            <option value="5">above 30 days</option>
+                            
                         </select>
                         <i class="fa fa-plus-circle"></i>
                     </div>
-                </div>--}}
+                </div>
                     <div class="col-lg-2 col-md-2">
                         <button class="btn btn-yellow" type="submit">Search</a>
                     </div>
@@ -141,8 +142,8 @@
                 <div class="upcomming-card-slider upcomming-card-slider-2 tp-common-slider-style">
                     @foreach($destinations as $dest)
                     <div class="single-upconing-card">
-                        <div class="shadow" style="background-image: url({{asset('images/main/'.$dest->banner_image)}});">
-                            <img src="{{asset('images/main/'.$dest->banner_image)}}" alt="img">
+                        <div class="shadow newblogss" style="background-image: url({{asset('images/listing/'.$dest->banner_image)}});">
+                            <a href="{{route('resolvepath.show',$dest->slug)}}"><img src="{{asset('images/main/'.$dest->banner_image)}}" alt="img"></a>
                         </div>
 
                         <div class="details">
@@ -174,8 +175,8 @@
             @foreach($bestSells as $bestsell)
             <div class="col-lg-4 col-sm-6 mb-4">
                 <div class="single-destinations-list style-two wow animated fadeInUp" data-wow-duration="0.4s" data-wow-delay="0.1s">
-                    <div class="thumb">
-                        <img src="{{$bestsell->imageUrl()}}" alt="list">
+                    <div class="thumb newblog">
+                        <a href="{{route('resolvepath.show',$bestsell->slug)}}"><img src="{{$bestsell->imageUrl()}}" alt="list"></a>
                     </div>
                     <div class="details">
 
@@ -199,7 +200,8 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="section-title">
-                    <h2 class="title text-center">Popular Trekking & <span>Hiking in Nepal</span></h2>
+                    <!--<h2 class="title text-center">Popular Trekking & <span>Hiking in Nepal</span></h2>-->
+                    <h2 class="title text-center">Our Recommended<span> Package</span></h2>
 
                 </div>
 
@@ -209,8 +211,8 @@
                     @foreach($popularPackages as $popularPackage)
                     <div class="d-list-slider-item">
                         <div class="single-destinations-list ">
-                            <div class="thumb sameimg">
-                                <img src="{{$popularPackage->imageUrl()}}" alt="list">
+                            <div class="thumb sameimg newblog">
+                                <a href="{{route('resolvepath.show',$popularPackage->slug)}}"><img src="{{$popularPackage->imageUrl()}}" alt="list"></a>
 
                             </div>
                             <div class="details">
@@ -356,8 +358,8 @@
             @foreach($blogs as $blog)
             <div class="col-lg-3 col-sm-6 blog-list">
                 <div class="single-destinations-list  style-two wow animated fadeInUp" data-wow-duration="0.4s" data-wow-delay="0.1s">
-                    <div class="thumb">
-                        <img src="{{asset('/images/thumbnail/' . $blog->image)}}" alt="list">
+                    <div class="thumb newblog">
+                        <a href="{{route('blogDetails',$blog->slug)}}"><img src="{{asset('/images/thumbnail/' . $blog->image)}}" alt="list"></a>
                     </div>
                     <div class="details">
 
@@ -421,7 +423,7 @@
                 <div class="partner-box newsletter">
                     <h4>E-Brochure</h4>
 
-                    <img src="{{asset('assets/front/img/icons/eBrochure.png')}}" alt="">
+                    <a href="https://wetrek.digitalwebnepal.com/wp-content/uploads/2018/10/We-trek-2017-1.pdf" target="_blank"><img src="{{asset('assets/front/img/icons/eBrochure.png')}}" alt=""></a>
 
 
                 </div>

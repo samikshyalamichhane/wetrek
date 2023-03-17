@@ -1,7 +1,7 @@
 @extends('front.layouts.app')
 @section('content')
 <!-- breadcrumb area start -->
-<div class="breadcrumb-area style-two jarallax" style="background-image:url({{ $package->imageUrl() }});">
+<div class="breadcrumb-area style-two jarallax newb" style="background-image:url({{ $package->imageUrl() }});">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -24,7 +24,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div class="p-short-info">
+                <div class="p-short-info newshortinfo">
                     <div class="single-info"><i class="fa-regular fa-clock"></i>
                         <div class="info-texts"><strong>Duration</strong>
                             <p>{{ $package->days_and_nights }}</p>
@@ -55,29 +55,24 @@
 
 
 
-                    <div class="single-info">
-                        <div class="info-texts"><a class="btn btn-yellow" href="https://wa.me/{{@$dashboard_settings->whatsapp}}">Chat Via WhatsApp <i class="fa-brands fa-whatsapp" style="margin-top: 7px;"></i></a>
+                    <!--<div class="single-info">-->
+                    <!--    <div class="info-texts"><a class="btn btn-yellow" href="https://wa.me/{{@$dashboard_settings->whatsapp}}">Chat Via WhatsApp <i class="fa-brands fa-whatsapp" style="margin-top: 7px;"></i></a>-->
 
-                        </div>
-                    </div>
+                    <!--    </div>-->
+                    <!--</div>-->
 
-                    <div class="single-info">
-                        <div class="info-texts"><a class="btn btn-yellow" href="{{route('bookingForm',['package_id'=>$package->id])}}">Book Now <i class="fa fa-paper-plane" style="margin-top: 7px;"></i></a>
+                    <!--<div class="single-info">-->
+                    <!--    <div class="info-texts"><a class="btn btn-yellow" href="{{route('bookingForm',['package_id'=>$package->id])}}">Book Now <i class="fa fa-paper-plane" style="margin-top: 7px;"></i></a>-->
 
-                        </div>
-                    </div>
+                    <!--    </div>-->
+                    <!--</div>-->
 
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-8">
-                <section id="tabs">
-                    <div class="container">
-
-                        <div class="row">
-                            <div class="col-xs-12 ">
-                                <nav>
+        <div class="row pt-3" id="tabs">
+            <div class="col-md-8">
+            <nav>
                                     <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
                                         <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Overview</a>
                                         <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Included/Exclude</a>
@@ -86,7 +81,32 @@
                                         <a class="nav-item nav-link" id="nav-map-tab" data-toggle="tab" href="#nav-map" role="tab" aria-controls="nav-map" aria-selected="false">Map</a>
                                         <a class="nav-item nav-link" id="nav-review-tab" data-toggle="tab" href="#nav-review" role="tab" aria-controls="nav-review" aria-selected="false">Review</a>
                                     </div>
-                                </nav>
+                                    </nav>
+                                    </div>
+                                    <div class="col-md-2 po">
+                                    <div class="single-info">
+                        <div class="info-texts"><a class="btn btn-yellow" href="https://wa.me/{{@$dashboard_settings->whatsapp}}">Chat Via WhatsApp <i class="fa-brands fa-whatsapp" style="margin-top: 7px;"></i></a>
+
+                        </div>
+                    </div>
+                    </div>
+            <div class="col-md-2 po">
+                                            
+                    <div class="single-info">
+                        <div class="info-texts"><a class="btn btn-yellow" href="{{route('bookingForm',['package_id'=>$package->id])}}">Book Now <i class="fa fa-paper-plane" style="margin-top: 7px;"></i></a>
+
+                        </div>
+                    </div>
+                        </div>
+            </div>
+              <div class="row">                  
+            <div class="col-lg-8">
+                
+                    <div class="container">
+
+                        <div class="row">
+                            <div class="col-xs-12 ">
+                                
                                 <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
                                     <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
 
@@ -149,7 +169,7 @@
                                             <h4 class="single-page-small-title pd-bottom-30 pd-top-50">Gallery
                                             </h4>
 
-                                            <div class="row gallery">
+                                            <div class="row gallery newgallery">
                                                 @foreach($package->slider__images as $slider)
                                                 <div class="col-lg-3 col-md-4 col-xs-6 thumb">
                                                     <a href="{{ asset('images/package/multiple/'. $slider->sliderimages) }}">
@@ -211,13 +231,13 @@
                                         </div>
                                     </div>
                                 </div>
-
+                                
                             </div>
                         </div>
                     </div>
-                </section>
+            
             </div>
-            <div class="col-xl-4 col-lg-4 order-lg-1">
+            <div class="col-xl-4 col-lg-4 order-lg-1 mt-5">
                 <div class="sidebar-area sidebar-area-inner-page">
                     <div class="widget tour-list-widget">
                         <h3><strong>Inquiry Now</strong></h3>
@@ -279,6 +299,7 @@
                     </div>
                 </div>
 
+            </div>
             </div>
         </div>
     </div>
