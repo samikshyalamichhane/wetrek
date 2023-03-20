@@ -59,11 +59,11 @@ class HomeController extends Controller
   {
 
     SEOMeta::setTitle($this->info->meta_title ? $this->info->meta_title : $this->info->site_name);
-    SEOMeta::setDescription($this->info->meta_description);
-    SEOMeta::setCanonical($this->info->canonical_url);
+    SEOMeta::setDescription(strip_tags($this->info->meta_description));
+    SEOMeta::setCanonical(strip_tags($this->info->canonical_url));
     // SEOMeta::addMeta('article:published_time', $about->created_at->toW3CString(), 'property');
     SEOMeta::addKeyword($this->info->keyword);
-    OpenGraph::setDescription($this->info->description);
+    OpenGraph::setDescription(strip_tags($this->info->description));
     OpenGraph::setTitle($this->info->meta_title ? $this->info->meta_title : $this->info->site_name);
     OpenGraph::setUrl($this->info->canonical_url);
     OpenGraph::addProperty('type', 'articles');
@@ -128,11 +128,11 @@ class HomeController extends Controller
   {
     $og['title'] = 'Destination Lists';
     SEOMeta::setTitle('We Trek|Destination Lists');
-    SEOMeta::setDescription($this->info->meta_description);
+    SEOMeta::setDescription(strip_tags($this->info->meta_description));
     SEOMeta::setCanonical($this->info->canonical_url);
     // SEOMeta::addMeta('article:published_time', $about->created_at->toW3CString(), 'property');
     SEOMeta::addKeyword($this->info->keyword);
-    OpenGraph::setDescription($this->info->description);
+    OpenGraph::setDescription(strip_tags($this->info->description));
     OpenGraph::setTitle($this->info->meta_title ? $this->info->meta_title : $this->info->site_name);
     OpenGraph::setUrl($this->info->canonical_url);
     OpenGraph::addProperty('type', 'articles');
@@ -179,11 +179,11 @@ class HomeController extends Controller
       $og['description'] = $detail->meta_description;
       $og['keywords'] = $detail->keywords;
       SEOMeta::setTitle($detail->meta_title ?? $detail->title);
-    SEOMeta::setDescription($detail->meta_description);
+    SEOMeta::setDescription(strip_tags($detail->meta_description));
     SEOMeta::setCanonical($detail->canonical_url);
     // SEOMeta::addMeta('article:published_time', $about->created_at->toW3CString(), 'property');
     SEOMeta::addKeyword($detail->keywords);
-    OpenGraph::setDescription($detail->meta_description);
+    OpenGraph::setDescription(strip_tags($detail->meta_description));
     OpenGraph::setTitle($detail->meta_title ? $detail->meta_title : $detail->title);
     OpenGraph::setUrl($detail->canonical_url ? $detail->canonical_url : url()->current());
     OpenGraph::addProperty('type', 'articles');
@@ -218,11 +218,11 @@ class HomeController extends Controller
     $og['description'] = $blog->meta_description;
     $og['keywords'] = $blog->keyword;
     SEOMeta::setTitle($blog->meta_title ?? $blog->title);
-    SEOMeta::setDescription($blog->meta_description);
+    SEOMeta::setDescription(strip_tags($blog->meta_description));
     SEOMeta::setCanonical($blog->canonical_url);
     // SEOMeta::addMeta('article:published_time', $about->created_at->toW3CString(), 'property');
     SEOMeta::addKeyword($blog->keyword);
-    OpenGraph::setDescription($blog->meta_description);
+    OpenGraph::setDescription(strip_tags($blog->meta_description));
     OpenGraph::setTitle($blog->meta_title ? $blog->meta_title : $blog->title);
     OpenGraph::setUrl($blog->canonical_url ? $blog->canonical_url : url()->current());
     OpenGraph::addProperty('type', 'articles');
@@ -262,11 +262,11 @@ class HomeController extends Controller
     $og['description'] = $package->meta_description;
     $og['keywords'] = $package->keyword;
     SEOMeta::setTitle($package->meta_title ?? $package->package_name);
-    SEOMeta::setDescription($package->meta_description);
+    SEOMeta::setDescription(strip_tags($package->meta_description));
     SEOMeta::setCanonical($package->canonical_url ? $package->canonical_url : url()->current());
     // SEOMeta::addMeta('article:published_time', $about->created_at->toW3CString(), 'property');
     SEOMeta::addKeyword($package->keyword);
-    OpenGraph::setDescription($package->meta_description);
+    OpenGraph::setDescription(strip_tags($package->meta_description));
     OpenGraph::setTitle($package->meta_title ? $package->meta_title : $package->title);
     OpenGraph::setUrl($package->canonical_url ? $package->canonical_url : url()->current());
     OpenGraph::addProperty('type', 'articles');
@@ -284,11 +284,11 @@ class HomeController extends Controller
     $og['description'] = $destinationType->meta_description;
     $og['keywords'] = $destinationType->keyword;
     SEOMeta::setTitle($destinationType->meta_title ?? $destinationType->title);
-    SEOMeta::setDescription($destinationType->meta_description);
+    SEOMeta::setDescription(strip_tags($destinationType->meta_description));
     SEOMeta::setCanonical($destinationType->canonical_url ? $destinationType->canonical_url : url()->current());
     // SEOMeta::addMeta('article:published_time', $about->created_at->toW3CString(), 'property');
     SEOMeta::addKeyword($destinationType->keyword);
-    OpenGraph::setDescription($destinationType->meta_description);
+    OpenGraph::setDescription(strip_tags($destinationType->meta_description));
     OpenGraph::setTitle($destinationType->meta_title ? $destinationType->meta_title : $destinationType->title);
     OpenGraph::setUrl($destinationType->canonical_url ? $destinationType->canonical_url : url()->current());
     OpenGraph::addProperty('type', 'articles');
@@ -304,11 +304,11 @@ class HomeController extends Controller
     $og['description'] = $destinationType->meta_description;
     $og['keywords'] = $destinationType->keyword;
     SEOMeta::setTitle($destinationType->meta_title ?? $destinationType->title);
-    SEOMeta::setDescription($destinationType->meta_description);
+    SEOMeta::setDescription(strip_tags($destinationType->meta_description));
     SEOMeta::setCanonical($destinationType->canonical_url ? $destinationType->canonical_url : url()->current());
     // SEOMeta::addMeta('article:published_time', $about->created_at->toW3CString(), 'property');
     SEOMeta::addKeyword($destinationType->keyword);
-    OpenGraph::setDescription($destinationType->meta_description);
+    OpenGraph::setDescription(strip_tags($destinationType->meta_description));
     OpenGraph::setTitle($destinationType->meta_title ? $destinationType->meta_title : $destinationType->title);
     OpenGraph::setUrl($destinationType->canonical_url ? $destinationType->canonical_url : url()->current());
     OpenGraph::addProperty('type', 'articles');
@@ -324,11 +324,11 @@ class HomeController extends Controller
     $og['description'] = $destination->meta_description;
     $og['keywords'] = $destination->meta_keyword;
     SEOMeta::setTitle($destination->meta_title ?? $destination->country_name);
-    SEOMeta::setDescription($destination->meta_description);
+    SEOMeta::setDescription(strip_tags($destination->meta_description));
     SEOMeta::setCanonical($destination->canonical_url ? $destination->canonical_url : url()->current());
     // SEOMeta::addMeta('article:published_time', $about->created_at->toW3CString(), 'property');
     SEOMeta::addKeyword($destination->keyword);
-    OpenGraph::setDescription($destination->meta_description);
+    OpenGraph::setDescription(strip_tags($destination->meta_description));
     OpenGraph::setTitle($destination->meta_title ? $destination->meta_title : $destination->title);
     OpenGraph::setUrl($destination->canonical_url ? $destination->canonical_url : url()->current());
     OpenGraph::addProperty('type', 'articles');
@@ -359,11 +359,11 @@ class HomeController extends Controller
 
     $region = Region::where('publish', 1)->whereSlug($slug)->first();
     SEOMeta::setTitle($region->meta_title ?? $region->name);
-    SEOMeta::setDescription($region->description);
+    SEOMeta::setDescription(strip_tags($region->description));
     SEOMeta::setCanonical($region->canonical_url ? $region->canonical_url : url()->current());
     // SEOMeta::addMeta('article:published_time', $about->created_at->toW3CString(), 'property');
     SEOMeta::addKeyword($region->keyword);
-    OpenGraph::setDescription($region->description);
+    OpenGraph::setDescription(strip_tags($region->description));
     OpenGraph::setTitle($region->meta_title ? $region->meta_title : $region->name);
     OpenGraph::setUrl($region->canonical_url ? $region->canonical_url : url()->current());
     OpenGraph::addProperty('type', 'articles');
