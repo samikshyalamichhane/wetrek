@@ -101,19 +101,19 @@
 
 
 <!-- about area start -->
-<div class="about-area tp-video-area pd-top-110" style="background-image: url({{asset('assets/front/img/bg/homeabtBG.png')}});">
+<div class="about-area tp-video-area naa" style="background-image: url({{asset('assets/front/img/bg/homeabtBG.png')}});">
 
     <div class="row">
         <div class="col-lg-4 offset-xl-1 wow animated fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s">
             <div class="aboutarea-wrap">
-                <div class="thumb">
+                <div class="thumb newthumb">
                     <img src="{{$aboutUs->imageUrl()}}" alt="aboutus">
                 </div>
 
             </div>
         </div>
         <div class="col-lg-7 align-self-center wow animated fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
-            <div class="section-title mb-lg-0 mb-4 text-center text-lg-left abtDtl">
+            <div class="section-title mb-lg-0 mb-4 text-center text-lg-left abtDtl newabts">
                 <h2 class="title">About <span> We Trek Nepal</span></h2>
 
                 {!! $aboutUs->description !!}
@@ -128,7 +128,7 @@
 
 
 
-<div class="upcomming-tour upcomming-tour-bg pd-top-50 " style="background-image: url({{asset('assets/front/img/bg/11.png')}});">
+<div class="upcomming-tour upcomming-tour-bg pd-top-50 naaa" style="background-image: url({{asset('assets/front/img/bg/11.png')}});">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -165,7 +165,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-xl-6 col-lg-9">
-                <div class="section-title text-center">
+                <div class="section-title text-center bts">
                     <h2 class="title wow animated fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.1s">Best Selling <span>Trips</span></h2>
 
                 </div>
@@ -237,11 +237,12 @@
 
 
 <!-- instagram area start -->
-<div class="instagram-area pd-top-50 gallery-area">
+<div class="instagram-area gallery-area">
 
     <div class="col-lg-12">
         <div class="section-title">
-            <h2 class="title text-center">Photo&amp; <span>Gallery</span></h2>
+            <h2 class="title text-center">Photo&amp; <span> Gallery</span></h2>
+            <p class="text-center" style="margin-top:0;margin-bottom:20px;">Pisang Peak Climbing</p>
 
         </div>
 
@@ -305,7 +306,7 @@
 <!-- instagram area end -->
 
 <!-- client area end -->
-<div class="client-area pd-top-70 pd-bottom-120 jarallax" style="background-image: url({{asset('assets/front/img/bg/testibg.png')}}); background-size: cover; background-repeat: no-repeat;">
+<div class="client-area pd-bottom-120 jarallax" style="background-image: url({{asset('assets/front/img/bg/testibg.png')}}); background-size: cover; background-repeat: no-repeat;">
     <div class="container">
         <!-- <div class="row justify-content-center">
             <div class="col-xl-6 col-lg-8">
@@ -344,11 +345,11 @@
 </div>
 <!-- client area end -->
 <!-- blog start -->
-<div class="holiday-plan-area blog-area tp-holiday-plan-area mg-top-96" style="background-image: url(#);">
+<div class="holiday-plan-area blog-area tp-holiday-plan-area mg-top-96 newh" style="background-image: url(#);">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-xl-6 col-lg-9">
-                <div class="section-title text-center">
+                <div class="section-title text-center bts">
                     <h2 class="title wow animated fadeInUp" data-wow-duration="0.6s" data-wow-delay="0.1s">Blogs &<span> News</span></h2>
 
                 </div>

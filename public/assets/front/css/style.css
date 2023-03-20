@@ -824,7 +824,7 @@ ul {
     default style
 ----------------------------------------------------- */
 .section-title {
-  margin-bottom: 63px;
+  margin-bottom: 10px;
 }
 
 .section-title .title {
@@ -1211,7 +1211,7 @@ ul {
 }
 
 .pd-top-100 {
-  padding-top: 100px;
+  padding-top: 50px;
 }
 
 .pd-top-110 {
@@ -8834,7 +8834,7 @@ ul.common-list li{
     position:relative;
 }
 .newshortinfo{
-    width:75%;
+    width:86%;
     margin:0 auto;
     padding:20px;
     border:1px solid #8A7D7D;
@@ -8847,6 +8847,29 @@ ul.common-list li{
 }
 .nntt ul li{
     display:inline-block;
+}
+.po a.btn.btn-yellow{
+    background:#fd7f47;
+}
+/*.newthumb{*/
+/*    margin-bottom:-90px!important;*/
+/*}*/
+.naa{
+    padding-top:50px;
+    height:560px;
+}
+.naaa{
+    margin-top:40px;
+}
+.newh{
+    margin-top:20px!important;
+}
+.newabts{
+  position:relative;
+  top:-130px;
+}
+.bts{
+    margin-bottom:25px;
 }
 /*Responsive starts*/
 

@@ -25,14 +25,30 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="p-short-info newshortinfo">
+                     <div class="single-info"><i class="fa-solid fa-map"></i>
+                        <div class="info-texts"><strong>Start & End</strong>
+                            <p><p>Kathmandu | Kathmandu</p></p>
+                        </div>
+                    </div>
                     <div class="single-info"><i class="fa-regular fa-clock"></i>
                         <div class="info-texts"><strong>Duration</strong>
                             <p>{{ $package->days_and_nights }}</p>
                         </div>
                     </div>
-                    <div class="single-info"><i class="fa-solid fa-umbrella-beach"></i>
-                        <div class="info-texts"><strong>Activities</strong>
-                            <p>{{ $package->activities }}</p>
+                    <!--<div class="single-info"><i class="fa-solid fa-umbrella-beach"></i>-->
+                    <!--    <div class="info-texts"><strong>Activities</strong>-->
+                    <!--        <p>{{ $package->activities }}</p>-->
+                    <!--    </div>-->
+                    <!--</div>-->
+                    <div class="single-info"><i class="fa-solid fa-mountain"></i>
+
+                        <div class="info-texts"><strong>Price</strong>
+                            <p>USD 1200</p>
+                        </div>
+                    </div>
+                    <div class="single-info"><i class="fa-solid fa-clock"></i>
+                        <div class="info-texts"><strong>Best time</strong>
+                            <p>Sep-Dec & Jan-Oct</p>
                         </div>
                     </div>
                     <div class="single-info"><i class="fa-solid fa-chart-simple"></i>
@@ -47,11 +63,8 @@
                         </div>
                     </div>
 
-                    <div class="single-info"><i class="fa-solid fa-user-group"></i>
-                        <div class="info-texts"><strong>Group Size</strong>
-                            <p>{{ $package->group_size }}</p>
-                        </div>
-                    </div>
+                    
+                   
 
 
 
