@@ -67,15 +67,15 @@ class HomeController extends Controller
     OpenGraph::setTitle($this->info->meta_title ? $this->info->meta_title : $this->info->site_name);
     OpenGraph::setUrl($this->info->canonical_url);
     OpenGraph::addProperty('type', 'articles');
-    $sliders = Slider::where('published', 1)->get();
-    $aboutUs = Page::where('slug', 'about-us')->first();
-    $bestSells = Package::select('package_name', 'slug', 'image', 'price', 'days_and_nights')->where('best_sells', 1)->published()->take(6)->get();
-    $popularPackages = Package::select('package_name', 'slug', 'image', 'price', 'days_and_nights')->where('popular_package', 1)->published()->take(6)->get();
-    $destinations = Destination::select('country_name', 'slug', 'banner_image')->published()->get();
-    $blogs = Blog::published()->take(4)->get();
-    $reviews = Travelersreview::published()->get();
-    $associates = Associate::published()->get();
-    $galleryImages = Galleryimage::take(6)->get();
+    $sliders = Slider::latest()->where('published', 1)->get();
+    $aboutUs = Page::latest()->where('slug', 'about-us')->first();
+    $bestSells = Package::latest()->select('package_name', 'slug', 'image', 'price', 'days_and_nights')->where('best_sells', 1)->published()->take(6)->get();
+    $popularPackages = Package::latest()->select('package_name', 'slug', 'image', 'price', 'days_and_nights')->where('popular_package', 1)->published()->take(6)->get();
+    $destinations = Destination::latest()->select('country_name', 'slug', 'banner_image')->published()->get();
+    $blogs = Blog::latest()->published()->take(4)->get();
+    $reviews = Travelersreview::latest()->published()->get();
+    $associates = Associate::latest()->published()->get();
+    $galleryImages = Galleryimage::latest()->take(6)->get();
     return view('front.index', compact('sliders', 'aboutUs', 'bestSells', 'popularPackages', 'destinations', 'blogs', 'reviews', 'associates', 'galleryImages'));
   }
 
