@@ -47,14 +47,15 @@ class PagesController extends Controller
         $file = $request->image;
         $filename = time() . '-image.' . $file->getClientOriginalExtension();
         $path = $file->storeAs('public/pages', $filename);
-        $formData['image'] = $path;
+        $formInput['image'] = $path;
       }
       if ($request->hasFile('banner_image')) {
         $file = $request->banner_image;
         $filename = time() . '-image.' . $file->getClientOriginalExtension();
         $path = $file->storeAs('public/pages', $filename);
-        $formData['banner_image'] = $path;
+        $formInput['banner_image'] = $path;
       }
+
       Page::create($formInput);
       return redirect()->route('pages.index')->with('message', 'Page Create Successfuly.');
     }
