@@ -542,6 +542,15 @@ class HomeController extends Controller
 
   public function testimonial()
   {
+    SEOMeta::setTitle('We Trek | Testimonial Page');
+    SEOMeta::setDescription($this->info->meta_description.'|Testimonial Page');
+    SEOMeta::setCanonical(url()->current());
+    // SEOMeta::addMeta('article:published_time', $about->created_at->toW3CString(), 'property');
+    SEOMeta::addKeyword($this->info->keyword);
+    OpenGraph::setDescription($this->info->description);
+    OpenGraph::setTitle('We Trek|Testimonial Page');
+    OpenGraph::setUrl(url()->current());
+    OpenGraph::addProperty('type', 'articles');
     $details = Travelersreview::published()->orderBy('updated_at', 'desc')->take(10)->get();
     return view('front.testimonials', compact('details'));
   }

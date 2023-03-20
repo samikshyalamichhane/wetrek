@@ -47,7 +47,7 @@
                     </div>
                   
                 </div>
-                <div class="col-xl-4 col-lg-4 order-lg-1">
+               {{--<div class="col-xl-4 col-lg-4 order-lg-1">
                     <div class="sidebar-area sidebar-area-inner-page">
                         <div class="widget tour-list-widget">
                           <h3><strong>Book this Trip</strong></h3>
@@ -82,7 +82,7 @@
                         </div>
 
                     </div>
-                </div>
+                </div>--}}
             </div>
         </div>
     </div>
