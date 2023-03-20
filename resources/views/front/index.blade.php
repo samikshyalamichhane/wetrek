@@ -218,7 +218,7 @@
                             <div class="details">
                                 <h4 class="title"><a href="{{route('resolvepath.show',$popularPackage->slug)}}">{{$popularPackage->package_name}}</a></h4>
                                 <div class="tp-price-meta">
-                                    <p class="location"><img src="{{asset('assets/front/img/icons/days-1.png')}}" alt="map" class="float-left">Duration<br>1 Day</p>
+                                    <p class="location"><img src="{{asset('assets/front/img/icons/days-1.png')}}" alt="map" class="float-left">Duration<br>{{ $popularPackage->days_and_nights }}</p>
                                     <h2>{{$popularPackage->price}} </h2>
                                 </div>
                             </div>

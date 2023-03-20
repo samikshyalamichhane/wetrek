@@ -212,7 +212,7 @@
                             <div class="check-list col-md-2">
                                 <label class="ui-checkbox ui-checkbox-primary">
                                     <input name="popular_package" type="checkbox">
-                                    <span class="input-span"></span>Popular Packages</label>
+                                    <span class="input-span"></span>Recommended Packages</label>
                             </div>
                             <div class="check-list col-md-2">
                                 <label class="ui-checkbox ui-checkbox-primary">
