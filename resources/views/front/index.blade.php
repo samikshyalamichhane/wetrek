@@ -368,7 +368,7 @@
 
                         <div class="tp-price-meta">
                             <p class="location"><img src="{{asset('assets/front/img/icons/icon _user_.png')}}" alt="map" class="float-left">{{$blog->author}}</p>
-                            <p class="location"><img src="{{asset('assets/front/img/icons/icon _calendar_.png')}}" alt="map" class="float-left">we trek</p>
+                            <p class="location"><img src="{{asset('assets/front/img/icons/icon _calendar_.png')}}" alt="map" class="float-left">{{ $blog->created_at->format('j F') }}</p>
                         </div>
                     </div>
                 </div>
