@@ -453,7 +453,7 @@
                     <div class="booking-conditions">
                         <h5>Travel Terms and Booking Conditions.</h5>
                         <p>Make booking with 20% advance payment or full payment.</p>
-                        <!--<p>These booking terms & conditions are a legal agreement between the customers and the company,Adventure Magic Treks(TravelServices Provider) for booking a trip with us.</p>-->
+                        <!--<p>These booking terms & conditions are a legal agreement between the customers and the company,WeTrek Nepal Treks(TravelServices Provider) for booking a trip with us.</p>-->
                         <div class="text-right rm">
                             <a href="{{route('resolvepath.show', 'terms-conditions')}}" target="_blank">Read More</a>
                         </div>

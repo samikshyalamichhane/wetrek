@@ -37,7 +37,7 @@
                                     <div class="content">
                                         <h4 class="title">{{$data->name}}</h4>
                                         <span class="date">{{ $data->created_at->format('d F Y') }}</span>
-                                        {{$data->words}}
+                                        {!! $data->words !!}
                                     </div>
                                 </div>
                             </li>

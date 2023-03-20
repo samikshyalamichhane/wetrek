@@ -1,5 +1,5 @@
 @extends('front.layouts.app')
-<title>Adventure Magic | Team | {{ $details->name}} </title>
+<title>WeTrek Nepal| Team | {{ $details->name}} </title>
 @section('content')
 {{-- {{asset('assets/front/    ')}} --}}
 

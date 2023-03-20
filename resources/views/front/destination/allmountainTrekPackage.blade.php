@@ -43,7 +43,7 @@
             <div class="destination-feature-single">
                 <div class="container">
                     <div class="destination-title">
-                        <h1>All Adventure Magic in {{$destination->country_name}}</h1>
+                        <h1>All WeTrek Nepal in {{$destination->country_name}}</h1>
                     </div>
 
                     <div class="destination-feature-list">
@@ -78,7 +78,7 @@
                             @endforeach
                             @endforeach
                             @else
-                            <h2>Sorry! No Other Adventure Magic Related to {{$destination->country_name}}.</h2>
+                            <h2>Sorry! No Other WeTrek Nepal Related to {{$destination->country_name}}.</h2>
                             @endif
                         </div>
                         {{$mountainTrekPackages->links()}}

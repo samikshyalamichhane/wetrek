@@ -1,5 +1,5 @@
 @extends('front.layouts.app')
-@section('title','Adventure Magic | Teams')
+@section('title','WeTrek Nepal | Teams')
 @section('content')
 <!--<div class="booking-image">-->
 <!--            <img src="https://classicvacationsnepal.com/images/main/Wed-07-23-37-1176753327-EBC.jpg" alt="" class="img-fluid">-->

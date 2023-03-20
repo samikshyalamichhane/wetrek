@@ -1,5 +1,5 @@
 @extends('front.layouts.app')
-@section('title','Adventure Magic | Teams')
+@section('title','WeTrek Nepal | Teams')
 @section('content')
 <section class="booking-form">
     <div class="container">

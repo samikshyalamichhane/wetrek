@@ -174,37 +174,37 @@
                     <input class="form-control" type="text" value="{{$detail->slug}}" name="slug" placeholder="Enter Slug">
                 </div>
 
+                <div class="form-group col-md-6">
+                    <label>Start Point</label>
+                    <input class="form-control" type="text" value="{{$detail->start_point}}" name="start_point" placeholder="Enter Start Point Eg. Kathmandu">
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label>End Point</label>
+                    <input class="form-control" type="text" value="{{$detail->end_point}}" name="end_point" placeholder="Enter Start Point Eg. Kathmandu">
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label>Duration (eg. 3 Nights 4 Days)</label>
+                    <input class="form-control" type="text" value="{{$detail->days_and_nights}}" name="days_and_nights" placeholder="Enter Days And Nights (eg. 3 Nights 4 Days)">
+                </div>
+
                 {{-- <div class="form-group col-md-6">
-                            <label>Start Point</label>
-                            <input class="form-control" type="text" value="{{$detail->start_point}}" name="start_point" placeholder="Enter Start Point Eg. Kathmandu">
-            </div>
-
-            <div class="form-group col-md-6">
-                <label>End Point</label>
-                <input class="form-control" type="text" value="{{$detail->end_point}}" name="end_point" placeholder="Enter Start Point Eg. Kathmandu">
-            </div> --}}
-
-            <div class="form-group col-md-6">
-                <label>Duration (eg. 3 Nights 4 Days)</label>
-                <input class="form-control" type="text" value="{{$detail->days_and_nights}}" name="days_and_nights" placeholder="Enter Days And Nights (eg. 3 Nights 4 Days)">
-            </div>
-
-            {{-- <div class="form-group col-md-6">
                                 <label>Max Altitude</label>
                                 <input class="form-control" type="text" value="{{$detail->max_altitude}}" name="max_altitude" placeholder="Enter Max. Altitude Eg. 5,555M at Kalapatthar">
-        </div> --}}
+            </div> --}}
 
-        {{-- <div class="form-group col-md-6">
+            {{-- <div class="form-group col-md-6">
                                 <label>Meals Include </label>
                                 <input class="form-control" type="text" value="{{$detail->meals_include}}" name="meals_include" placeholder="Enter Start Point Eg. (Breakfast, Lunch & Dinner) during the trek">
-</div> --}}
+        </div> --}}
 
-<div class="form-group col-md-6">
-    <label>Group Size</label>
-    <input class="form-control" type="text" value="{{$detail->group_size}}" name="group_size" placeholder="Enter Group Size Eg. 2-30">
-</div>
+        <div class="form-group col-md-6">
+            <label>Group Size</label>
+            <input class="form-control" type="text" value="{{$detail->group_size}}" name="group_size" placeholder="Enter Group Size Eg. 2-30">
+        </div>
 
-{{-- <div class="form-group col-md-6">
+        {{-- <div class="form-group col-md-6">
                     <label>Nature of Package</label>
                     <input class="form-control" type="text" value="{{$detail->nature_of_trek}}" name="nature_of_trek" placeholder="Example: Cultural, Adventure">
 </div> --}}

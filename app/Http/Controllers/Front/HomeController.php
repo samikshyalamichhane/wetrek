@@ -542,7 +542,7 @@ class HomeController extends Controller
 
   public function testimonial()
   {
-    $details = Testimonial::published()->orderBy('updated_at', 'desc')->take(10)->get();
+    $details = Travelersreview::published()->orderBy('updated_at', 'desc')->take(10)->get();
     return view('front.testimonials', compact('details'));
   }
 

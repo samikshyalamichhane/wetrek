@@ -31,7 +31,7 @@
     <div class="container">
     <h1>Welcome to our<span> Online Payment Form</span></h1>
     <p>
-        For online payments at Adventure Magic, you could use Credit Card, AMEX, Visa Card, Mastercard etc. Our online payments are secured, and powered by Visa Card so it is a safe process. Your card payment will be processed by Himalayan Bank Limited on behalf of Adventure Magic
+        For online payments at WeTrek Nepal, you could use Credit Card, AMEX, Visa Card, Mastercard etc. Our online payments are secured, and powered by Visa Card so it is a safe process. Your card payment will be processed by Himalayan Bank Limited on behalf of WeTrek Nepal
     </p>
     </div>
 </div>

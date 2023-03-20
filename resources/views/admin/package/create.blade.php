@@ -136,6 +136,16 @@
                             </div>
 
                             <div class="form-group col-md-6">
+                                <label>Start Point</label>
+                                <input class="form-control" type="text" value="{{old('start_point')}}" name="start_point" placeholder="Enter Start Point Eg. Kathmandu">
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <label>End Point</label>
+                                <input class="form-control" type="text" value="{{old('end_point')}}" name="end_point" placeholder="Enter Start Point Eg. Kathmandu">
+                            </div>
+
+                            <div class="form-group col-md-6">
                                 <label>Group Size</label>
                                 <input class="form-control" type="text" value="{{old('group_size')}}" name="group_size" placeholder="Enter Group Size Eg. 2-30">
                             </div>

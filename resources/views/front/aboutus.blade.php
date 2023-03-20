@@ -1,5 +1,5 @@
 @extends('front.layouts.app')
-@section('title','Adventure Magic | About Us')
+@section('title','WeTrek Nepal | About Us')
 @section('content')
 {{-- {{asset('assets/front/    ')}} --}}
         <!-- ========== Package Banner ========== -->

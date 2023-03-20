@@ -1,6 +1,6 @@
 
 @extends('front.layouts.app')
-@section('title','Adventure Magic | Payment Form')
+@section('title','WeTrek Nepal | Payment Form')
 @section('content')
 
 <!-- <div class="tour-detail-top-image" style="background-image:url(/assets/front/images/banner.png)">
