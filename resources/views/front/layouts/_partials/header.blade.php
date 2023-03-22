@@ -155,6 +155,7 @@
                             @foreach($dashboard_pages->where('aboutus',1) as $page)
                             <li><a href="{{route('pagesDetail',$page->slug)}}">{{$page->title}}</a></li>
                             @endforeach
+                            <li><a href="{{route('pagesDetail',['who-we-are'])}}">Who We Are</a></li>
                             <li><a href="{{route('getTestimonial')}}">Testimonial</a></li>
                             <li><a href="{{route('team')}}">Team</a></li>
                             <li><a href="{{route('blogList')}}">Blog</a></li>
