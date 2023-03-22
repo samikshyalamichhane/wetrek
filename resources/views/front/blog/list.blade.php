@@ -30,7 +30,7 @@
                     <div class="col-lg-6 col-md-6">
                         <div class="single-blog">
                             <div class="thumb">
-                                <img src="{{asset('/images/thumbnail/' . $blog->image)}}" alt="blog">
+                                <img src="{{asset('/images/listing/' . $blog->image)}}" alt="blog">
 
                             </div>
                             <div class="single-blog-details">

@@ -132,7 +132,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <div class="section-title">
+                <div class="section-title st">
                     <h2 class="title text-center">Travel with <span>We Trek Nepal</span></h2>
 
                 </div>
@@ -161,7 +161,7 @@
 <!-- end trek nepal -->
 
 
-<div class="holiday-plan-area tp-holiday-plan-area mg-top-96 pd-top-50 pd-bottom-70" style="background-image: url({{asset('assets/front/img/bg/lightBG.png')}}); background-color: #F7F7F7;">
+<div class="holiday-plan-area tp-holiday-plan-area mg-top-96 pd-top-50 pd-bottom-70 hp" style="background-image: url({{asset('assets/front/img/bg/lightBG.png')}}); background-color: #F7F7F7;">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-xl-6 col-lg-9">

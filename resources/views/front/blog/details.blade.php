@@ -1,7 +1,7 @@
 @extends('front.layouts.app')
 @section('content')
  <!-- breadcrumb area start -->
- <div class="breadcrumb-area jarallax" style="background-image:url({{asset('/images/thumbnail/' . $blog->image)}});">
+ <div class="breadcrumb-area jarallax" style="background-image:url({{asset('/images/listing/' . $blog->image)}});">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">

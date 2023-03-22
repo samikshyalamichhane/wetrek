@@ -8871,6 +8871,12 @@ ul.common-list li{
 .bts{
     margin-bottom:25px;
 }
+.hp{
+    margin-top:20px!important;
+}
+.st{
+    margin-bottom:0;
+}
 /*Responsive starts*/
 
 @media (max-width: 767px) {
