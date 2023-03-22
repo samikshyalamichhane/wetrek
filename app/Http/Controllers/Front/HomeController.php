@@ -452,9 +452,9 @@ class HomeController extends Controller
         'name' => $data['name'],
         'email' => $data['email'],
         'number' => $data['number'],
-        'travel_date' => $data['suitable_time'],
+        // 'travel_date' => $data['suitable_time'],
         'comment' => $data['message'],
-        'how_found' => $data['how_found'],
+        // 'how_found' => $data['how_found'],
         'ip_address' => $data['ip_address'],
 
       ];
