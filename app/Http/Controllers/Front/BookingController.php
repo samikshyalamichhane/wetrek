@@ -122,11 +122,13 @@ class BookingController extends Controller
         'email' => 'required',
         'phone_number' => 'nullable',
         'how_found' => 'nullable',
-        'message' => 'required',
-        'g-recaptcha-response' => 'required',
-         ],[ 'g-recaptcha-response.required' => 'The recaptcha field is required.']);
+        'message1' => 'required',
         // 'g-recaptcha-response' => 'required',
-    // ]);
+        //  ]
+        //  ,[ 'g-recaptcha-response.required' => 'The recaptcha field is required.']
+        // );
+        // 'g-recaptcha-response' => 'required',
+    ]);
     $value = $request->except('_token','g-recaptcha-response');
     $value['ip_address'] = request()->ip();
     $quote = Quote::create($value);

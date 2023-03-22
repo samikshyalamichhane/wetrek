@@ -1,5 +1,5 @@
 <div class="maildetails">
-<h2 style="line-height:30px;"><b>Trip Inquiry In  </b><a href="https://www.adventuremagictreks.com/" style="color:#0270bd;">https://www.adventuremagictreks.com/</a></h2>
+<h2 style="line-height:30px;"><b>Trip Inquiry In  </b><a href="{{env('APP_ENV')}}" style="color:#0270bd;">{{env('APP_ENV')}}/</a></h2>
 <h2 style="line-height:30px;"><b>Inquiry From  </b><a href="http://ip2location.com/{{ucfirst($quote->ip_address)  ?? ''}}" style="color:#0270bd;">http://ip2location.com/{{ucfirst($quote->ip_address)  ?? ''}}</a></h2>
 <div class="newmailinfo" style="padding:20px;background:#f5f5f5;">
     <h3>Inquiry Detail:</h2>
@@ -34,7 +34,7 @@
       </tr>
       <tr style="line-height:30px;">
     <td><b>Message:</b></td>
-    <td colspan="2">{{ucfirst($quote->message)  ?? ''}}</td>
+    <td colspan="2">{{ucfirst($quote->message1)  ?? ''}}</td>
       </tr>
 
 <!--<tr style="line-height:30px;">-->

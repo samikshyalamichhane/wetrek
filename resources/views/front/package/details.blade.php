@@ -239,13 +239,13 @@
                 <div class="sidebar-area sidebar-area-inner-page">
                     <div class="widget tour-list-widget">
                         <h3><strong>Inquiry Now</strong></h3>
-                        <form action="{{route('packageEnquiry', $package->id )}}" method="post">
+                        <form action="{{route('requestQuote' )}}" method="post">
                             @csrf
                             <input type="hidden" name="package_id" value="{{$package->id}}">
                             <div class="widget-tour-list-meta">
                                 <div class="single-widget-search-input-title"><i class="fa fa-dot-circle-o"></i>Full Name</div>
                                 <div class="single-widget-search-input">
-                                    <input type="text" name="name" placeholder="Write name here">
+                                    <input type="text" name="full_name" placeholder="Write name here">
                                 </div>
                             </div>
 
@@ -261,7 +261,7 @@
                             <div class="widget-tour-list-meta">
                                 <div class="single-widget-search-input-title"><i class="fa fa-dot-circle-o"></i>Phone Number</div>
                                 <div class="single-widget-search-input">
-                                    <input type="phone" name="phone" placeholder="Write here">
+                                    <input type="phone" name="phone_number" placeholder="Write here">
                                 </div>
                             </div>
 

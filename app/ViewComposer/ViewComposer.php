@@ -41,7 +41,7 @@ class ViewComposer {
 		$destinations = Destination::with('destinationtype')->published()->take(5)->get();
 		$luxurypackages=Package::select('package_name','slug')->where('luxury_package',1)->published()->orderBy('created_at','desc')->get();
 		$whyWithUs=Whywithus::published()->get();
-		$pages = Page::select('travel_guide','aboutus','title','slug')->publish()->orderBy('created_at','asc')->get();
+		$pages = Page::select('travel_guide','aboutus','title','slug')->published()->orderBy('created_at','asc')->get();
 		$view->with([
 			'dashboard_categories'=>$categories,
 			'dashboard_destinations'=>$destinations,

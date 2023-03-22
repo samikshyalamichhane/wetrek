@@ -143,7 +143,7 @@
                     <li class="menu-item-has-children">
                         <a href="#">Travel Guide <i class="ti-angle-down"></i></a>
                         <ul class="sub-menu">
-                            @foreach($dashboard_pages->where('travel-guide',1) as $page)
+                            @foreach($dashboard_pages->where('travel_guide',1) as $page)
                             <li><a href="{{route('pagesDetail',$page->slug)}}">{{$page->title}}</a></li>
                             @endforeach
                         </ul>

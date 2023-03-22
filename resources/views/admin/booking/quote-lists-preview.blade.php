@@ -29,7 +29,7 @@
         </tr>
         <tr class="warning">
             <td>Message</td>
-            <td>{{$detail->message  ?? ''}}  </td>
+            <td>{{$detail->message1  ?? ''}}  </td>
         </tr>
         <tr class="warning">
             <td>Ip Address</td>

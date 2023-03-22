@@ -18,9 +18,7 @@
     <div class="ibox">
         <div class="ibox-head">
             <div class="ibox-title">Request Quote Lists</div>
-            <!-- <div>
-                <a class="btn btn-info btn-md" href="{{route('bookings.create')}}">Trekking Package Inquery</a>
-            </div> -->
+            
         </div>
 
 
@@ -34,7 +32,7 @@
                         <th>Phone Number</th>
                         <th>Email</th>
                         <th>How did u found us? </th>
-                        <th>Message </th>
+                        <!-- <th>Message </th> -->
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -52,7 +50,7 @@
                       <td>{{$data->phone_number}}</td>
                       <td>{{$data->email}}</td>
                       <td>{{$data->how_found}}</td>
-                      <td>{{$data->message}}</td>
+                      <!-- <td>{{$data->message}}</td> -->
                       <td>
                           <a href=""  class="btn btn-success btn-sm view" data-id="{{$data->id}}"><i class="fa fa-eye"></i></a>
                           <form class="adjust-delete-button" action="{{route('removeQuote', $data->id)}}" method="post">

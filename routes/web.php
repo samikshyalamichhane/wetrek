@@ -237,9 +237,6 @@ Route::group(['namespace' => 'Front'], function () {
   Route::get('payment-cancel', 'RedirectUrlController@paymentCancel')->name('paymentCancel');
 
   Route::post('/package-enquiry/{id}', 'HomeController@packageEnquiry')->name('packageEnquiry');
-
-  Route::get('{resolvePath}', 'ResolveController@show')->name('resolvepath.show');
-
   // travel style
   Route::get('/travel-style/{slug}', 'HomeController@travelStyleDetail')->name('travelStyleDetail');
   Route::get('team/{slug}', 'HomeController@teamDetail')->name('teamDetail');
@@ -252,6 +249,10 @@ Route::group(['namespace' => 'Front'], function () {
 
   //save subscriber
   Route::post('subscriber/save', 'HomeController@saveSubscribers')->name('saveSubscribers');
+
+  Route::get('{resolvePath}', 'ResolveController@show')->name('resolvepath.show');
+
+  
 
   Route::get('{slug}', 'HomeController@dynamicPages')->name('pagesDetail');
 

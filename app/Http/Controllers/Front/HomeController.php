@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Front;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-
+use App\Mail\QuoteRequest;
 use App\Models\Gallery;
 use App\Models\Group;
 use App\Models\Faq;
@@ -40,6 +40,7 @@ use App\Mail\SubscriberRequest;
 use App\Models\Category;
 use App\Models\Galleryimage;
 use App\Models\PackageEnquiry;
+use App\Models\Quote;
 use App\Models\Setting;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Pagination\LengthAwarePaginator;
@@ -577,7 +578,11 @@ class HomeController extends Controller
     ]);
     $formInput = $request->all();
     $formInput['ip_address'] = request()->ip();
-    PackageEnquiry::create($formInput);
+    $quote = Quote::create($formInput);
+    $package = Package::where('id',$request->package_id)->first();
+    Mail::to('info@adventuremagictreks.com')->send(new QuoteRequest($quote,$package));
+
+    return redirect()->route('thankyou')->with( ['quote'=>'quote'] );
     return redirect()->back()->with('message', 'Form Submitted Successfuly.');
   }
 
