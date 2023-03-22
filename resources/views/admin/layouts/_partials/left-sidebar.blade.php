@@ -391,7 +391,7 @@
             </ul>
         </li>
 
-        <li>
+        <!-- <li>
             <a href="javascript:;">
                 {{-- <i class="sidebar-item-icon fa fa-sitemap"></i> --}}
                 <i class='sidebar-item-icon fa fa-address-card'></i>
@@ -409,7 +409,7 @@
                 </li>
 
             </ul>
-        </li>
+        </li> -->
 
 
         {{-- //CV --}}

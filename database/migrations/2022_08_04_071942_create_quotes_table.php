@@ -24,7 +24,7 @@ class CreateQuotesTable extends Migration
             $table->string('how_found')->nullable();
             $table->string('ip_address')->nullable();
             $table->string('suitable_time')->nullable();
-            $table->text('message')->nullable();
+            $table->text('message1')->nullable();
             $table->timestamps();
         });
     }
