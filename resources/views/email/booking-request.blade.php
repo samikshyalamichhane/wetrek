@@ -44,21 +44,13 @@
     <td colspan="2">{{$data->contact  ?? ''}}</td>
     
   </tr>
-  <tr style="line-height:30px;">
-    <td><b>Passport Number:</b></td>
-    <td colspan="2">{{$data->passport_no  ?? ''}}</td>
-    
-  </tr>
+  
   <tr style="line-height:30px;">
     <td><b>Country:</b></td>
     <td colspan="2">{{ucfirst($data->country) ?? ''}}</td>
     
   </tr>
-  <tr style="line-height:30px;">
-    <td><b>Date Of Birth:</b></td>
-    <td colspan="2">{{$data->dob  ?? ''}}</td>
-    
-  </tr>
+  
   @endforeach
   <tr style="line-height:30px;">
     <td><b>Special Requirement:</b></td>
