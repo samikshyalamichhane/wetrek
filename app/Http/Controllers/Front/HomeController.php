@@ -407,7 +407,7 @@ class HomeController extends Controller
     ]);
     $value = $request->all();
     $subscribe = \App\Models\Subscriber::create($value);
-    // Mail::to('info@adventuremagictreks.com')->send(new SubscriberRequest($subscribe));
+    Mail::to('info@wetreknepal.com')->send(new SubscriberRequest($subscribe));
     return redirect()->route('thankyou')->with(['subscribe' => 'subscribe']);
   }
 
@@ -448,22 +448,22 @@ class HomeController extends Controller
       \App\Models\Contactus::create($data);
 
       $email = $request->email;
-      // $messageData = [
-      //   'name' => $data['name'],
-      //   'email' => $data['email'],
-      //   'number' => $data['number'],
-      //   'travel_date' => $data['suitable_time'],
-      //   'comment' => $data['message'],
-      //   'how_found' => $data['how_found'],
-      //   'ip_address' => $data['ip_address'],
+      $messageData = [
+        'name' => $data['name'],
+        'email' => $data['email'],
+        'number' => $data['number'],
+        'travel_date' => $data['suitable_time'],
+        'comment' => $data['message'],
+        'how_found' => $data['how_found'],
+        'ip_address' => $data['ip_address'],
 
-      // ];
+      ];
 
-      // Mail::send('email.contact', $messageData, function ($message) use ($request, $email) {
-      //   $message->to('info@adventuremagictreks.com');
-      //   $message->from($email);
-      //   $message->subject('Feedback Received');
-      // });
+      Mail::send('email.contact', $messageData, function ($message) use ($request, $email) {
+        $message->to('info@wetreknepal.com');
+        $message->from($email);
+        $message->subject('Feedback Received');
+      });
 
       return redirect()->route('thankyou')->with(['contact' => 'contact']);
     }
@@ -580,7 +580,7 @@ class HomeController extends Controller
     $formInput['ip_address'] = request()->ip();
     $quote = Quote::create($formInput);
     $package = Package::where('id',$request->package_id)->first();
-    Mail::to('info@adventuremagictreks.com')->send(new QuoteRequest($quote,$package));
+    Mail::to('info@wetreknepal.com')->send(new QuoteRequest($quote,$package));
 
     return redirect()->route('thankyou')->with( ['quote'=>'quote'] );
     return redirect()->back()->with('message', 'Form Submitted Successfuly.');
