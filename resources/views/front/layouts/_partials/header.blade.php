@@ -143,17 +143,19 @@
                     <li class="menu-item-has-children">
                         <a href="#">Travel Guide <i class="ti-angle-down"></i></a>
                         <ul class="sub-menu">
-                            <li><a href="{{route('pagesDetail',['nepal-visa'])}}">Nepal Visa</a></li>
-                            <li><a href="{{route('pagesDetail',['accomodation'])}}">Accommodations</a></li>
-                            <li><a href="{{route('pagesDetail',['best-time-to-travel'])}}">Best Time to Travel</a></li>
+                            @foreach($dashboard_pages->where('travel-guide',1) as $page)
+                            <li><a href="{{route('pagesDetail',$page->slug)}}">{{$page->title}}</a></li>
+                            @endforeach
                         </ul>
                     </li>
 
                     <li class="menu-item-has-children">
                         <a href="#">About Us <i class="ti-angle-down"></i></a>
                         <ul class="sub-menu">
-                            <li><a href="{{route('pagesDetail',['who-we-are'])}}">Who We Are</a></li>
-                            <li><a href="{{route('pagesDetail',['why-travel-with-us'])}}">Why Travel With Us</a></li>
+                            @foreach($dashboard_pages->where('aboutus',1) as $page)
+                            <li><a href="{{route('pagesDetail',$page->slug)}}">{{$page->title}}</a></li>
+                            @endforeach
+                            <li><a href="{{route('getTestimonial')}}">Testimonial</a></li>
                             <li><a href="{{route('team')}}">Team</a></li>
                             <li><a href="{{route('blogList')}}">Blog</a></li>
                         </ul>
