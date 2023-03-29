@@ -34,7 +34,7 @@
                 <p>Thank you for contacting us. We will get back to you soon . Meanwhile, if you have any questions, do not hesitate to contact us at {{ @$dashboard_settings->nepal_cell}} anytime 24X7 or email at <a href="#">{{ @$dashboard_settings->nepal_email}}</a> </p>
                 <p>We look forward to your great trip with us!</p>
                 <p>Thank You & Best Regards,</p>
-                <p>We Trek Pvt. Ltd.<br>
+                <p>We Trek Nepal Pvt. Ltd.<br>
                     </p>
                 <div class="text-center thankyoubtn">
                     <a class="btn btn-primary" href="{{ url()->previous() }}" role="button">Back</a>
@@ -59,7 +59,7 @@
                 <p>Thank you for contacting us. We will get back to you soon . Meanwhile, if you have any questions, do not hesitate to contact us at {{ @$dashboard_settings->nepal_cell}} anytime 24X7 or email at <a href="#">{{ @$dashboard_settings->nepal_email}}</a> </p>
                 <p>We look forward to your great trip with us!</p>
                 <p>Thank You & Best Regards,</p>
-                <p>We Trek Pvt. Ltd.<br>
+                <p>We Trek Nepal Pvt. Ltd.<br>
                     </p>
                 <div class="text-center thankyoubtn">
                     <a class="btn btn-primary" href="{{ url()->previous() }}" role="button">Back</a>
@@ -83,7 +83,7 @@
                 <p>Thank you for contacting us. We will get back to you soon . Meanwhile, if you have any questions, do not hesitate to contact us at {{ @$dashboard_settings->nepal_cell}} anytime 24X7 or email at <a href="#">{{ @$dashboard_settings->nepal_email}}</a> </p>
                 <p>We look forward to your great trip with us!</p>
                 <p>Thank You & Best Regards,</p>
-                <p>We Trek Pvt. Ltd.<br>
+                <p>We Trek Nepal Pvt. Ltd.<br>
                     </p>
                 <div class="text-center thankyoubtn">
                     <a class="btn btn-primary" href="{{ url()->previous() }}" role="button">Back</a>
@@ -108,7 +108,7 @@
                 <p>Thank you for contacting us. We will get back to you soon . Meanwhile, if you have any questions, do not hesitate to contact us at {{ @$dashboard_settings->nepal_cell}} anytime 24X7 or email at <a href="#">{{ @$dashboard_settings->nepal_email}}</a> </p>
                 <p>We look forward to your great trip with us!</p>
                 <p>Thank You & Best Regards,</p>
-                <p>We Trek Pvt. Ltd.<br>
+                <p>We Trek Nepal Pvt. Ltd.<br>
                     </p>
                 <div class="text-center thankyoubtn">
                     <a class="btn btn-primary" href="{{ url()->previous() }}" role="button">Back</a>

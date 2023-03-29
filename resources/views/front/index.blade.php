@@ -402,7 +402,7 @@
 
                 </div>
 
-                <div class="partner-box newsletter">
+               {{-- <div class="partner-box newsletter">
                     <h4>Newsletter</h4>
                     <p>Please enter your email address using the fields below to receive all of the latest news and offers!</p>
                     <form action="{{route('saveSubscribers')}}" method="post">
@@ -420,7 +420,7 @@
                             @endif
                     </form>
 
-                </div>
+                </div> --}}
 
 
             </div>

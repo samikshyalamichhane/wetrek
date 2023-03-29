@@ -404,6 +404,7 @@ class HomeController extends Controller
     $request->validate([
       // 'first_name' => 'required',
       'email' => 'required',
+      'g-recaptcha-response' => 'required',
     ]);
     $value = $request->all();
     $subscribe = \App\Models\Subscriber::create($value);
