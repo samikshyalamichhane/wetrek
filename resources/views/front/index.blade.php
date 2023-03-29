@@ -414,6 +414,10 @@
                                 <button class="btn btn-yellow" type="submit">subscribe</button>
                             </div>
                         </div>
+                        <div class=" g-recaptcha" data-sitekey="{{config('hbl.captcha.site_key')}}"></div>
+                            @if ($errors->has('g-recaptcha-response'))
+                                <span class="text-danger">{{ $errors->first('g-recaptcha-response') }}</span>
+                            @endif
                     </form>
 
                 </div>
