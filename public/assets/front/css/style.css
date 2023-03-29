@@ -8873,15 +8873,46 @@ ul.common-list li{
 }
 .hp{
     margin-top:20px!important;
+    padding-top:25px;
 }
 .st{
     margin-bottom:0;
 }
 .newblogimg img{
-    width:100%;
-    height:100px;
+    width:70px;
+    height:70px;
     object-fit:cover;
 }
+.wc p span,.wc ul li,.wc i{
+    color:rgba(255, 255, 255, 0.75);
+}
+.wc i{
+    margin-right:5px;
+}
+.thankyou-wrap{
+    margin:30px 0;
+}
+.thankyou{
+    padding:40px;
+    background:#00468B;
+}
+.thankyou h1,.thankyou p{
+    color:#fff;
+}
+.thankyoubtn a.btn.btn-primary{
+    background:#00ADE8;
+    border-radius:0;
+    font-size:17px;
+}
+.thankyou h1{
+    font-size:50px;
+    margin-bottom:20px;
+}
+
+
+
+
+
 /*Responsive starts*/
 
 @media (max-width: 767px) {
@@ -8890,6 +8921,7 @@ ul.common-list li{
   }
   .header-info{
       text-align:left;
+      display:none;
   }
   .header-info span{
       display:block;
@@ -8924,6 +8956,19 @@ ul.common-list li{
   }
   .po .btn{
       width:100%;
+  }
+  .responsive-mobile-menu .mobile-logo img{
+      width:45%!important;
+      margin-top:0;
+  }
+  .tp-search-single-wrap{
+      margin-bottom:15px!important;
+  }
+  .responsive-mobile-menu .navbar-toggler{
+      margin-top:25px!important;
+  }
+  .tp-main-search span.current{
+      padding-left:10px;
   }
 }
 

@@ -12,7 +12,7 @@
                               <h4 class="widget-title">Travel Guide</h4>
                               <ul class="widget_nav_menu">
                                   <li><a href="{{route('pagesDetail',['nepal-visa'])}}">Nepal Visa</a></li>
-                                  <li><a href="{{route('pagesDetail',['accomodation'])}}">Accommodations</a></li>
+                                  <li><a href="{{route('pagesDetail',['accommodation'])}}">Accommodations</a></li>
                                   <li><a href="{{route('pagesDetail',['best-time-to-travel'])}}">Best Time to Travel</a></li>
                                   <li><a href="{{route('pagesDetail',['who-we-are'])}}">Who We Are</a></li>
                                   <li><a href="{{route('pagesDetail',['why-travel-with-us'])}}">Why Travel With Us</a></li>
@@ -53,7 +53,7 @@
               </div>
               <div class="col-lg-3 col-md-3">
                   <div class="footer-widget widget ">
-                      <div class="widget-contact">
+                      <div class="wc">
                           <h4 class="widget-title">Nepal Contact Adress</h4>
                           <p>
                               <i class="fa fa-map-marker"></i>
@@ -87,7 +87,7 @@
 
               <div class="col-lg-3 col-md-3">
                   <div class="footer-widget widget ">
-                      <div class="widget-contact">
+                      <div class="wc">
                           <h4 class="widget-title">Australia Contact Address</h4>
                           <p>
                               <i class="fa fa-map-marker"></i>

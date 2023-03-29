@@ -128,3 +128,17 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in /home/webhous1/wetrek.webhousejapan.com/public/index.php on line 24
+[24-Mar-2023 13:43:07 UTC] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home/sajhaturahi/wetreknepal.com/vendor/psr/log/src/LoggerInterface.php on line 30
+[24-Mar-2023 13:43:21 UTC] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home/sajhaturahi/wetreknepal.com/vendor/psr/log/src/LoggerInterface.php on line 30
+[24-Mar-2023 13:48:19 UTC] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home/sajhaturahi/wetreknepal.com/vendor/psr/log/src/LoggerInterface.php on line 30
+[24-Mar-2023 13:48:22 UTC] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home/sajhaturahi/wetreknepal.com/vendor/psr/log/src/LoggerInterface.php on line 30
+[24-Mar-2023 13:48:23 UTC] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home/sajhaturahi/wetreknepal.com/vendor/psr/log/src/LoggerInterface.php on line 30
+[24-Mar-2023 13:50:15 UTC] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home/sajhaturahi/wetreknepal.com/vendor/psr/log/src/LoggerInterface.php on line 30
+[24-Mar-2023 13:50:42 UTC] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home/sajhaturahi/wetreknepal.com/vendor/psr/log/src/LoggerInterface.php on line 30
+[24-Mar-2023 13:52:20 UTC] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home/sajhaturahi/wetreknepal.com/vendor/psr/log/src/LoggerInterface.php on line 30
+[24-Mar-2023 13:52:45 UTC] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home/sajhaturahi/wetreknepal.com/vendor/psr/log/src/LoggerInterface.php on line 30
+[24-Mar-2023 14:03:04 UTC] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home/sajhaturahi/wetreknepal.com/vendor/psr/log/src/LoggerInterface.php on line 30
+[24-Mar-2023 14:03:08 UTC] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home/sajhaturahi/wetreknepal.com/vendor/psr/log/src/LoggerInterface.php on line 30
+[24-Mar-2023 14:06:30 UTC] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home/sajhaturahi/wetreknepal.com/vendor/psr/log/src/LoggerInterface.php on line 30
+[24-Mar-2023 14:10:00 UTC] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home/sajhaturahi/wetreknepal.com/vendor/psr/log/src/LoggerInterface.php on line 30
+[24-Mar-2023 14:10:02 UTC] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home/sajhaturahi/wetreknepal.com/vendor/psr/log/src/LoggerInterface.php on line 30

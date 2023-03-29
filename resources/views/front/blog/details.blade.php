@@ -69,7 +69,7 @@
                             <ul>
                                 @foreach($relatedBlogs as $blog)
                                 <li>
-                                    <div class="media">
+                                    <div class="media newblogimg">
                                         <img src="{{asset('/images/thumbnail/' . $blog->image)}}" alt="widget">
                                         <div class="media-body">
                                             <span class="post-date">{{ $blog->created_at->format('d F Y') }}</span>

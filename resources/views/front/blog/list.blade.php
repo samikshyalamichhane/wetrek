@@ -25,7 +25,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8">
-                <div class="row justify-content-center">
+                <div class="row">
                     @foreach($details as $blog)
                     <div class="col-lg-6 col-md-6">
                         <div class="single-blog">
