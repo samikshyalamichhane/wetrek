@@ -96,7 +96,7 @@
         </div>
       </div>
 
-      @php
+      {{--@php
       $count= $dashboard_subscriber->count();
       @endphp
       <div class="col-sm-3">
@@ -111,7 +111,7 @@
             <p class="card-text"></p>
           </div>
         </div>
-      </div>
+      </div>--}}
 
       @php
       $count= $dashboard_quoteLists->count();
