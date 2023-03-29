@@ -467,6 +467,7 @@
                             @if ($errors->has('g-recaptcha-response'))
                                 <span class="text-danger">{{ $errors->first('g-recaptcha-response') }}</span>
                             @endif
+                            <br>
                         <div class="contact-us mt-3">
                             <button type="submit" class="btn btn-link hvr-radial-out">Submit</button>
                         </div>
