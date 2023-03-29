@@ -412,27 +412,6 @@
         </li> -->
 
 
-        {{-- //CV --}}
-        {{--<li>
-            <a href="javascript:;">
-                {{-- <i class="sidebar-item-icon fa fa-sitemap"></i> --}}
-                <i class='sidebar-item-icon fa fa-address-card'></i>
-
-
-                <span class="nav-label">Newsletters</span>
-                <i class="fa fa-angle-left arrow"></i>
-            </a>
-            <ul class="nav-2-level collapse">
-                <li>
-                    <a href="{{route('subscriberList')}}">
-                        <span class="fa fa-plus"></span>
-                        Subscriber List
-                    </a>
-                </li>
-
-            </ul>
-        </li>--}}
-
         {{-- <li>
                 <a href="javascript:;">
                     <i class="sidebar-item-icon fa fa-sitemap"></i>
