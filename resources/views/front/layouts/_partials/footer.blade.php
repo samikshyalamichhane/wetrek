@@ -178,9 +178,10 @@
   <script src="{{asset('assets/front/js/swiper.min.js')}}"></script>
   <script src="{{asset('assets/front/js/jquery.nice-select.min.js')}}"></script>
   <script src="{{asset('assets/front/js/jquery-ui.min.js')}}"></script>
-
   <!-- main js -->
   <script src="{{asset('assets/front/js/main.js')}}"></script>
+<script src="https://www.google.com/recaptcha/api.js"></script>
+
 
   </body>
 

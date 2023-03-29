@@ -64,6 +64,12 @@
                                     <textarea name="message"></textarea>
                                 </label>
                             </div>
+                            <div class="col-lg-12">
+                            <div class=" g-recaptcha" data-sitekey="{{config('hbl.captcha.site_key')}}"></div>
+                            @if ($errors->has('g-recaptcha-response'))
+                                <span class="text-danger">{{ $errors->first('g-recaptcha-response') }}</span>
+                            @endif
+                            </div>
                             <div class="col-12">
                                 <!-- <a class="btn btn-yellow" href="#">Send Message</a> -->
                                 <button type="submit" name="contactus" value="Submit" class="btn btn-yellow">Send Message</button>

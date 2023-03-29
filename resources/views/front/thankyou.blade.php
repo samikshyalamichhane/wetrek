@@ -31,7 +31,7 @@
                     <h1>THANK <span>YOU!</span></h1>
                 </div>
                 <i class="fa fa-check-circle-o" aria-hidden="true"></i>
-                <p>Thank you for contacting us. We will get back to you soon . Meanwhile, if you have any questions, do not hesitate to contact us at +977-9851081525 anytime 24X7 or email at <a href="#">info@wetrek nepal.com</a> </p>
+                <p>Thank you for contacting us. We will get back to you soon . Meanwhile, if you have any questions, do not hesitate to contact us at {{ @$dashboard_settings->nepal_cell}} anytime 24X7 or email at <a href="#">{{ @$dashboard_settings->nepal_email}}</a> </p>
                 <p>We look forward to your great trip with us!</p>
                 <p>Thank You & Best Regards,</p>
                 <p>We Trek Pvt. Ltd.<br>
@@ -56,7 +56,7 @@
                     <h1>THANK <span>YOU!</span></h1>
                 </div>
                 <i class="fa fa-check-circle-o" aria-hidden="true"></i>
-                <p>Thank you for contacting us. We will get back to you soon . Meanwhile, if you have any questions, do not hesitate to contact us at +977-9851081525 anytime 24X7 or email at <a href="#">info@wetrek nepal.com</a> </p>
+                <p>Thank you for contacting us. We will get back to you soon . Meanwhile, if you have any questions, do not hesitate to contact us at {{ @$dashboard_settings->nepal_cell}} anytime 24X7 or email at <a href="#">{{ @$dashboard_settings->nepal_email}}</a> </p>
                 <p>We look forward to your great trip with us!</p>
                 <p>Thank You & Best Regards,</p>
                 <p>We Trek Pvt. Ltd.<br>
@@ -80,7 +80,7 @@
                     <h1>THANK <span>YOU!</span></h1>
                 </div>
                 <i class="fa fa-check-circle-o" aria-hidden="true"></i>
-                <p>Thank you for contacting us. We will get back to you soon . Meanwhile, if you have any questions, do not hesitate to contact us at +977-9851081525 anytime 24X7 or email at <a href="#">info@wetrek nepal.com</a> </p>
+                <p>Thank you for contacting us. We will get back to you soon . Meanwhile, if you have any questions, do not hesitate to contact us at {{ @$dashboard_settings->nepal_cell}} anytime 24X7 or email at <a href="#">{{ @$dashboard_settings->nepal_email}}</a> </p>
                 <p>We look forward to your great trip with us!</p>
                 <p>Thank You & Best Regards,</p>
                 <p>We Trek Pvt. Ltd.<br>
@@ -105,7 +105,7 @@
                     <h1>THANK <span>YOU!</span></h1>
                 </div>
                 <i class="fa fa-check-circle-o" aria-hidden="true"></i>
-                <p>Thank you for contacting us. We will get back to you soon . Meanwhile, if you have any questions, do not hesitate to contact us at +977-9851081525 anytime 24X7 or email at <a href="#">info@wetrek nepal.com</a> </p>
+                <p>Thank you for contacting us. We will get back to you soon . Meanwhile, if you have any questions, do not hesitate to contact us at {{ @$dashboard_settings->nepal_cell}} anytime 24X7 or email at <a href="#">{{ @$dashboard_settings->nepal_email}}</a> </p>
                 <p>We look forward to your great trip with us!</p>
                 <p>Thank You & Best Regards,</p>
                 <p>We Trek Pvt. Ltd.<br>

@@ -59,7 +59,7 @@ class DashboardController extends Controller
 		$contactMessage = Contactus::orderBy('updated_at', 'desc')->get();
 		$footer_dest = Destination::with('destinationtype')->where('slug','nepal')->first();
 		$bookingLists = BookingForm::with('costanddate','package')->latest()->get();
-		$quoteLists = PackageEnquiry::latest()->get();
+		$quoteLists = Quote::latest()->get();
     return view('admin.dashboard')->with([
 			'dashboard_subscriber'=>$subscribers,
 			'dashboard_associates'=>$associates,

@@ -259,7 +259,7 @@
                 <th>Phone Number</th>
                 <th>Email</th>
                 <th>How did you found us?</th>
-                <th>Message</th>
+                <th>View</th>
 
               </tr>
             </thead>
@@ -274,7 +274,9 @@
                     <td>{{$data->phone_number}}</td>
                     <td>{{$data->email}}</td>
                     <td>{{$data->how_found}}</td>
-                    <td>{!!  substr(strip_tags($data->message), 0, 50) !!}</td>
+                    <td><a href=""  class="btn btn-success btn-sm viewQuote" data-id="{{$data->id}}"><i class="fa fa-eye"></i></a></td>
+
+                    <!-- <td>{!!  substr(strip_tags($data->message1), 0, 50) !!}</td> -->
                     <!-- <td><a href=""  class="btn btn-success btn-sm inquiry-view" data-id="{{$data->id}}"><i class="fa fa-eye"></i></a></td> -->
                   </tr>
                 @endforeach
@@ -369,6 +371,25 @@
 
     </div>
   </div>
+   <!-- Modal -->
+   <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Booking Details</h4>
+        </div>
+        <div class="modal-body">
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
 
 @endsection
 
@@ -419,6 +440,29 @@ $(document).ready(function(){
                 console.log(data);
                 $('#bookingModal .modal-body').html(data);
                 $('#bookingModal').modal('show');
+            }
+        });
+    });
+});
+</script>
+<script>
+$(document).ready(function(){
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+    $(".viewQuote").click(function(e) {
+        e.preventDefault();
+        id=$(this).data('id');
+        $.ajax({
+            method:"post",
+            url:"{{route('viewQuote')}}",
+            data:{id:id},
+            success:function(data){
+                console.log(data);
+                $('#myModal .modal-body').html(data);
+                $('#myModal').modal('show');
             }
         });
     });

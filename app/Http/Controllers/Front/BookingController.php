@@ -48,6 +48,8 @@ class BookingController extends Controller
       'how_found' => 'nullable',
       'spec_req' => 'nullable',
     //   'terms_and_conditions' => 'required',
+    'g-recaptcha-response' => 'required',
+      //   ],[ 'g-recaptcha-response.required' => 'The recaptcha field is required.']);
     ],
     [
       'package_id.required' => 'Please Select any of the packages!',
@@ -123,6 +125,8 @@ class BookingController extends Controller
         'phone_number' => 'nullable',
         'how_found' => 'nullable',
         'message1' => 'required',
+        'g-recaptcha-response' => 'required',
+      //   ],[ 'g-recaptcha-response.required' => 'The recaptcha field is required.']);
         // 'g-recaptcha-response' => 'required',
         //  ]
         //  ,[ 'g-recaptcha-response.required' => 'The recaptcha field is required.']

@@ -435,7 +435,7 @@ class HomeController extends Controller
         'email' => 'required',
         // 'how_found' => 'required',
         'message' => 'required',
-        // 'g-recaptcha-response' => 'required',
+        'g-recaptcha-response' => 'required',
       ]
       // , ['g-recaptcha-response.required' => 'The recaptcha field is required.']
     );
