@@ -181,6 +181,7 @@
   <!-- main js -->
   <script src="{{asset('assets/front/js/main.js')}}"></script>
 <script src="https://www.google.com/recaptcha/api.js"></script>
+@stack('scripts')
 
 
   </body>

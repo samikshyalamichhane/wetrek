@@ -17,6 +17,7 @@ class Payment extends ActionRequest
         $now = Carbon::now();
         $orderNo = $now->getPreciseTimestamp(3);
 
+
         $request = [
             "apiRequest" => [
                 "requestMessageID" => $this->Guid(),
@@ -200,6 +201,7 @@ class Payment extends ActionRequest
             ],
             'body' => $body
         ]);
+        dd($response);
 
         $token = $response->getBody()->getContents();
         $decryptingKey = $this->GetPrivateKey(SecurityData::$MerchantDecryptionPrivateKey);
@@ -214,10 +216,11 @@ class Payment extends ActionRequest
 
     public function ExecuteFormJose($booking,$mid,$api_key,$curr,$amt,$threeD,$success_url,$failed_url,$cancel_url,$backend_url): string
     {
+        // dd($booking,$mid,$api_key,$curr,$amt,$threeD,$success_url,$failed_url,$cancel_url,$backend_url);
         $now = Carbon::now();
+        // $orderNo = $now->getPreciseTimestamp(3);
         $orderNo = $booking;
-        $desc = BookingForm::where('order_id',$booking)->first();
-        
+        $desc = BookingForm::where('booking_id',$booking)->first();
         $packageDesc = $desc->package->package_name;
 
         $request = [

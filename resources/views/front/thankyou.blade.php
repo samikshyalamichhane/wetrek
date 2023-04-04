@@ -120,6 +120,31 @@
 </section>
 @endif
 
+@if( session()->get('booking-successfull') )
+<section class="thankyou-wrap">
+    <div class="container">
+        <div class="row">
+            <div class="thankyou text-center">
+                <a href="#"><img src="{{asset('images/main/'.$dashboard_settings->logo)}}" alt=""></a>
+                <div class="section-title color-title thanktitle">
+                    <h1>Payment <span>Successfull!</span></h1>
+                </div>
+                <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                <p>Thank you for contacting us. We will get back to you soon . Meanwhile, if you have any questions, do not hesitate to contact us at {{ @$dashboard_settings->nepal_cell}} anytime 24X7 or email at <a href="#">{{ @$dashboard_settings->nepal_email}}</a> </p>
+                <p>We look forward to your great trip with us!</p>
+                <p>Thank You & Best Regards,</p>
+                <p>We Trek Nepal Pvt. Ltd.<br>
+                    </p>
+                <div class="text-center thankyoubtn">
+                    <a class="btn btn-primary" href="{{ route('indexHome') }}" role="button">Back</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+@endif
+
 
 
 <!-- Modal -->

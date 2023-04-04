@@ -10,14 +10,12 @@ use App\Models\BookingForm;
 use App\Models\CostandDate;
 use App\Models\Package;
 use App\Models\Quote;
-use Carbon\Carbon;
 use Mail;
-use Payment;
-use Exception;
-use GuzzleHttp\Exception\GuzzleException;
+use Carbon\Carbon;
 
 class BookingController extends Controller
 {
+
   public $merchantId;
     public $api_key;
     public $input_currency;
@@ -31,12 +29,11 @@ class BookingController extends Controller
         $this->input_3d = config('hbl.hbl.input_3d');
     }
 
-    public function PaymentForm()
-	{
-		$packages = Package::published()->get();
-		return view('front.payment',compact('packages'));
-	}
-
+    public function PaymentForm(){
+        $og['title'] = 'Make Online Payment - Payment Form';
+        $packages = Package::published()->get();
+        return view('front.booking.payment-form',compact('packages','og'));
+    }
     public function bookingForm(Request $request)
   {
     $start_date = $request->started_date;
@@ -58,12 +55,14 @@ class BookingController extends Controller
       'first_name.*' => 'required',
       'last_name.*' => 'required',
       'email.*' => 'required',
-      'dob.*' => 'required',
+      'dob.*' => 'nullable',
       'country.*' => 'required',
       'contact.*' => 'required|numeric|min:7',
-      'how_found' => 'required',
-      'spec_req' => 'required',
+      'how_found' => 'nullable',
+      'spec_req' => 'nullable',
     //   'terms_and_conditions' => 'required',
+    'g-recaptcha-response' => 'required',
+      //   ],[ 'g-recaptcha-response.required' => 'The recaptcha field is required.']);
     ],
     [
       'package_id.required' => 'Please Select any of the packages!',
@@ -83,12 +82,12 @@ class BookingController extends Controller
         $booking->package_id = $request->package_id;
         $booking->first_name = $val;
         $booking->last_name = $request->last_name[$key] ?? null;
-        $booking->dob = $request->dob[$key] ?? '';
+        // $booking->dob = $request->dob[$key];
         $booking->country = $request->country[$key];
         $booking->email = $request->email[$key];
         $booking->contact = $request->contact[$key];
         $booking->name_title = $request->name_title[$key];
-        $booking->passport_no = $request->passport_no[$key] ?? '';
+        // $booking->passport_no = $request->passport_no[$key];
         array_push($a, $booking);
       }
     }
@@ -96,8 +95,9 @@ class BookingController extends Controller
     $booking->package_id = $request->package_id;
     $booking->costanddate_id = $request->costanddate_id;
     $booking->no_of_traveller = $request->no_of_traveller;
-    // $booking->from_date = $request->from_date;
-    // $booking->to_date = $request->to_date;
+    $booking->payment_type = $request->payment_type;
+    $booking->from_date = $request->from_date;
+    $booking->to_date = $request->to_date;
     $booking->ip_address = request()->ip();
     $booking->how_found = $request->how_found;
     $booking->spec_req = $request->spec_req;
@@ -105,17 +105,24 @@ class BookingController extends Controller
     $booking->emer_name = $request->emer_name;
     $booking->emer_relation = $request->emer_relation;
     $booking->emer_contact = $request->emer_contact;
-    $booking->booking_id = Carbon::now()->getPreciseTimestamp(3);
+    $now = Carbon::now();
+    $orderNo = $now->getTimestampMs();
+    $booking->order_id = $orderNo;
     $booking->terms_and_conditions = $request->has('terms_and_conditions') ? true : false;
     $data = [
       'emer_title' => $request->emer_title,
       'emer_name' => $request->emer_name,
       'emer_contact' => $request->emer_contact,
       'emer_relation' => $request->emer_relation,
-  ];  
+  ];
+    // dd($booking);
 
     $booking->save();
-    // Mail::to('info@wetreknepal.com')->send(new BookingRequest($booking));
+    $package_name = Package::findOrFail($request->package_id);
+    $package = Package::where('id',$request->package_id)->first();
+    $booking->destination_name = $package_name->package_name;
+    
+    Mail::to('info@wetreknepal.com')->send(new BookingRequest($booking,$package));
     if ($request->payment_type == 'hbl') {
 			return view('front.booking.payment', compact('booking'));
 		}
@@ -142,13 +149,12 @@ class BookingController extends Controller
     $booking->first_name = $request->name;
     $booking->email = $request->email;
     $booking->amount = $request->amount;
-    $booking->currency = $this->input_currency;
     $booking->ip_address = request()->ip();
     $booking->booking_id = Carbon::now()->getTimestampMs();
     // dd($booking);
     $booking->save();
 // dd($booking->booking_id,$this->merchantId ,$this->api_key,$this->input_currency,$request->amount,$this->input_3d,$request->success_url,$request->fail_url,$request->cancel_url,$request->backend_url);
-    // Mail::to('info@wetreknepal.com')->send(new BookingRequest($booking));
+    // Mail::to('info@classicvacationsnepal.com')->send(new BookingRequest($booking));
       $payment = new Payment();  
        // $joseResponse = $payment->ExecuteFormJose($_POST['merchant_id'],$_POST['api_key'],$_POST['input_currency'],$_POST['input_amount'],$_POST['input_3d'],$_POST['success_url'],$_POST['fail_url'],$_POST['cancel_url'],$_POST['backend_url'],);
         $joseResponse = $payment->ExecuteFormJose($booking->booking_id,$this->merchantId ,$this->api_key,$this->input_currency,$request->amount,$this->input_3d,$request->success_url,$request->fail_url,$request->cancel_url,$request->backend_url);
@@ -176,13 +182,20 @@ class BookingController extends Controller
         'email' => 'required',
         'phone_number' => 'nullable',
         'how_found' => 'nullable',
-        'message' => 'nullable',
+        'message1' => 'required',
         'g-recaptcha-response' => 'required',
+      //   ],[ 'g-recaptcha-response.required' => 'The recaptcha field is required.']);
+        // 'g-recaptcha-response' => 'required',
+        //  ]
+        //  ,[ 'g-recaptcha-response.required' => 'The recaptcha field is required.']
+        // );
+        // 'g-recaptcha-response' => 'required',
     ]);
     $value = $request->except('_token','g-recaptcha-response');
     $value['ip_address'] = request()->ip();
     $quote = Quote::create($value);
-    Mail::to('info@wetreknepal.com')->send(new QuoteRequest($quote));
+    $package = Package::where('id',$request->package_id)->first();
+    Mail::to('info@wetreknepal.com')->send(new QuoteRequest($quote,$package));
 
     return redirect()->route('thankyou')->with( ['quote'=>'quote'] );
 

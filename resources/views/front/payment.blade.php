@@ -1,38 +1,28 @@
 @extends('front.layouts.app')
 @section('content')
-<!--<div class="booking-image">-->
-<!--            <img src="https://classicvacationsnepal.com/images/main/Wed-07-23-37-1176753327-EBC.jpg" alt="" class="img-fluid">-->
-<!--       </div>-->
-<div class="tourmaster-single-header" style="background-image: url('https://classicvacationsnepal.com/images/main/Mon-03-10-37-959451343-globalpedia-hero-nepal-1.jpg');">
-    <div class="tourmaster-single-header-background-overlay"></div>
-    <div class="tourmaster-single-header-overlay"></div>
-
-    <div class="tourmaster-single-header-container tourmaster-container">
-        <div class="tourmaster-single-header-container-inner">
-            <div class="tourmaster-single-header-title-wrap tourmaster-item-pdlr">
-                <div class="container">
-                    <div class="row">
-                        <div class="COL-12 trip-topic triphead-block p-0">
-                            <div class="tourmaster-single-header-gallery-wrap"></div>
-
-                            <h1 class="tourmaster-single-header-title">Online Payment Form<p></p>
-                            </h1>
-
-                        </div>
-
+<!-- breadcrumb area start -->
+<div class="breadcrumb-area jarallax" style="background-image:url({{ $dashboard_settings->contactus_banner_imageUrl() }});">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb-inner">
+                        <h1 class="page-title">Payment Form</h1>
+                        <ul class="page-list">
+                            <li><a href="{{route('indexHome')}}">Home</a></li>
+                            <li>Payment Form</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-</div>
+    <!-- breadcrumb area End -->
 <div class="contact-us nnba">
     <div class="container">
-    <h1>Welcome to our<span> Online Payment Form</span></h1>
-    <p>
-        For online payments at WeTrek Nepal, you could use Credit Card, AMEX, Visa Card, Mastercard etc. Our online payments are secured, and powered by Visa Card so it is a safe process. Your card payment will be processed by Himalayan Bank Limited on behalf of WeTrek Nepal
-    </p>
+        <h1>Welcome to our<span> Online Payment Form</span></h1>
+        <p>
+            For online payments at We Trek Nepal, you could use Credit Card, AMEX, Visa Card, Mastercard etc. Our online payments are secured, and powered by Visa Card so it is a safe process. Your card payment will be processed by Himalayan Bank Limited on behalf of We Trek Nepal Pvt. Ltd.
+        </p>
     </div>
 </div>
 <section class="booking-form-wrap">
@@ -62,9 +52,21 @@
         @endif
         <div class="booking-form">
             <div class="booking-inner">
-                <form action="{{route('makePayment')}}" id="onlinepaymentform" method="POST">
+                <form action="{{route('cardPaymentBooking')}}" id="onlinepaymentform" method="POST">
                     @csrf
-                    <input type="hidden" name="currencyCode" value="840">
+                    <!-- <input type="tel" id="success_url" name="input_3d" class="form-textbox" size="50" value="N" hidden> -->
+                    <span>
+                        <input type="tel" id="success_url" name="success_url" class="form-textbox" size="50" value="{{env('APP_URL'). '/payment-success/'}}" hidden>
+                    </span>
+                    <span>
+                        <input type="tel" id="fail_url" name="fail_url" class="form-textbox" size="50" value="{{env('APP_URL'). '/payment-fail/'}}" hidden>
+                    </span>
+                    <span>
+                        <input type="tel" id="cancel_url" name="cancel_url" class="form-textbox" size="50" value="{{env('APP_URL'). '/payment-cancel/'}}" hidden>
+                    </span>
+                    <span>
+                        <input type="tel" id="backend_url" name="backend_url" class="form-textbox" size="50" value="{{env('APP_URL'). '/get-response/'}}" hidden>
+                    </span>
                     <div class="row">
                         <div class="col-md-12">
                             <div class="md-form">
@@ -148,37 +150,37 @@
     </div>
 </section>
 
- <!-- Modal -->
- <div class="modal fade popupbox text-white" id="onlinePaymentModal" role="dialog">
+<!-- Modal -->
+<div class="modal fade popupbox text-white" id="onlinePaymentModal" role="dialog">
     <div class="modal-dialog" style="max-width: 650px; bottom: -150px;">
-      <!-- Modal content-->
-      <!-- <form action="{{route('makePayment')}}" method="POST">
-        @csrf -->
-      <div class="modal-content" style="height: 340px;">
-        <div class="modal-header">
-          <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
-          <h4 class="modal-title" style="font-size: 25px;">Re-confirm </h4>
-        </div>
-        <div class="modal-body" style="font-size: 18px;">
-        Hi, <span id="traveller_names"></span>, <br>
+        <!-- Modal content-->
+        {{--<form action="{{route('makePayment')}}" method="POST">
+        @csrf--}}
+        <div class="modal-content" style="height: 340px;">
+            <div class="modal-header">
+                <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+                <h4 class="modal-title" style="font-size: 25px;">Re-confirm </h4>
+            </div>
+            <div class="modal-body" style="font-size: 18px;">
+                Hi, <span id="traveller_names"></span>, <br>
 
-        Please Re-confirm Your Entry. <br>
+                Please Re-confirm Your Entry. <br>
 
-         Package Name:: <span id="package_name"></span> <br>
-         Name:: <span id="traveller_name"></span> <br>
-         Email:: <span id="traveller_email"></span> <br>
-         Amount:: <span id="amount_to_pay"></span> <br>
-        </div>
-        <div class="modal-footer">
-          <a href="" class="btn btn-success" data-dismiss="modal" >Back</a>
-          <button type="submit" class="btn btn-default" onClick='submitDetailsForm()'>Submit</button>
+                Package Name:: <span id="package_name"></span> <br>
+                Name:: <span id="traveller_name"></span> <br>
+                Email:: <span id="traveller_email"></span> <br>
+                Amount:: <span id="amount_to_pay"></span> <br>
+            </div>
+            <div class="modal-footer">
+                <a href="" class="btn btn-success" data-dismiss="modal">Back</a>
+                <button type="submit" class="btn btn-default" onClick='submitDetailsForm()'>Submit</button>
 
+            </div>
         </div>
-      </div>
-      <!-- </form> -->
+        <!-- </form> -->
 
     </div>
-  </div>
+</div>
 
 @endsection
 
@@ -187,30 +189,29 @@
 <script type="text/javascript">
     $('#exampleFormControlSelect1').change(function() {
 
-    $('#submitOnline').click(function() {
-        var val1 = $("#namemodal").val();
-    var val2 = $("#emailmodal").val();
-    var val3 = $("#amountmodal").val();
-    var val4 = $('#exampleFormControlSelect1 option:selected').text();
-    $("#onlinePaymentModal").modal("show");
-    $('#package_name').empty()
-    $('#traveller_email').empty()
-    $('#traveller_name').empty()
-    $('#amount_to_pay').empty()
-    $('#package_name').append(val4)
-    $('#traveller_email').append(val2)
-    $('#traveller_name').append(val1)
-    $('#traveller_names').append(val1)
-    $('#amount_to_pay').append(val3)
-    return false;
+        $('#submitOnline').click(function() {
+            var val1 = $("#namemodal").val();
+            var val2 = $("#emailmodal").val();
+            var val3 = $("#amountmodal").val();
+            var val4 = $('#exampleFormControlSelect1 option:selected').text();
+            $("#onlinePaymentModal").modal("show");
+            $('#package_name').empty()
+            $('#traveller_email').empty()
+            $('#traveller_name').empty()
+            $('#amount_to_pay').empty()
+            $('#package_name').append(val4)
+            $('#traveller_email').append(val2)
+            $('#traveller_name').append(val1)
+            $('#traveller_names').append(val1)
+            $('#amount_to_pay').append(val3)
+            return false;
 
-});
-});
-
+        });
+    });
 </script>
 <script language="javascript" type="text/javascript">
     function submitDetailsForm() {
-       $("#onlinepaymentform").submit();
+        $("#onlinepaymentform").submit();
     }
 </script>
 

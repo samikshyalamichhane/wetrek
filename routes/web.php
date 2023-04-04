@@ -229,6 +229,8 @@ Route::group(['namespace' => 'Front'], function () {
   
    Route::get('card-payment','BookingController@PaymentForm')->name('PaymentForm');
   Route::post('payment-request','HblController@PaymentRequest')->name('PaymentRequest');
+  Route::post('post-card-booking', 'BookingController@cardPaymentBooking')->name('cardPaymentBooking');
+
   
   //Redirect Url For payment process
   Route::post('get-response', 'RedirectUrlController@getPaymentResponse')->name('getPaymentResponse');
